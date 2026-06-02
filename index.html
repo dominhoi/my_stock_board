@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>📊 My Stock Dashboard | 실시간 투자 분석 보고서</title>
+  <meta name="description" content="AI 기반 주식 포트폴리오 분석 및 최신 시장 수급 브리핑 보드">
+  
+  <!-- Premium Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- FontAwesome Icons for aesthetics -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+  <!-- Ambient background glow elements -->
+  <div class="bg-glow bg-glow-1"></div>
+  <div class="bg-glow bg-glow-2"></div>
+
+  <div class="app-container">
+    <!-- Header Section -->
+    <header class="dashboard-header">
+      <div class="brand">
+        <div class="logo-icon"><i class="fa-solid fa-chart-line"></i></div>
+        <div>
+          <h1>My Stock Dashboard</h1>
+          <p class="subtitle">AI & 퀀트 기반 실시간 자산 모니터링</p>
+        </div>
+      </div>
+      <div class="update-pill" id="update-time-container">
+        <i class="fa-regular fa-clock"></i>
+        <span>업데이트 확인 중...</span>
+      </div>
+    </header>
+
+    <!-- Overall Summary Widgets -->
+    <section class="summary-grid" id="summary-section">
+      <div class="summary-card loading-skeleton"></div>
+      <div class="summary-card loading-skeleton"></div>
+      <div class="summary-card loading-skeleton"></div>
+      <div class="summary-card loading-skeleton"></div>
+    </section>
+
+    <!-- Controls / Navigation (Mobile Tabs & Search) -->
+    <div class="controls-bar">
+      <div class="tab-buttons">
+        <button class="tab-btn active" id="tab-owned" onclick="switchTab('owned')">
+          <i class="fa-solid fa-wallet"></i> 보유 종목
+        </button>
+        <button class="tab-btn" id="tab-watched" onclick="switchTab('watched')">
+          <i class="fa-solid fa-eye"></i> 관심 종목 & AI 뉴스
+        </button>
+      </div>
+      <div class="search-box">
+        <i class="fa-solid fa-magnifying-glass search-icon"></i>
+        <input type="text" id="stock-search" placeholder="종목명 또는 티커 검색..." oninput="filterStocks()">
+      </div>
+    </div>
+
+    <!-- Main Dashboard Layout Grid -->
+    <main class="dashboard-main">
+      <!-- Section: Owned Stocks -->
+      <section class="dashboard-column" id="owned-section-wrapper">
+        <div class="column-header">
+          <h2><i class="fa-solid fa-wallet text-indigo"></i> 보유 종목 현황</h2>
+          <span class="count-badge" id="owned-count">0</span>
+        </div>
+        <div class="stock-list" id="owned-stock-list">
+          <!-- Dynamically populated -->
+          <div class="loading-spinner-container">
+            <div class="spinner"></div>
+            <p>보유 자산을 불러오는 중...</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section: Watched Stocks & AI News Briefing -->
+      <section class="dashboard-column" id="watched-section-wrapper">
+        <div class="column-header">
+          <h2><i class="fa-solid fa-eye text-violet"></i> 관심 종목 & AI 뉴스 브리핑</h2>
+          <span class="count-badge" id="watched-count">0</span>
+        </div>
+        <div class="stock-list" id="watched-stock-list">
+          <!-- Dynamically populated -->
+          <div class="loading-spinner-container">
+            <div class="spinner"></div>
+            <p>시황 데이터를 불러오는 중...</p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Bottom Disclaimer Guide (As specified in ANTIGRAVITY.md 2.4) -->
+    <footer class="dashboard-footer">
+      <p class="tips"><i class="fa-solid fa-circle-info"></i> 💡 (팁) 비공개(Private) 세션 문제가 발생할 경우 로그인 세션이 유지된 브라우저로 접속해 주세요.</p>
+      <p class="copyright">&copy; 2026 My Stock. Powered by Antigravity AI Agent & Google Gemini.</p>
+    </footer>
+  </div>
+
+  <script src="index.js"></script>
+</body>
+</html>

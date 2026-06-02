@@ -1,0 +1,100 @@
+{
+  "updated_at": "2026-06-03 08:00:00",
+  "summary": {
+    "total_buy_combined_krw": 85642000,
+    "total_eval_combined_krw": 91873000,
+    "total_profit_combined_pct": 7.27,
+    "krw_rate": 1378.50
+  },
+  "owned_stocks": [
+    {
+      "name": "삼성전자",
+      "ticker": "005930.KS",
+      "current_price": 74300.0,
+      "change_pct": 0.81,
+      "buy_price": 72000.0,
+      "qty": 10.0,
+      "is_usd": false,
+      "profit_pct": 3.19,
+      "news_summary": "삼성전자가 세계 최초로 차세대 파운드리 3나노 게이트올어라운드(GAA) 공정 제품의 대량 생산 안정성을 확보하며 주요 클라이언트와의 수주 논의가 가속화되고 있습니다.",
+      "news_url": "https://finance.naver.com"
+    },
+    {
+      "name": "Apple",
+      "ticker": "AAPL",
+      "current_price": 182.35,
+      "change_pct": 1.25,
+      "buy_price": 150.9482,
+      "qty": 28.0,
+      "is_usd": true,
+      "profit_pct": 20.80,
+      "news_summary": "애플이 새로운 AI 칩셋 탑재 M4 Mac 시리즈를 전격 공개하며 대기 수요를 자극, 월가 연구원들의 목표 주가 상향 조정이 잇따르고 있습니다.",
+      "news_url": "https://finance.yahoo.com"
+    },
+    {
+      "name": "NVIDIA",
+      "ticker": "NVDA",
+      "current_price": 924.80,
+      "change_pct": 2.45,
+      "buy_price": 450.00,
+      "qty": 2.0,
+      "is_usd": true,
+      "profit_pct": 105.51,
+      "news_summary": "엔비디아가 차세대 AI 칩 블랙웰(Blackwell) 생산 일정을 앞당기겠다는 발표 이후 테크 업계 전반의 HBM 수요가 또다시 폭발하며 사상 최고가 부근에서 등락하고 있습니다.",
+      "news_url": "https://finance.yahoo.com"
+    },
+    {
+      "name": "테슬라",
+      "ticker": "TSLA",
+      "current_price": 178.64,
+      "change_pct": -1.12,
+      "buy_price": 240.00,
+      "qty": 3.0,
+      "is_usd": true,
+      "profit_pct": -25.57,
+      "news_summary": "테슬라가 자율주행(FSD) 라이선스 다각화 합의가 지연되면서 단기 마진 하락 우려로 주가 압박을 받고 있으나 로보택시 공개 기대감은 여전히 유지되는 양상입니다.",
+      "news_url": "https://finance.yahoo.com"
+    },
+    {
+      "name": "CrowdStrike",
+      "ticker": "CRWD",
+      "current_price": 312.45,
+      "change_pct": 3.76,
+      "buy_price": 161.3556,
+      "qty": 50.0,
+      "is_usd": true,
+      "profit_pct": 93.64,
+      "news_summary": "클라우드 보안 플랫폼 수요 가속화로 분기 매출이 예상을 뛰어넘으며 강력한 실적 가이던스를 제시해 기관 매수세가 크게 유입되었습니다.",
+      "news_url": "https://finance.yahoo.com"
+    }
+  ],
+  "watched_stocks": [
+    {
+      "name": "SK하이닉스",
+      "ticker": "000660.KS",
+      "current_price": 188600.0,
+      "change_pct": 3.12,
+      "is_usd": false,
+      "news_summary": "HBM3E 12단 제품 양산 돌입 소식과 외인 매수 우위가 이어지며 수급 골든크로스를 보여주고 있습니다.",
+      "news_url": "https://finance.naver.com"
+    },
+    {
+      "name": "카카오",
+      "ticker": "035720.KS",
+      "current_price": 47250.0,
+      "change_pct": -0.42,
+      "is_usd": false,
+      "news_summary": "신규 톡채널 비즈니스 고도화 전략을 발표했으나 카카오톡 모바일 MAU 정체 논란이 빚어지며 강보합 수준의 횡보 국면입니다.",
+      "news_url": "https://finance.naver.com"
+    },
+    {
+      "name": "Alphabet",
+      "ticker": "GOOGL",
+      "current_price": 168.42,
+      "change_pct": 0.85,
+      "is_usd": true,
+      "news_summary": "구글 검색엔진에 생성형 AI 답변 도입 범위를 확장하면서 모바일 광고 매출 확대 기대가 강세를 지지하고 있습니다.",
+      "news_url": "https://finance.yahoo.com"
+    }
+  ]
+}
