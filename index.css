@@ -629,6 +629,122 @@ body {
   }
 }
 
+/* Owned Stocks Sub-Filters (전체/국장/미장) */
+.owned-filter-group {
+  display: flex;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--border-color);
+  padding: 0.2rem;
+  border-radius: 8px;
+  gap: 0.15rem;
+}
+
+.owned-filter-btn {
+  background: transparent;
+  border: none;
+  color: var(--text-secondary);
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 0.75rem;
+  padding: 0.35rem 0.75rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: var(--transition-smooth);
+}
+
+.owned-filter-btn:hover {
+  color: #fff;
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.owned-filter-btn.active {
+  background: var(--color-indigo);
+  color: #fff;
+  box-shadow: 0 2px 8px rgba(99, 102, 241, 0.3);
+}
+
+/* Owned Stocks Visual Container (Summary + Chart) */
+.owned-visual-container {
+  background: rgba(15, 22, 42, 0.35);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  padding: 1rem;
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 1rem;
+  align-items: center;
+  margin-bottom: 0.5rem;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  animation: fadeIn 0.5s ease-out;
+}
+
+.owned-visual-metrics {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.visual-metric-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.4rem 0.6rem;
+  background: rgba(255, 255, 255, 0.015);
+  border: 1px solid rgba(255, 255, 255, 0.02);
+  border-radius: 8px;
+}
+
+.visual-metric-label {
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+  font-weight: 500;
+}
+
+.visual-metric-value {
+  font-family: var(--font-header);
+  font-size: 0.88rem;
+  font-weight: 700;
+}
+
+.visual-metric-value.profit-up {
+  color: var(--color-emerald);
+}
+
+.visual-metric-value.profit-down {
+  color: var(--color-ruby);
+}
+
+.owned-chart-wrapper {
+  position: relative;
+  width: 100%;
+  max-height: 140px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#owned-assets-chart {
+  max-width: 100% !important;
+  max-height: 140px !important;
+}
+
+/* Responsive adjustment for chart panel */
+@media (max-width: 480px) {
+  .owned-visual-container {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+    padding: 0.85rem;
+  }
+  
+  .owned-chart-wrapper {
+    max-height: 120px;
+  }
+  #owned-assets-chart {
+    max-height: 120px !important;
+  }
+}
+
 /* Fx and KRW detailed profit panel */
 .fx-details-panel {
   background: rgba(99, 102, 241, 0.04);

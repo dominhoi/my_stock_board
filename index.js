@@ -1,6 +1,9 @@
 // Global Data Store
 let dashboardData = null;
 let currentTab = 'owned'; // 'owned' or 'watched'
+let currentOwnedFilter = 'all'; // 'all', 'kr', or 'us'
+let ownedChartInstance = null; // Chart.js instance for owned assets ratio
+
 
 // Initialize dashboard on page load
 document.addEventListener('DOMContentLoaded', () => {
@@ -133,21 +136,90 @@ function renderSummary() {
 function renderOwnedStocks(stocks) {
   const container = document.getElementById('owned-stock-list');
   const countBadge = document.getElementById('owned-count');
+  const visualPanel = document.getElementById('owned-visual-panel');
+  const visualMetrics = document.getElementById('owned-visual-metrics');
   
   if (!container) return;
-  countBadge.textContent = stocks.length;
 
-  if (stocks.length === 0) {
+  // 1. Filter stocks based on currentOwnedFilter
+  const filteredStocks = stocks.filter(stock => {
+    if (currentOwnedFilter === 'kr') return !stock.is_usd;
+    if (currentOwnedFilter === 'us') return stock.is_usd;
+    return true;
+  });
+
+  countBadge.textContent = filteredStocks.length;
+
+  if (filteredStocks.length === 0) {
     container.innerHTML = `
       <div class="loading-spinner-container">
         <i class="fa-solid fa-circle-exclamation" style="font-size: 2rem; color: var(--text-muted)"></i>
-        <p>보유중인 주식이 없습니다.</p>
+        <p>선택하신 시장의 보유중인 주식이 없습니다.</p>
       </div>
     `;
+    if (visualPanel) visualPanel.style.display = 'none';
+    if (ownedChartInstance) {
+      ownedChartInstance.destroy();
+      ownedChartInstance = null;
+    }
     return;
   }
 
-  container.innerHTML = stocks.map(stock => {
+  // 2. Calculate dynamic summary metrics (원화 환산 기준)
+  const krwRate = (dashboardData && dashboardData.summary) ? dashboardData.summary.krw_rate : 1350;
+  let totalBuyKrw = 0;
+  let totalEvalKrw = 0;
+
+  filteredStocks.forEach(stock => {
+    let buyKrw = 0;
+    let evalKrw = 0;
+
+    if (stock.is_usd) {
+      const purchasePriceKrw = stock.buy_price_krw || (stock.buy_price * (stock.purchase_rate || krwRate));
+      buyKrw = purchasePriceKrw * stock.qty;
+      evalKrw = stock.current_price * stock.qty * krwRate;
+    } else {
+      buyKrw = stock.buy_price * stock.qty;
+      evalKrw = stock.current_price * stock.qty;
+    }
+
+    totalBuyKrw += buyKrw;
+    totalEvalKrw += evalKrw;
+  });
+
+  let profitPct = 0;
+  if (totalBuyKrw > 0) {
+    profitPct = ((totalEvalKrw - totalBuyKrw) / totalBuyKrw) * 100;
+  }
+
+  // 3. Render summary metrics UI
+  if (visualPanel && visualMetrics) {
+    visualPanel.style.display = 'grid';
+    const isProfitUp = profitPct >= 0;
+    const profitClass = isProfitUp ? 'profit-up' : 'profit-down';
+    const profitSign = isProfitUp ? '+' : '';
+
+    visualMetrics.innerHTML = `
+      <div class="visual-metric-row">
+        <span class="visual-metric-label">총 매수금액</span>
+        <span class="visual-metric-value">${formatKRW(totalBuyKrw)}</span>
+      </div>
+      <div class="visual-metric-row">
+        <span class="visual-metric-label">총 평가금액</span>
+        <span class="visual-metric-value">${formatKRW(totalEvalKrw)}</span>
+      </div>
+      <div class="visual-metric-row">
+        <span class="visual-metric-label">선택 그룹 수익률</span>
+        <span class="visual-metric-value ${profitClass}">${profitSign}${profitPct.toFixed(2)}%</span>
+      </div>
+    `;
+  }
+
+  // 4. Render Donut Chart using Chart.js
+  renderAllocationChart(filteredStocks, totalEvalKrw, krwRate);
+
+  // 5. Render individual stock cards
+  container.innerHTML = filteredStocks.map(stock => {
     const isUp = stock.change_pct >= 0;
     const changeColorClass = isUp ? 'change-up' : 'change-down';
     const changeArrow = isUp ? '+' : '';
@@ -234,6 +306,103 @@ function renderOwnedStocks(stocks) {
     `;
   }).join('');
 }
+
+// Filter owned stocks by all, kr, us
+function changeOwnedFilter(filter) {
+  currentOwnedFilter = filter;
+  
+  // Update button active state
+  document.querySelectorAll('.owned-filter-btn').forEach(btn => {
+    btn.classList.remove('active');
+  });
+  
+  const activeBtn = document.getElementById(`owned-filter-${filter}`);
+  if (activeBtn) activeBtn.classList.add('active');
+  
+  // Re-render using stored dashboard data
+  if (dashboardData && dashboardData.owned_stocks) {
+    renderOwnedStocks(dashboardData.owned_stocks);
+  }
+}
+
+// Render asset allocation chart using Chart.js
+function renderAllocationChart(stocks, totalEvalKrw, krwRate) {
+  const canvas = document.getElementById('owned-assets-chart');
+  if (!canvas) return;
+
+  const chartData = stocks.map(stock => {
+    const evalKrw = stock.is_usd 
+      ? stock.current_price * stock.qty * krwRate 
+      : stock.current_price * stock.qty;
+    return {
+      name: stock.name,
+      value: Math.max(0, evalKrw)
+    };
+  }).filter(item => item.value > 0);
+
+  // Sort by asset valuation descending
+  chartData.sort((a, b) => b.value - a.value);
+
+  const labels = chartData.map(item => item.name);
+  const data = chartData.map(item => item.value);
+
+  // Premium, harmonious color palette
+  const backgroundColors = [
+    'rgba(99, 102, 241, 0.85)',   // Indigo
+    'rgba(139, 92, 246, 0.85)',   // Violet
+    'rgba(16, 185, 129, 0.85)',   // Emerald
+    'rgba(245, 158, 11, 0.85)',   // Amber
+    'rgba(239, 68, 68, 0.85)',    // Ruby
+    'rgba(6, 182, 212, 0.85)',    // Cyan
+    'rgba(236, 72, 153, 0.85)',   // Pink
+    'rgba(100, 116, 139, 0.85)'   // Slate
+  ];
+
+  const ctx = canvas.getContext('2d');
+  
+  if (ownedChartInstance) {
+    ownedChartInstance.destroy();
+  }
+
+  // Handle case where totalEvalKrw is 0
+  if (totalEvalKrw <= 0 || data.length === 0) {
+    return;
+  }
+
+  ownedChartInstance = new Chart(ctx, {
+    type: 'doughnut',
+    data: {
+      labels: labels,
+      datasets: [{
+        data: data,
+        backgroundColor: backgroundColors.slice(0, labels.length),
+        borderWidth: 1,
+        borderColor: 'rgba(15, 22, 42, 0.8)'
+      }]
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      plugins: {
+        legend: {
+          display: false
+        },
+        tooltip: {
+          callbacks: {
+            label: function(context) {
+              const label = context.label || '';
+              const value = context.parsed || 0;
+              const percentage = ((value / totalEvalKrw) * 100).toFixed(1);
+              return ` ${label}: ${Math.round(value).toLocaleString()}원 (${percentage}%)`;
+            }
+          }
+        }
+      },
+      cutout: '65%'
+    }
+  });
+}
+
 
 // Render Watched Stocks
 function renderWatchedStocks(stocks) {

@@ -15,6 +15,8 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   
   <link rel="stylesheet" href="index.css">
+  <!-- Chart.js for data visualization -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
   <!-- Ambient background glow elements -->
@@ -71,8 +73,24 @@
       <section class="dashboard-column" id="owned-section-wrapper">
         <div class="column-header">
           <h2><i class="fa-solid fa-wallet text-indigo"></i> 보유 종목 현황</h2>
+          <div class="owned-filter-group">
+            <button class="owned-filter-btn active" id="owned-filter-all" onclick="changeOwnedFilter('all')">전체</button>
+            <button class="owned-filter-btn" id="owned-filter-kr" onclick="changeOwnedFilter('kr')">국장</button>
+            <button class="owned-filter-btn" id="owned-filter-us" onclick="changeOwnedFilter('us')">미장</button>
+          </div>
           <span class="count-badge" id="owned-count">0</span>
         </div>
+
+        <!-- Visual Summary & Asset allocation chart panel -->
+        <div class="owned-visual-container" id="owned-visual-panel" style="display: none;">
+          <div class="owned-visual-metrics" id="owned-visual-metrics">
+            <!-- Dynamic summary metrics filled by JS -->
+          </div>
+          <div class="owned-chart-wrapper">
+            <canvas id="owned-assets-chart"></canvas>
+          </div>
+        </div>
+
         <div class="stock-list" id="owned-stock-list">
           <!-- Dynamically populated -->
           <div class="loading-spinner-container">
