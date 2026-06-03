@@ -535,7 +535,7 @@ function renderMacroInsight(macro) {
   const container = document.getElementById('macro-insights-container');
   if (!container) return;
   
-  if (!macro || !macro.summary || macro.summary.includes("수집되지 않았습니다") || macro.summary.startsWith("최근 24시간 내 중요 거시")) {
+  if (!macro || !macro.summary) {
     container.style.display = 'none';
     return;
   }
