@@ -373,12 +373,20 @@ function renderMacroInsight(macro) {
 
   container.style.display = 'block';
 
+  const macroRefHtml = macro.ref_title && macro.ref_url 
+    ? `<a href="${macro.ref_url}" target="_blank" class="macro-ref-link"><i class="fa-solid fa-arrow-up-right-from-square"></i> 참고 뉴스: ${macro.ref_title}</a>`
+    : '';
+
   const sectorPillsHtml = (macro.sector_insights || []).map(si => {
     let iconClass = 'fa-solid fa-microchip'; // Default
     if (si.sector.includes('반도체') || si.sector.includes('AI')) iconClass = 'fa-solid fa-microchip';
     else if (si.sector.includes('빅테크') || si.sector.includes('플랫폼')) iconClass = 'fa-solid fa-laptop-code';
     else if (si.sector.includes('보안') || si.sector.includes('클라우드')) iconClass = 'fa-solid fa-shield-halved';
     else if (si.sector.includes('금융') || si.sector.includes('결제')) iconClass = 'fa-solid fa-credit-card';
+
+    const sectorRefHtml = si.ref_title && si.ref_url
+      ? `<a href="${si.ref_url}" target="_blank" class="macro-ref-link sector-ref-link"><i class="fa-solid fa-arrow-up-right-from-square"></i> ${si.ref_title}</a>`
+      : '';
 
     return `
       <div class="macro-sector-pill">
@@ -387,6 +395,7 @@ function renderMacroInsight(macro) {
           <span>${si.sector}</span>
         </div>
         <div class="macro-sector-text">${si.insight}</div>
+        ${sectorRefHtml}
       </div>
     `;
   }).join('');
@@ -397,7 +406,10 @@ function renderMacroInsight(macro) {
         <h2><i class="fa-solid fa-earth-americas text-indigo"></i> 🌍 글로벌 거시경제 & 섹터 인사이트</h2>
       </div>
       <div class="macro-body">
-        <p class="macro-summary-text">${macro.summary}</p>
+        <div class="macro-summary-wrapper">
+          <p class="macro-summary-text">${macro.summary}</p>
+          ${macroRefHtml}
+        </div>
         <div class="macro-sectors-grid">
           ${sectorPillsHtml}
         </div>
