@@ -1,10 +1,10 @@
 {
-  "updated_at": "2026-06-03 00:23:55",
+  "updated_at": "2026-06-03 04:30:10",
   "summary": {
     "total_buy_combined_krw": 77450420.0,
-    "total_eval_combined_krw": 130622819.19746162,
-    "total_profit_combined_pct": 68.65346785396595,
-    "krw_rate": 1517.8800048828125
+    "total_eval_combined_krw": 130676801.88947006,
+    "total_profit_combined_pct": 68.72316753023425,
+    "krw_rate": 1518.739990234375
   },
   "owned_stocks": [
     {
@@ -17,7 +17,12 @@
       "news_url": "",
       "buy_price": 343143.0,
       "qty": 126.0,
-      "profit_pct": -18.2556543481872
+      "profit_pct": -18.2556543481872,
+      "purchase_rate": 1.0,
+      "fx_profit_krw": 0.0,
+      "stock_profit_krw": -7893018.0,
+      "total_profit_krw": -7893018.0,
+      "total_profit_krw_pct": -18.2556543481872
     },
     {
       "name": "크라우드스트라이크",
@@ -25,12 +30,17 @@
       "current_price": 768.9500122070312,
       "change_pct": -1.6901680955506746,
       "is_usd": true,
-      "news_summary": "크라우드스트라이크 실적 발표를 앞두고 소프트웨어 섹터가 4월 저점 대비 40% 랠리를 기록하며 기대감을 높였습니다. [중립]",
+      "news_summary": "소프트웨어 섹터가 강세를 보이는 가운데, 크라우드스트라이크의 실적 발표가 임박하여 투자자들의 관심이 집중되고 있습니다. [중립]",
       "news_url": "https://247wallst.com/investing/2026/06/02/software-rallies-40-from-april-lows-as-crowdstrike-earnings-loom/",
       "buy_price": 161.3556,
       "qty": 50.0,
       "profit_pct": 376.5561357690909,
-      "buy_price_krw": 217830.0
+      "buy_price_krw": 217830.0,
+      "purchase_rate": 1349.9996281504948,
+      "fx_profit_krw": 1361360.1184130865,
+      "stock_profit_krw": 46138896.583088376,
+      "total_profit_krw": 47500256.70150146,
+      "total_profit_krw_pct": 436.12226691917056
     },
     {
       "name": "Apple",
@@ -38,12 +48,17 @@
       "current_price": 315.20001220703125,
       "change_pct": 2.9022925164151507,
       "is_usd": true,
-      "news_summary": "최근 24시간 내 중요 뉴스 없음",
-      "news_url": "",
+      "news_summary": "애플이 새로운 AI 기능(Siri) 및 빌 스플리팅 서비스 도입을 통해 장기적인 서비스 성장 전략을 시험하고 있습니다. [호재]",
+      "news_url": "https://finance.yahoo.com/sectors/technology/articles/apple-ai-siri-bill-splitting-010649706.html",
       "buy_price": 150.9482,
       "qty": 28.0,
       "profit_pct": 108.81336260189339,
-      "buy_price_krw": 203780.0
+      "buy_price_krw": 203780.0,
+      "purchase_rate": 1349.9995362647583,
+      "fx_profit_krw": 713189.8982291023,
+      "stock_profit_krw": 6984762.278683981,
+      "total_profit_krw": 7697952.176913083,
+      "total_profit_krw_pct": 134.91356534555968
     },
     {
       "name": "구글",
@@ -51,12 +66,17 @@
       "current_price": 361.8500061035156,
       "change_pct": -3.857904162522087,
       "is_usd": true,
-      "news_summary": "구글이 AI 분야에 대한 자금 조달 전략을 설명하며 핵심 성장 동력에 대한 투자를 강조했습니다. [호재]",
+      "news_summary": "구글이 AI 분야에 대한 투자 자금 조달 방안을 다루며, 핵심 성장 동력인 AI 추진 전략을 강조하고 있습니다. [호재]",
       "news_url": "https://finance.yahoo.com/video/google-funding-ai-push-143912627.html",
       "buy_price": 299.4283,
       "qty": 6.0,
       "profit_pct": 20.846962729814,
-      "buy_price_krw": 404228.0
+      "buy_price_krw": 404228.0,
+      "purchase_rate": 1349.9993153619748,
+      "fx_profit_krw": 303154.4005073727,
+      "stock_profit_krw": 568814.0479083983,
+      "total_profit_krw": 871968.4484157711,
+      "total_profit_krw_pct": 35.95200598077369
     },
     {
       "name": "비자",
@@ -64,12 +84,17 @@
       "current_price": 317.32000732421875,
       "change_pct": -1.6885065761319924,
       "is_usd": true,
-      "news_summary": "비자가 AI 기반의 확장된 채권 허브를 통해 기업 가치 변화 가능성을 제시하며 새로운 서비스 영역을 강화했습니다. [호재]",
+      "news_summary": "비자가 AI 기반의 확장된 채권 허브를 통해 투자 가치를 변화시킬 수 있는 신규 서비스를 선보이며 경쟁력을 강화합니다. [호재]",
       "news_url": "https://finance.yahoo.com/markets/stocks/articles/visa-expanded-ai-powered-receivables-211737995.html",
       "buy_price": 267.9314,
       "qty": 42.0,
       "profit_pct": 18.433303197840477,
-      "buy_price_krw": 361707.0
+      "buy_price_krw": 361707.0,
+      "purchase_rate": 1349.99854440353,
+      "fx_profit_krw": 1898867.536418262,
+      "stock_profit_krw": 3150355.0262214816,
+      "total_profit_krw": 5049222.562639743,
+      "total_profit_krw_pct": 33.23673161557719
     }
   ],
   "watched_stocks": [
@@ -79,7 +104,7 @@
       "current_price": 360500.0,
       "change_pct": 3.29512893982808,
       "is_usd": false,
-      "news_summary": "삼성전자가 AI 및 연결성 분야에서 새로운 파트너십을 강화하며 미래 성장 동력을 확보했습니다. [호재]",
+      "news_summary": "삼성전자가 AI 및 연결성 부문에서 새로운 파트너십을 심화하며 미래 성장 동력을 확보했습니다. [호재]",
       "news_url": "https://finance.yahoo.com/sectors/technology/articles/samsung-electronics-deepens-ai-connectivity-230923607.html"
     },
     {
@@ -88,7 +113,7 @@
       "current_price": 2360000.0,
       "change_pct": -0.12695725772323319,
       "is_usd": false,
-      "news_summary": "SK하이닉스가 2030년까지 지속될 AI 메모리 부족에 대비해 대규모 확장을 계획하며 장기 성장 전망을 밝혔습니다. [호재]",
+      "news_summary": "SK하이닉스가 AI 메모리 확장 계획을 발표하며 2030년까지 지속될 수 있는 공급 부족에 대응하고 미래 성장을 준비합니다. [호재]",
       "news_url": "https://finance.yahoo.com/sectors/technology/articles/sk-hynix-plans-major-ai-150749988.html"
     },
     {
@@ -106,8 +131,8 @@
       "current_price": 222.82000732421875,
       "change_pct": -0.6863935976917738,
       "is_usd": true,
-      "news_summary": "엔비디아 주식의 대규모 랠리가 이제 시작될 수 있다는 분석이 제기되며 지속적인 기업 가치 상승 기대감을 높였습니다. [호재]",
-      "news_url": "https://finance.yahoo.com/sectors/technology/article/why-a-massive-nvidia-stock-rally-may-be-just-getting-started-130659463.html"
+      "news_summary": "최근 24시간 내 중요 뉴스 없음",
+      "news_url": ""
     },
     {
       "name": "테슬라",
