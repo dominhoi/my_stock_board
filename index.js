@@ -220,7 +220,7 @@ function renderOwnedStocks(stocks) {
             <span class="detail-val">${buyFormatted}${currency} ${buyKrwHtml}</span>
           </div>
           <div class="detail-item">
-            <span class="detail-label">USD 기준수익률</span>
+            <span class="detail-label">${stock.is_usd ? 'USD 기준수익률' : '원화 기준수익률'}</span>
             <span class="detail-val ${profitColorClass}">${profitArrow}${stock.profit_pct.toFixed(2)}%</span>
           </div>
         </div>
