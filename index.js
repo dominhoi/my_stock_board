@@ -163,6 +163,34 @@ function renderOwnedStocks(stocks) {
       buyKrwHtml = `<span style="font-size: 0.65rem; color: var(--text-muted)">(${Math.round(stock.buy_price_krw).toLocaleString()}원)</span>`;
     }
 
+    let fxDetailsHtml = '';
+    if (stock.is_usd && stock.purchase_rate) {
+      const isFxUp = stock.fx_profit_krw >= 0;
+      const fxColorClass = isFxUp ? 'change-up' : 'change-down';
+      const fxArrow = isFxUp ? '+' : '';
+      
+      const isStockProfitUp = stock.stock_profit_krw >= 0;
+      const stockProfitColorClass = isStockProfitUp ? 'change-up' : 'change-down';
+      const stockProfitArrow = isStockProfitUp ? '+' : '';
+
+      const isTotKrwUp = stock.total_profit_krw >= 0;
+      const totKrwColorClass = isTotKrwUp ? 'change-up profit-glowing' : 'change-down loss-glowing';
+      const totKrwArrow = isTotKrwUp ? '+' : '';
+
+      fxDetailsHtml = `
+        <div class="fx-details-panel">
+          <div class="fx-details-row">
+            <span>평균 매입환율: <strong>${stock.purchase_rate.toFixed(1)} 원</strong></span>
+            <span>원화 총손익: <strong class="${totKrwColorClass}">${totKrwArrow}${stock.total_profit_krw_pct.toFixed(2)}% (${Math.round(stock.total_profit_krw).toLocaleString()}원)</strong></span>
+          </div>
+          <div class="fx-details-row sub-row">
+            <span>└─ 환차손익: <strong class="${fxColorClass}">${fxArrow}${Math.round(stock.fx_profit_krw).toLocaleString()}원</strong></span>
+            <span>주가평가손익: <strong class="${stockProfitColorClass}">${stockProfitArrow}${Math.round(stock.stock_profit_krw).toLocaleString()}원</strong></span>
+          </div>
+        </div>
+      `;
+    }
+
     return `
       <div class="stock-card" data-name="${stock.name}" data-ticker="${stock.ticker}">
         <div class="stock-card-top">
@@ -189,10 +217,13 @@ function renderOwnedStocks(stocks) {
             <span class="detail-val">${buyFormatted}${currency} ${buyKrwHtml}</span>
           </div>
           <div class="detail-item">
-            <span class="detail-label">개별 예상수익률</span>
+            <span class="detail-label">USD 기준수익률</span>
             <span class="detail-val ${profitColorClass}">${profitArrow}${stock.profit_pct.toFixed(2)}%</span>
           </div>
         </div>
+
+        <!-- FX details for USD stocks -->
+        ${fxDetailsHtml}
 
         <!-- News snippet -->
         ${renderNewsHtml(stock)}

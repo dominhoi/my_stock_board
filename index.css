@@ -628,3 +628,31 @@ body {
     justify-content: center;
   }
 }
+
+/* Fx and KRW detailed profit panel */
+.fx-details-panel {
+  background: rgba(99, 102, 241, 0.04);
+  border: 1px solid rgba(99, 102, 241, 0.1);
+  border-radius: 10px;
+  padding: 0.6rem 0.8rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  font-size: 0.78rem;
+}
+
+.fx-details-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--text-secondary);
+}
+
+.fx-details-row.sub-row {
+  color: var(--text-muted);
+  font-size: 0.72rem;
+  border-top: 1px dashed rgba(255, 255, 255, 0.04);
+  padding-top: 0.25rem;
+  margin-top: 0.15rem;
+}
+
