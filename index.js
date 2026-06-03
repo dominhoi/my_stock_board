@@ -199,6 +199,43 @@ function renderOwnedStocks(stocks) {
     const profitClass = isProfitUp ? 'profit-up' : 'profit-down';
     const profitSign = isProfitUp ? '+' : '';
 
+    // Calculate asset allocation weights for legend
+    const legendData = filteredStocks.map(stock => {
+      const evalKrw = stock.is_usd 
+        ? stock.current_price * stock.qty * krwRate 
+        : stock.current_price * stock.qty;
+      return {
+        name: stock.name,
+        value: Math.max(0, evalKrw)
+      };
+    }).filter(item => item.value > 0);
+
+    legendData.sort((a, b) => b.value - a.value);
+
+    // Sync colors with chart palette
+    const backgroundColors = [
+      '#6366f1',   // Indigo
+      '#8b5cf6',   // Violet
+      '#10b981',   // Emerald
+      '#f59e0b',   // Amber
+      '#ef4444',   // Ruby
+      '#06b6d4',   // Cyan
+      '#ec4899',   // Pink
+      '#64748b'    // Slate
+    ];
+
+    const legendHtml = legendData.slice(0, 5).map((item, idx) => {
+      const pct = ((item.value / totalEvalKrw) * 100).toFixed(1);
+      const color = backgroundColors[idx % backgroundColors.length];
+      return `
+        <div class="legend-item">
+          <span class="legend-chip" style="background-color: ${color}"></span>
+          <span class="legend-name" title="${item.name}">${item.name}</span>
+          <span class="legend-pct">${pct}%</span>
+        </div>
+      `;
+    }).join('');
+
     visualMetrics.innerHTML = `
       <div class="visual-metric-row">
         <span class="visual-metric-label">총 매수금액</span>
@@ -211,6 +248,12 @@ function renderOwnedStocks(stocks) {
       <div class="visual-metric-row">
         <span class="visual-metric-label">선택 그룹 수익률</span>
         <span class="visual-metric-value ${profitClass}">${profitSign}${profitPct.toFixed(2)}%</span>
+      </div>
+      <div class="allocation-legend-box">
+        <div class="legend-title"><i class="fa-solid fa-chart-pie"></i> 포트폴리오 비중 Top 5</div>
+        <div class="legend-list-grid">
+          ${legendHtml}
+        </div>
       </div>
     `;
   }
@@ -546,6 +589,56 @@ function renderMacroInsight(macro) {
     ? `<a href="${macro.ref_url}" target="_blank" class="macro-ref-link"><i class="fa-solid fa-arrow-up-right-from-square"></i> 참고 뉴스: ${macro.ref_title}</a>`
     : '';
 
+  // Determine if it is a fallback state (news not collected)
+  let calendarHtml = '';
+  const isFallback = macro.summary.includes("수집되지 않았습니다") || macro.summary.startsWith("최근 24시간");
+
+  if (isFallback) {
+    calendarHtml = `
+      <div class="macro-calendar-container">
+        <div class="calendar-title"><i class="fa-regular fa-calendar-days"></i> 2026 주요 매크로 핵심 일정 캘린더</div>
+        <div class="calendar-table-wrapper">
+          <table class="calendar-table">
+            <thead>
+              <tr>
+                <th>날짜</th>
+                <th>경제 이벤트 / 발표 지표</th>
+                <th>중요도</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>2026-06-10</td>
+                <td>미국 5월 CPI (소비자물가지수) 발표</td>
+                <td><span class="badge badge-high">🚨 HIGH</span></td>
+              </tr>
+              <tr>
+                <td>2026-06-18</td>
+                <td>FOMC 금리 결정 및 성명서 발표</td>
+                <td><span class="badge badge-high">🚨 HIGH</span></td>
+              </tr>
+              <tr>
+                <td>2026-07-02</td>
+                <td>미국 6월 고용보고서 (비농업 고용 및 실업률)</td>
+                <td><span class="badge badge-medium">⚠️ MID</span></td>
+              </tr>
+              <tr>
+                <td>2026-07-15</td>
+                <td>미국 6월 CPI 발표</td>
+                <td><span class="badge badge-high">🚨 HIGH</span></td>
+              </tr>
+              <tr>
+                <td>2026-07-30</td>
+                <td>FOMC 금리 결정 및 성명서/기자회견</td>
+                <td><span class="badge badge-high">🚨 HIGH</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    `;
+  }
+
   const sectorPillsHtml = (macro.sector_insights || []).map(si => {
     let iconClass = 'fa-solid fa-microchip'; // Default
     if (si.sector.includes('반도체') || si.sector.includes('AI')) iconClass = 'fa-solid fa-microchip';
@@ -579,6 +672,7 @@ function renderMacroInsight(macro) {
           <p class="macro-summary-text">${macro.summary}</p>
           ${macroRefHtml}
         </div>
+        ${calendarHtml}
         <div class="macro-sectors-grid">
           ${sectorPillsHtml}
         </div>

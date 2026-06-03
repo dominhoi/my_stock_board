@@ -913,4 +913,129 @@ body {
   to { opacity: 1; transform: translateY(0); }
 }
 
+/* Dynamic Allocation Legend in owned summary metrics */
+.allocation-legend-box {
+  margin-top: 0.6rem;
+  border-top: 1px dashed rgba(255, 255, 255, 0.08);
+  padding-top: 0.6rem;
+}
+
+.legend-title {
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: var(--text-secondary);
+  margin-bottom: 0.4rem;
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.legend-list-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.35rem 0.6rem;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  font-size: 0.72rem;
+  gap: 0.3rem;
+  color: var(--text-secondary);
+}
+
+.legend-chip {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  display: inline-block;
+  flex-shrink: 0;
+}
+
+.legend-name {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 80px;
+}
+
+.legend-pct {
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-left: auto;
+}
+
+/* Macro Economic Calendar */
+.macro-calendar-container {
+  background: rgba(255, 255, 255, 0.01);
+  border: 1px solid rgba(255, 255, 255, 0.03);
+  border-radius: 10px;
+  padding: 0.9rem 1.1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  margin-top: 0.5rem;
+}
+
+.calendar-title {
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--color-indigo);
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.calendar-table-wrapper {
+  overflow-x: auto;
+}
+
+.calendar-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  font-size: 0.76rem;
+}
+
+.calendar-table th, .calendar-table td {
+  padding: 0.45rem 0.6rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+}
+
+.calendar-table th {
+  color: var(--text-muted);
+  font-weight: 600;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.calendar-table td {
+  color: var(--text-primary);
+}
+
+.calendar-table tr:last-child td {
+  border-bottom: none;
+}
+
+.badge {
+  font-size: 0.62rem;
+  font-weight: 800;
+  padding: 0.15rem 0.4rem;
+  border-radius: 4px;
+  letter-spacing: 0.02em;
+}
+
+.badge-high {
+  background: rgba(239, 68, 68, 0.1);
+  color: var(--color-ruby);
+  border: 1px solid rgba(239, 68, 68, 0.2);
+}
+
+.badge-medium {
+  background: rgba(245, 158, 11, 0.1);
+  color: var(--color-amber);
+  border: 1px solid rgba(245, 158, 11, 0.2);
+}
+
 
