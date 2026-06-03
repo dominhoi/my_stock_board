@@ -1,10 +1,10 @@
 {
-  "updated_at": "2026-06-02 23:55:10",
+  "updated_at": "2026-06-03 00:23:55",
   "summary": {
     "total_buy_combined_krw": 77450420.0,
-    "total_eval_combined_krw": 130460871.12143634,
-    "total_profit_combined_pct": 68.4443688251611,
-    "krw_rate": 1515.300048828125
+    "total_eval_combined_krw": 130622819.19746162,
+    "total_profit_combined_pct": 68.65346785396595,
+    "krw_rate": 1517.8800048828125
   },
   "owned_stocks": [
     {
@@ -25,7 +25,7 @@
       "current_price": 768.9500122070312,
       "change_pct": -1.6901680955506746,
       "is_usd": true,
-      "news_summary": "소프트웨어 섹터가 4월 저점 대비 40% 랠리하는 가운데, 크라우드스트라이크의 실적 발표가 임박했습니다. [중립]",
+      "news_summary": "크라우드스트라이크 실적 발표를 앞두고 소프트웨어 섹터가 4월 저점 대비 40% 랠리를 기록하며 기대감을 높였습니다. [중립]",
       "news_url": "https://247wallst.com/investing/2026/06/02/software-rallies-40-from-april-lows-as-crowdstrike-earnings-loom/",
       "buy_price": 161.3556,
       "qty": 50.0,
@@ -51,7 +51,7 @@
       "current_price": 361.8500061035156,
       "change_pct": -3.857904162522087,
       "is_usd": true,
-      "news_summary": "구글이 핵심 성장 동력인 AI 부문 추진을 위한 자금 조달 방식과 전략에 대해 심층적으로 다루는 뉴스가 보도되었습니다. [호재]",
+      "news_summary": "구글이 AI 분야에 대한 자금 조달 전략을 설명하며 핵심 성장 동력에 대한 투자를 강조했습니다. [호재]",
       "news_url": "https://finance.yahoo.com/video/google-funding-ai-push-143912627.html",
       "buy_price": 299.4283,
       "qty": 6.0,
@@ -64,7 +64,7 @@
       "current_price": 317.32000732421875,
       "change_pct": -1.6885065761319924,
       "is_usd": true,
-      "news_summary": "비자가 AI 기반의 수취 허브를 확장하며 사업 모델과 투자 매력도를 변화시킬 잠재력을 보여줍니다. [호재]",
+      "news_summary": "비자가 AI 기반의 확장된 채권 허브를 통해 기업 가치 변화 가능성을 제시하며 새로운 서비스 영역을 강화했습니다. [호재]",
       "news_url": "https://finance.yahoo.com/markets/stocks/articles/visa-expanded-ai-powered-receivables-211737995.html",
       "buy_price": 267.9314,
       "qty": 42.0,
@@ -79,7 +79,7 @@
       "current_price": 360500.0,
       "change_pct": 3.29512893982808,
       "is_usd": false,
-      "news_summary": "삼성전자가 AI 및 연결성 분야에서 새로운 파트너십을 통해 사업 역할을 강화하며 성장 동력을 확보합니다. [호재]",
+      "news_summary": "삼성전자가 AI 및 연결성 분야에서 새로운 파트너십을 강화하며 미래 성장 동력을 확보했습니다. [호재]",
       "news_url": "https://finance.yahoo.com/sectors/technology/articles/samsung-electronics-deepens-ai-connectivity-230923607.html"
     },
     {
@@ -88,7 +88,7 @@
       "current_price": 2360000.0,
       "change_pct": -0.12695725772323319,
       "is_usd": false,
-      "news_summary": "SK하이닉스가 2030년까지 AI 메모리 부족이 지속될 것으로 예상하며 대규모 AI 메모리 확장을 계획합니다. [호재]",
+      "news_summary": "SK하이닉스가 2030년까지 지속될 AI 메모리 부족에 대비해 대규모 확장을 계획하며 장기 성장 전망을 밝혔습니다. [호재]",
       "news_url": "https://finance.yahoo.com/sectors/technology/articles/sk-hynix-plans-major-ai-150749988.html"
     },
     {
@@ -106,7 +106,7 @@
       "current_price": 222.82000732421875,
       "change_pct": -0.6863935976917738,
       "is_usd": true,
-      "news_summary": "엔비디아 주식의 대규모 랠리가 이제 막 시작되었을 수 있다는 분석이 나오며 향후 성장에 대한 기대감을 높입니다. [호재]",
+      "news_summary": "엔비디아 주식의 대규모 랠리가 이제 시작될 수 있다는 분석이 제기되며 지속적인 기업 가치 상승 기대감을 높였습니다. [호재]",
       "news_url": "https://finance.yahoo.com/sectors/technology/article/why-a-massive-nvidia-stock-rally-may-be-just-getting-started-130659463.html"
     },
     {
