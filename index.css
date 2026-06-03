@@ -656,3 +656,108 @@ body {
   margin-top: 0.15rem;
 }
 
+/* Macro Insights styling */
+.macro-insights-section {
+  margin-bottom: 0.5rem;
+  animation: fadeIn 0.8s ease-out;
+}
+
+.macro-card {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-color);
+  border-radius: var(--card-radius);
+  padding: 1.5rem;
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+  position: relative;
+  overflow: hidden;
+}
+
+.macro-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(90deg, var(--color-indigo), var(--color-violet), var(--color-indigo));
+}
+
+.macro-header h2 {
+  font-family: var(--font-header);
+  font-size: 1.25rem;
+  font-weight: 700;
+  background: linear-gradient(to right, #ffffff, #c084fc);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.macro-body {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.macro-summary-text {
+  font-size: 0.88rem;
+  color: var(--text-primary);
+  line-height: 1.65;
+  background: rgba(255, 255, 255, 0.015);
+  border-left: 3px solid var(--color-indigo);
+  padding: 0.8rem 1.1rem;
+  border-radius: 0 8px 8px 0;
+}
+
+.macro-sectors-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 0.8rem;
+}
+
+.macro-sector-pill {
+  background: rgba(255, 255, 255, 0.01);
+  border: 1px solid var(--border-color);
+  border-radius: 10px;
+  padding: 0.8rem 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  transition: var(--transition-smooth);
+}
+
+.macro-sector-pill:hover {
+  border-color: rgba(139, 92, 246, 0.25);
+  background: rgba(139, 92, 246, 0.02);
+  transform: translateY(-1px);
+}
+
+.macro-sector-name {
+  font-size: 0.76rem;
+  font-weight: 800;
+  color: var(--color-violet);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.macro-sector-text {
+  font-size: 0.82rem;
+  color: var(--text-secondary);
+  line-height: 1.48;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(5px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+

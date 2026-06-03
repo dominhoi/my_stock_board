@@ -55,6 +55,9 @@ function renderDashboard() {
   // 2. Render Summary Panel
   renderSummary();
 
+  // 2.5. Render Global Macro & Sector Insights
+  renderMacroInsight(dashboardData.macro_insight);
+
   // 3. Render Owned Stock cards
   renderOwnedStocks(dashboardData.owned_stocks || []);
 
@@ -357,3 +360,48 @@ window.addEventListener('resize', () => {
     document.body.className = `tab-${currentTab}-active`;
   }
 });
+
+// Render Global Macro and Sector Insights Panel
+function renderMacroInsight(macro) {
+  const container = document.getElementById('macro-insights-container');
+  if (!container) return;
+  
+  if (!macro || !macro.summary || macro.summary.includes("수집되지 않았습니다") || macro.summary.startsWith("최근 24시간 내 중요 거시")) {
+    container.style.display = 'none';
+    return;
+  }
+
+  container.style.display = 'block';
+
+  const sectorPillsHtml = (macro.sector_insights || []).map(si => {
+    let iconClass = 'fa-solid fa-microchip'; // Default
+    if (si.sector.includes('반도체') || si.sector.includes('AI')) iconClass = 'fa-solid fa-microchip';
+    else if (si.sector.includes('빅테크') || si.sector.includes('플랫폼')) iconClass = 'fa-solid fa-laptop-code';
+    else if (si.sector.includes('보안') || si.sector.includes('클라우드')) iconClass = 'fa-solid fa-shield-halved';
+    else if (si.sector.includes('금융') || si.sector.includes('결제')) iconClass = 'fa-solid fa-credit-card';
+
+    return `
+      <div class="macro-sector-pill">
+        <div class="macro-sector-name">
+          <i class="${iconClass}"></i>
+          <span>${si.sector}</span>
+        </div>
+        <div class="macro-sector-text">${si.insight}</div>
+      </div>
+    `;
+  }).join('');
+
+  container.innerHTML = `
+    <div class="macro-card">
+      <div class="macro-header">
+        <h2><i class="fa-solid fa-earth-americas text-indigo"></i> 🌍 글로벌 거시경제 & 섹터 인사이트</h2>
+      </div>
+      <div class="macro-body">
+        <p class="macro-summary-text">${macro.summary}</p>
+        <div class="macro-sectors-grid">
+          ${sectorPillsHtml}
+        </div>
+      </div>
+    </div>
+  `;
+}
