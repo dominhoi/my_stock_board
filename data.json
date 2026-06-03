@@ -1,10 +1,10 @@
 {
-  "updated_at": "2026-06-03 04:30:10",
+  "updated_at": "2026-06-03 04:33:13",
   "summary": {
-    "total_buy_combined_krw": 77450420.0,
-    "total_eval_combined_krw": 130676801.88947006,
-    "total_profit_combined_pct": 68.72316753023425,
-    "krw_rate": 1518.739990234375
+    "total_buy_combined_krw": 76328918.0,
+    "total_eval_combined_krw": 130666127.95193027,
+    "total_profit_combined_pct": 71.18823556745593,
+    "krw_rate": 1518.5699462890625
   },
   "owned_stocks": [
     {
@@ -30,17 +30,17 @@
       "current_price": 768.9500122070312,
       "change_pct": -1.6901680955506746,
       "is_usd": true,
-      "news_summary": "소프트웨어 섹터가 강세를 보이는 가운데, 크라우드스트라이크의 실적 발표가 임박하여 투자자들의 관심이 집중되고 있습니다. [중립]",
-      "news_url": "https://247wallst.com/investing/2026/06/02/software-rallies-40-from-april-lows-as-crowdstrike-earnings-loom/",
+      "news_summary": "최근 24시간 내 중요 뉴스 없음",
+      "news_url": "",
       "buy_price": 161.3556,
       "qty": 50.0,
       "profit_pct": 376.5561357690909,
-      "buy_price_krw": 217830.0,
-      "purchase_rate": 1349.9996281504948,
-      "fx_profit_krw": 1361360.1184130865,
-      "stock_profit_krw": 46138896.583088376,
-      "total_profit_krw": 47500256.70150146,
-      "total_profit_krw_pct": 436.12226691917056
+      "buy_price_krw": 200559.0,
+      "purchase_rate": 1242.9627481165821,
+      "fx_profit_krw": 2223538.241271973,
+      "stock_profit_krw": 46133730.6955383,
+      "total_profit_krw": 48357268.93681027,
+      "total_profit_krw_pct": 482.22487085406556
     },
     {
       "name": "Apple",
@@ -48,17 +48,17 @@
       "current_price": 315.20001220703125,
       "change_pct": 2.9022925164151507,
       "is_usd": true,
-      "news_summary": "애플이 새로운 AI 기능(Siri) 및 빌 스플리팅 서비스 도입을 통해 장기적인 서비스 성장 전략을 시험하고 있습니다. [호재]",
+      "news_summary": "애플이 AI 기반 시리(Siri) 기능 확장과 새로운 결제 서비스 도입을 통해 장기적인 서비스 성장 전략을 시험대에 올립니다. [호재]",
       "news_url": "https://finance.yahoo.com/sectors/technology/articles/apple-ai-siri-bill-splitting-010649706.html",
       "buy_price": 150.9482,
       "qty": 28.0,
       "profit_pct": 108.81336260189339,
-      "buy_price_krw": 203780.0,
-      "purchase_rate": 1349.9995362647583,
-      "fx_profit_krw": 713189.8982291023,
-      "stock_profit_krw": 6984762.278683981,
-      "total_profit_krw": 7697952.176913083,
-      "total_profit_krw_pct": 134.91356534555968
+      "buy_price_krw": 187121.0,
+      "purchase_rate": 1239.6371735469518,
+      "fx_profit_krw": 1178923.199060059,
+      "stock_profit_krw": 6983980.237951153,
+      "total_profit_krw": 8162903.437011212,
+      "total_profit_krw_pct": 155.79879629092582
     },
     {
       "name": "구글",
@@ -66,17 +66,17 @@
       "current_price": 361.8500061035156,
       "change_pct": -3.857904162522087,
       "is_usd": true,
-      "news_summary": "구글이 AI 분야에 대한 투자 자금 조달 방안을 다루며, 핵심 성장 동력인 AI 추진 전략을 강조하고 있습니다. [호재]",
+      "news_summary": "구글이 인공지능(AI) 분야에 대한 투자 및 자금 조달 전략을 상세히 공개하며 AI 경쟁력 강화에 대한 강력한 의지를 밝혔습니다. [호재]",
       "news_url": "https://finance.yahoo.com/video/google-funding-ai-push-143912627.html",
       "buy_price": 299.4283,
       "qty": 6.0,
       "profit_pct": 20.846962729814,
-      "buy_price_krw": 404228.0,
-      "purchase_rate": 1349.9993153619748,
-      "fx_profit_krw": 303154.4005073727,
-      "stock_profit_krw": 568814.0479083983,
-      "total_profit_krw": 871968.4484157711,
-      "total_profit_krw_pct": 35.95200598077369
+      "buy_price_krw": 436087.0,
+      "purchase_rate": 1456.3987438729073,
+      "fx_profit_krw": 111694.90469055169,
+      "stock_profit_krw": 568750.3613093244,
+      "total_profit_krw": 680445.265999876,
+      "total_profit_krw_pct": 26.005715449741146
     },
     {
       "name": "비자",
@@ -84,17 +84,17 @@
       "current_price": 317.32000732421875,
       "change_pct": -1.6885065761319924,
       "is_usd": true,
-      "news_summary": "비자가 AI 기반의 확장된 채권 허브를 통해 투자 가치를 변화시킬 수 있는 신규 서비스를 선보이며 경쟁력을 강화합니다. [호재]",
+      "news_summary": "비자가 AI 기반의 확장된 수취 허브(Receivables Hub)를 출시하여 기업 결제 시장에서의 혁신을 주도하고 기업 가치를 높일 잠재력을 보였습니다. [호재]",
       "news_url": "https://finance.yahoo.com/markets/stocks/articles/visa-expanded-ai-powered-receivables-211737995.html",
       "buy_price": 267.9314,
       "qty": 42.0,
       "profit_pct": 18.433303197840477,
-      "buy_price_krw": 361707.0,
-      "purchase_rate": 1349.99854440353,
-      "fx_profit_krw": 1898867.536418262,
-      "stock_profit_krw": 3150355.0262214816,
-      "total_profit_krw": 5049222.562639743,
-      "total_profit_krw_pct": 33.23673161557719
+      "buy_price_krw": 362120.0,
+      "purchase_rate": 1351.539983742107,
+      "fx_profit_krw": 1879608.0117004404,
+      "stock_profit_krw": 3150002.3004084798,
+      "total_profit_krw": 5029610.312108919,
+      "total_profit_krw_pct": 33.06987365480608
     }
   ],
   "watched_stocks": [
@@ -104,7 +104,7 @@
       "current_price": 360500.0,
       "change_pct": 3.29512893982808,
       "is_usd": false,
-      "news_summary": "삼성전자가 AI 및 연결성 부문에서 새로운 파트너십을 심화하며 미래 성장 동력을 확보했습니다. [호재]",
+      "news_summary": "삼성전자가 AI 및 연결성 강화를 위한 새로운 파트너십을 통해 미래 성장 동력을 확보하며 핵심 기술 분야의 리더십을 확대합니다. [호재]",
       "news_url": "https://finance.yahoo.com/sectors/technology/articles/samsung-electronics-deepens-ai-connectivity-230923607.html"
     },
     {
@@ -113,7 +113,7 @@
       "current_price": 2360000.0,
       "change_pct": -0.12695725772323319,
       "is_usd": false,
-      "news_summary": "SK하이닉스가 AI 메모리 확장 계획을 발표하며 2030년까지 지속될 수 있는 공급 부족에 대응하고 미래 성장을 준비합니다. [호재]",
+      "news_summary": "SK하이닉스가 AI 메모리 시장의 수요 급증에 대응하여 대규모 생산 확장을 계획하며 2030년까지 이어질 수 있는 공급 부족에 대비합니다. [호재]",
       "news_url": "https://finance.yahoo.com/sectors/technology/articles/sk-hynix-plans-major-ai-150749988.html"
     },
     {
@@ -140,8 +140,8 @@
       "current_price": 423.739990234375,
       "change_pct": 1.8899659118916525,
       "is_usd": true,
-      "news_summary": "최근 24시간 내 중요 뉴스 없음",
-      "news_url": ""
+      "news_summary": "트럼프 전 대통령의 캐나다-중국 EV 딜 비판이 테슬라에 잠재적으로 유리하게 작용하여 북미 시장 내 경쟁 우위를 점할 수 있습니다. [호재]",
+      "news_url": "https://finance.yahoo.com/markets/stocks/articles/trump-criticized-canadas-china-ev-013112867.html"
     }
   ]
 }
