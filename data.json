@@ -1,10 +1,10 @@
 {
-  "updated_at": "2026-06-03 04:37:37",
+  "updated_at": "2026-06-03 04:41:11",
   "summary": {
     "total_buy_combined_krw": 76328918.0,
-    "total_eval_combined_krw": 130686847.49759255,
-    "total_profit_combined_pct": 71.21538064720446,
-    "krw_rate": 1518.9000244140625
+    "total_eval_combined_krw": 130684334.17992346,
+    "total_profit_combined_pct": 71.21208790084442,
+    "krw_rate": 1518.8599853515625
   },
   "owned_stocks": [
     {
@@ -37,10 +37,10 @@
       "profit_pct": 376.5561357690909,
       "buy_price_krw": 200559.0,
       "purchase_rate": 1242.9627481165821,
-      "fx_profit_krw": 2226201.2389672864,
-      "stock_profit_krw": 46143758.37675539,
-      "total_profit_krw": 48369959.61572267,
-      "total_profit_krw_pct": 482.35142392734974
+      "fx_profit_krw": 2225878.2126196297,
+      "stock_profit_krw": 46142542.00122314,
+      "total_profit_krw": 48368420.213842764,
+      "total_profit_krw_pct": 482.3360728149099
     },
     {
       "name": "Apple",
@@ -55,10 +55,10 @@
       "profit_pct": 108.81336260189339,
       "buy_price_krw": 187121.0,
       "purchase_rate": 1239.6371735469518,
-      "fx_profit_krw": 1180318.2906272467,
-      "stock_profit_krw": 6985498.283996785,
-      "total_profit_krw": 8165816.574624032,
-      "total_profit_krw_pct": 155.854397014003
+      "fx_profit_krw": 1180149.063543653,
+      "stock_profit_krw": 6985314.142316693,
+      "total_profit_krw": 8165463.205860347,
+      "total_profit_krw_pct": 155.84765254759424
     },
     {
       "name": "구글",
@@ -73,10 +73,10 @@
       "profit_pct": 20.846962729814,
       "buy_price_krw": 436087.0,
       "purchase_rate": 1456.3987438729073,
-      "fx_profit_krw": 112287.91308156727,
-      "stock_profit_krw": 568873.9855475841,
-      "total_profit_krw": 681161.8986291513,
-      "total_profit_krw_pct": 26.03310419821241
+      "fx_profit_krw": 112215.9801110595,
+      "stock_profit_krw": 568858.9897080319,
+      "total_profit_krw": 681074.9698190913,
+      "total_profit_krw_pct": 26.029781894403765
     },
     {
       "name": "비자",
@@ -91,10 +91,10 @@
       "profit_pct": 18.433303197840477,
       "buy_price_krw": 362120.0,
       "purchase_rate": 1351.539983742107,
-      "fx_profit_krw": 1883322.4200543466,
-      "stock_profit_krw": 3150686.9885623613,
-      "total_profit_krw": 5034009.408616707,
-      "total_profit_krw_pct": 33.098797876898914
+      "fx_profit_krw": 1882871.8557273918,
+      "stock_profit_krw": 3150603.934673873,
+      "total_profit_krw": 5033475.790401265,
+      "total_profit_krw_pct": 33.095289317414284
     }
   ],
   "watched_stocks": [
