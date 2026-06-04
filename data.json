@@ -1,126 +1,126 @@
 {
-  "updated_at": "2026-06-03 04:41:11",
+  "updated_at": "2026-06-04 00:26:14",
   "summary": {
     "total_buy_combined_krw": 76328918.0,
-    "total_eval_combined_krw": 130684334.17992346,
-    "total_profit_combined_pct": 71.21208790084442,
-    "krw_rate": 1518.8599853515625
+    "total_eval_combined_krw": 126074723.29080495,
+    "total_profit_combined_pct": 65.17294702226089,
+    "krw_rate": 1527.3699951171875
   },
   "owned_stocks": [
     {
       "name": "네이버",
       "ticker": "035420.KS",
-      "current_price": 280500.0,
-      "change_pct": 3.314917127071823,
+      "current_price": 257000.0,
+      "change_pct": -8.377896613190732,
       "is_usd": false,
       "news_summary": "최근 24시간 내 중요 뉴스 없음",
       "news_url": "",
       "buy_price": 343143.0,
       "qty": 126.0,
-      "profit_pct": -18.2556543481872,
+      "profit_pct": -25.104111114025347,
       "purchase_rate": 1.0,
       "fx_profit_krw": 0.0,
-      "stock_profit_krw": -7893018.0,
-      "total_profit_krw": -7893018.0,
-      "total_profit_krw_pct": -18.2556543481872
+      "stock_profit_krw": -10854018.0,
+      "total_profit_krw": -10854018.0,
+      "total_profit_krw_pct": -25.104111114025347
     },
     {
       "name": "크라우드스트라이크",
       "ticker": "CRWD",
-      "current_price": 768.9500122070312,
-      "change_pct": -1.6901680955506746,
+      "current_price": 747.6099853515625,
+      "change_pct": -2.7752148577199485,
       "is_usd": true,
-      "news_summary": "최근 24시간 내 중요 뉴스 없음",
-      "news_url": "",
+      "news_summary": "크라우드스트라이크가 1분기 실적은 예상치를 상회했으나, 보수적인 가이던스 제시로 시간 외 거래에서 주가가 13% 하락했습니다. [악재]",
+      "news_url": "https://stocktwits.com/news-articles/markets/equity/crowdstrike-beats-q1-estimates-earnings-revenue-stock-sinks-after-hours-guidance/cZ0jm4JReUF",
       "buy_price": 161.3556,
       "qty": 50.0,
-      "profit_pct": 376.5561357690909,
+      "profit_pct": 363.3306717285068,
       "buy_price_krw": 200559.0,
       "purchase_rate": 1242.9627481165821,
-      "fx_profit_krw": 2225878.2126196297,
-      "stock_profit_krw": 46142542.00122314,
-      "total_profit_krw": 48368420.213842764,
-      "total_profit_krw_pct": 482.3360728149099
+      "fx_profit_krw": 2294535.099206543,
+      "stock_profit_krw": 44771367.88459229,
+      "total_profit_krw": 47065902.98379883,
+      "total_profit_krw_pct": 469.3472044016856
     },
     {
       "name": "Apple",
       "ticker": "AAPL",
-      "current_price": 315.20001220703125,
-      "change_pct": 2.9022925164151507,
+      "current_price": 310.260009765625,
+      "change_pct": -1.5672557850174456,
       "is_usd": true,
-      "news_summary": "최근 24시간 내 중요 뉴스 없음",
-      "news_url": "",
+      "news_summary": "팀 쿡 애플 CEO가 사임 이유를 설명하며 회사의 장기적인 리더십 전환에 대한 관심이 커지고 있습니다. [중립]",
+      "news_url": "https://finance.yahoo.com/video/apple-ceo-tim-cook-explains-195727340.html",
       "buy_price": 150.9482,
       "qty": 28.0,
-      "profit_pct": 108.81336260189339,
+      "profit_pct": 105.54071513646733,
       "buy_price_krw": 187121.0,
       "purchase_rate": 1239.6371735469518,
-      "fx_profit_krw": 1180149.063543653,
-      "stock_profit_krw": 6985314.142316693,
-      "total_profit_krw": 8165463.205860347,
-      "total_profit_krw_pct": 155.84765254759424
+      "fx_profit_krw": 1216117.0419145515,
+      "stock_profit_krw": 6813186.186907322,
+      "total_profit_krw": 8029303.228821874,
+      "total_profit_krw_pct": 153.24887618213947
     },
     {
       "name": "구글",
       "ticker": "GOOGL",
-      "current_price": 361.8500061035156,
-      "change_pct": -3.857904162522087,
+      "current_price": 358.989990234375,
+      "change_pct": -0.7903854540900987,
       "is_usd": true,
-      "news_summary": "최근 24시간 내 중요 뉴스 없음",
-      "news_url": "",
+      "news_summary": "알파벳의 800억 달러 규모 주식 매각은 AI 경쟁 심화에 따른 막대한 투자 비용을 반영하며 수익성에 대한 우려를 제기합니다. [악재]",
+      "news_url": "https://finance.yahoo.com/markets/article/alphabets-80-billion-stock-sale-shows-how-expensive-ai-is-getting-chart-of-the-day-140153236.html",
       "buy_price": 299.4283,
       "qty": 6.0,
-      "profit_pct": 20.846962729814,
+      "profit_pct": 19.89180389240931,
       "buy_price_krw": 436087.0,
       "purchase_rate": 1456.3987438729073,
-      "fx_profit_krw": 112215.9801110595,
-      "stock_profit_krw": 568858.9897080319,
-      "total_profit_krw": 681074.9698190913,
-      "total_profit_krw_pct": 26.029781894403765
+      "fx_profit_krw": 127504.80665368633,
+      "stock_profit_krw": 545836.4311346929,
+      "total_profit_krw": 673341.2377883792,
+      "total_profit_krw_pct": 25.734208915055145
     },
     {
       "name": "비자",
       "ticker": "V",
-      "current_price": 317.32000732421875,
-      "change_pct": -1.6885065761319924,
+      "current_price": 312.3999938964844,
+      "change_pct": -1.550487237966601,
       "is_usd": true,
-      "news_summary": "최근 24시간 내 중요 뉴스 없음",
-      "news_url": "",
+      "news_summary": "비자가 스트라이프, 마스터카드와 새로운 스테이블코인 플랫폼 구축을 논의하며 디지털 결제 혁신을 주도할 가능성을 높이고 있습니다. [호재]",
+      "news_url": "http://videos.coindesk.com/previews/tpFB7QI5",
       "buy_price": 267.9314,
       "qty": 42.0,
-      "profit_pct": 18.433303197840477,
+      "profit_pct": 16.597007255022884,
       "buy_price_krw": 362120.0,
       "purchase_rate": 1351.539983742107,
-      "fx_profit_krw": 1882871.8557273918,
-      "stock_profit_krw": 3150603.934673873,
-      "total_profit_krw": 5033475.790401265,
-      "total_profit_krw_pct": 33.095289317414284
+      "fx_profit_krw": 1978636.0066091316,
+      "stock_profit_krw": 2852639.8337867446,
+      "total_profit_krw": 4831275.840395875,
+      "total_profit_krw_pct": 31.765817174495403
     }
   ],
   "watched_stocks": [
     {
       "name": "삼성전자",
       "ticker": "005930.KS",
-      "current_price": 360500.0,
-      "change_pct": 3.29512893982808,
+      "current_price": 350500.0,
+      "change_pct": -2.7739251040221915,
       "is_usd": false,
-      "news_summary": "최근 24시간 내 중요 뉴스 없음",
-      "news_url": ""
+      "news_summary": "삼성전자가 미국 본사를 뉴저지에서 텍사스로 이전하며 운영 효율성 및 전략적 중요도를 재조정했습니다. [중립]",
+      "news_url": "https://qz.com/samsung-us-headquarters-new-jersey-texas-plano-060326"
     },
     {
       "name": "SK하이닉스",
       "ticker": "000660.KS",
-      "current_price": 2360000.0,
-      "change_pct": -0.12695725772323319,
+      "current_price": 2276000.0,
+      "change_pct": -3.5593220338983054,
       "is_usd": false,
-      "news_summary": "최근 24시간 내 중요 뉴스 없음",
-      "news_url": ""
+      "news_summary": "SK하이닉스가 엔비디아와의 AI 투자 및 협력을 통해 성장 전망을 재편하며 HBM 등 AI 반도체 시장에서의 입지를 강화하고 있습니다. [호재]",
+      "news_url": "https://finance.yahoo.com/markets/stocks/articles/sk-hynix-trillion-won-ai-231437222.html"
     },
     {
       "name": "카카오",
       "ticker": "035720.KS",
-      "current_price": 42550.0,
-      "change_pct": -0.351288056206089,
+      "current_price": 42100.0,
+      "change_pct": -1.0575793184488838,
       "is_usd": false,
       "news_summary": "최근 24시간 내 중요 뉴스 없음",
       "news_url": ""
@@ -128,41 +128,25 @@
     {
       "name": "NVIDIA",
       "ticker": "NVDA",
-      "current_price": 222.82000732421875,
-      "change_pct": -0.6863935976917738,
+      "current_price": 214.75,
+      "change_pct": -3.621757472399243,
       "is_usd": true,
-      "news_summary": "최근 24시간 내 중요 뉴스 없음",
-      "news_url": ""
+      "news_summary": "엔비디아 CEO가 마벨을 '다음 조(兆) 달러 기업'으로 지목하며 AI 칩 생태계 내 주요 파트너사에 대한 신뢰와 성장 잠재력을 강조했습니다. [호재]",
+      "news_url": "https://finance.yahoo.com/markets/stocks/article/marvell-stock-extends-gains-after-a-32-pop-as-nvidia-ceo-calls-chipmaker-the-next-trillion-dollar-company-130932583.html"
     },
     {
       "name": "테슬라",
       "ticker": "TSLA",
-      "current_price": 423.739990234375,
-      "change_pct": 1.8899659118916525,
+      "current_price": 423.70001220703125,
+      "change_pct": -0.009436870007258954,
       "is_usd": true,
-      "news_summary": "최근 24시간 내 중요 뉴스 없음",
-      "news_url": ""
+      "news_summary": "중고 사이버트럭의 수요는 높지만, 이것이 테슬라 주가에 큰 영향을 미치지 않을 것이라는 분석이 나왔습니다. [중립]",
+      "news_url": "https://finance.yahoo.com/video/used-cybertrucks-demand-wont-move-200343181.html"
     }
   ],
   "macro_insight": {
-    "summary": "최근 24시간 내 중요 거시 경제 뉴스가 수집되지 않았습니다.",
-    "sector_insights": [
-      {
-        "sector": "반도체/AI",
-        "insight": "뉴스 데이터 수집 전 또는 분석 스킵 상태입니다."
-      },
-      {
-        "sector": "빅테크/플랫폼",
-        "insight": "뉴스 데이터 수집 전 또는 분석 스킵 상태입니다."
-      },
-      {
-        "sector": "클라우드/보안",
-        "insight": "뉴스 데이터 수집 전 또는 분석 스킵 상태입니다."
-      },
-      {
-        "sector": "금융/결제",
-        "insight": "뉴스 데이터 수집 전 또는 분석 스킵 상태입니다."
-      }
-    ]
+    "summary": "최근 시장은 AI 기술 경쟁 심화에 따른 대규모 투자와 메모리 반도체 시장의 호황이라는 긍정적 흐름을 보이고 있습니다. 그러나 AI 시대의 높은 비용 부담과 일부 기업들의 보수적 가이던스, 그리고 중동 지역의 지정학적 긴장 고조는 시장 전반의 변동성을 키우는 요인으로 작용하고 있습니다. 투자자들은 기술 혁신의 기회와 잠재적 위험 요소를 동시에 고려해야 할 시점입니다.",
+    "ref_title": "Dow Logs Worst Day Since March, S&P 500 And Nasdaq Snap Win Streak After US-Iran Exchange Fire — SNDK, TSLA, GOOGL, META, IREN In Focus",
+    "ref_url": "https://stocktwits.com/news-articles/markets/equity/dow-logs-worst-day-since-march-s-and-p-500-and-nasdaq-snap-win-streak-after-us-iran-exchange-fire-sndk-tsla-googl-meta-iren-in-focus/cZ0jVb2ReUp"
   }
 }
