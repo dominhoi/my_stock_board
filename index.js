@@ -589,7 +589,119 @@ function renderMacroInsight(macro) {
     ? `<a href="${macro.ref_url}" target="_blank" class="macro-ref-link"><i class="fa-solid fa-arrow-up-right-from-square"></i> 참고 뉴스: ${macro.ref_title}</a>`
     : '';
 
-  // Icon mapping for indicators
+  const indicators = dashboardData ? (dashboardData.macro_indicators || []) : [];
+  
+  // 1. Calculate Money Flow & Risk Mode
+  let moneyFlowStatusHtml = '';
+  let assetGroupsHtml = '';
+  
+  if (indicators.length > 0) {
+    const indMap = {};
+    indicators.forEach(ind => {
+      indMap[ind.ticker] = ind;
+    });
+
+    // Helpers to get avg change_pct for a group of tickers
+    const getAvgChange = (tickers) => {
+      let sum = 0;
+      let count = 0;
+      tickers.forEach(t => {
+        if (indMap[t] && !isNaN(indMap[t].change_pct)) {
+          sum += indMap[t].change_pct;
+          count++;
+        }
+      });
+      return count > 0 ? sum / count : 0;
+    };
+
+    // Calculate asset groups average change_pct
+    const stockAvg = getAvgChange(["^IXIC", "^KS11"]);
+    const cryptoAvg = getAvgChange(["BTC-USD", "ETH-USD"]);
+    const bondAvg = getAvgChange(["TLT"]); // long term bond price
+    const fxAvg = getAvgChange(["DX-Y.NYB", "USDKRW=X"]); // dollar strength
+    const cmdAvg = getAvgChange(["GC=F", "CL=F", "HG=F"]); // gold, oil, copper
+    const reAvg = getAvgChange(["VNQ"]); // real estate REITs
+
+    // Classify Risk-On (Stock, Crypto, REITs) vs Risk-Off (Bond price, Dollar, Gold)
+    const riskOnAvg = (stockAvg + cryptoAvg + reAvg) / 3;
+    const riskOffAvg = (bondAvg + fxAvg + (indMap["GC=F"] ? indMap["GC=F"].change_pct : 0)) / 3;
+
+    // Define Money Flow State
+    let flowState = 'neutral'; // 'riskon', 'riskoff', or 'neutral'
+    let stateTitle = '💤 글로벌 자금 기류: 중립 (Neutral) 관망 국면';
+    let stateDesc = '자산 시장 전반이 뚜렷한 방향성 없이 관망세를 나타내고 있습니다.';
+    let stateClass = 'flow-neutral';
+
+    if (riskOnAvg > 0.4 && riskOffAvg < 0.2) {
+      flowState = 'riskon';
+      stateTitle = '🟢 글로벌 자금 기류: 위험자산 선호 (Risk-On) 장세';
+      stateDesc = '자금이 주식, 암호화폐, 부동산 리츠 등 수익성 자산으로 유입 중입니다.';
+      stateClass = 'flow-riskon';
+    } else if (riskOffAvg > 0.3 && riskOnAvg < -0.4) {
+      flowState = 'riskoff';
+      stateTitle = '🚨 글로벌 자금 기류: 안전자산 피난 (Risk-Off) 장세';
+      stateDesc = '위험자산 회피 성향이 강해지며 자금이 달러, 채권, 안전자산으로 피난하고 있습니다.';
+      stateClass = 'flow-riskoff';
+    }
+
+    moneyFlowStatusHtml = `
+      <div class="money-flow-status-card ${stateClass}">
+        <div class="flow-status-title">${stateTitle}</div>
+        <div class="flow-status-desc">${stateDesc}</div>
+      </div>
+    `;
+
+    // Helper to get signal light class and label
+    const getSignalLight = (avg) => {
+      if (avg >= 2.0) return { class: 'sig-fire', label: '🔥 강한 쏠림', color: '#ff4b4b' };
+      if (avg >= 0.2) return { class: 'sig-inflow', label: '🟢 자금 유입', color: '#10b981' };
+      if (avg > -0.2 && avg < 0.2) return { class: 'sig-neutral', label: '⚪ 중립/관망', color: '#64748b' };
+      if (avg <= -2.0) return { class: 'sig-outflow-heavy', label: '🔴 강한 이탈', color: '#ef4444' };
+      return { class: 'sig-outflow-light', label: '🟡 약한 이탈', color: '#f59e0b' };
+    };
+
+    const groups = [
+      { name: '주식 시장', avg: stockAvg, desc: '나스닥, 코스피 지수 평균', icon: 'fa-solid fa-chart-line' },
+      { name: '암호화폐', avg: cryptoAvg, desc: '비트코인, 이더리움 평균', icon: 'fa-brands fa-bitcoin' },
+      { name: '리츠/부동산', avg: reAvg, desc: '미국 리츠부동산(VNQ)', icon: 'fa-solid fa-building-columns' },
+      { name: '채권/국채', avg: bondAvg, desc: '미국 20년물 국채(TLT)', icon: 'fa-solid fa-vault' },
+      { name: '달러/외환', avg: fxAvg, desc: '달러인덱스, 환율 평균', icon: 'fa-solid fa-money-bill-transfer' },
+      { name: '원자재/실물', avg: cmdAvg, desc: '금, 원유, 구리 평균', icon: 'fa-solid fa-gem' }
+    ];
+
+    const groupCardsHtml = groups.map(g => {
+      const sig = getSignalLight(g.avg);
+      const sign = g.avg >= 0 ? '+' : '';
+      return `
+        <div class="asset-group-card">
+          <div class="group-left">
+            <span class="group-signal-dot" style="background-color: ${sig.color}"></span>
+            <div class="group-icon-name">
+              <i class="${g.icon}"></i>
+              <strong>${g.name}</strong>
+            </div>
+            <span class="group-desc">${g.desc}</span>
+          </div>
+          <div class="group-right">
+            <span class="group-avg-val">${sign}${g.avg.toFixed(2)}%</span>
+            <span class="group-badge" style="border-color: ${sig.color}; color: ${sig.color}">${sig.label}</span>
+          </div>
+        </div>
+      `;
+    }).join('');
+
+    assetGroupsHtml = `
+      <div class="asset-groups-wrapper">
+        <div class="indicators-title"><i class="fa-solid fa-traffic-light"></i> 6대 자산군별 자금 강도 신호등</div>
+        <div class="asset-groups-grid">
+          ${groupCardsHtml}
+        </div>
+      </div>
+    `;
+  }
+
+  // Render Mini Indicators Dashboard Grid
+  let indicatorsHtml = '';
   const indicatorIcons = {
     "^TNX": "fa-solid fa-percent",
     "DX-Y.NYB": "fa-solid fa-dollar-sign",
@@ -606,9 +718,6 @@ function renderMacroInsight(macro) {
     "^KS11": "fa-solid fa-chart-simple"
   };
 
-  // Render Mini Indicators Dashboard Grid
-  let indicatorsHtml = '';
-  const indicators = dashboardData ? (dashboardData.macro_indicators || []) : [];
   if (indicators.length > 0) {
     const cardsHtml = indicators.map(ind => {
       const isUp = ind.change_pct >= 0;
@@ -635,8 +744,8 @@ function renderMacroInsight(macro) {
     }).join('');
 
     indicatorsHtml = `
-      <div class="macro-indicators-wrapper">
-        <div class="indicators-title"><i class="fa-solid fa-gauge-high"></i> 실시간 글로벌 13대 매크로 지표</div>
+      <div class="macro-indicators-wrapper" style="margin-top: 1.5rem;">
+        <div class="indicators-title"><i class="fa-solid fa-gauge-high"></i> 실시간 글로벌 13대 매크로 지표 세부 현황</div>
         <div class="indicators-grid-container">
           ${cardsHtml}
         </div>
@@ -720,19 +829,30 @@ function renderMacroInsight(macro) {
   container.innerHTML = `
     <div class="macro-card">
       <div class="macro-header">
-        <h2><i class="fa-solid fa-earth-americas text-indigo"></i> 🌍 글로벌 거시경제 & 섹터 인사이트</h2>
+        <h2><i class="fa-solid fa-earth-americas text-indigo"></i> 글로벌 거시경제 & 섹터 인사이트</h2>
       </div>
       <div class="macro-body">
-        <!-- 실시간 지표 Grid 주입 -->
-        ${indicatorsHtml}
+        <!-- 1. 자금 기류 대형 판정 바 -->
+        ${moneyFlowStatusHtml}
         
+        <!-- 2. 6대 자산군 신호등 -->
+        ${assetGroupsHtml}
+        
+        <!-- 3. CIO 오늘의 총평 줄글 요약 -->
         <div class="macro-summary-wrapper" style="margin-top: 1.5rem;">
           <div class="summary-subtitle" style="font-family: var(--font-header); font-size: 0.95rem; font-weight: 600; color: var(--text-secondary); margin-bottom: 0.5rem;"><i class="fa-solid fa-quote-left"></i> CIO 오늘의 총평</div>
           <p class="macro-summary-text">${macro.summary}</p>
           ${macroRefHtml}
         </div>
+        
+        <!-- 4. 매크로 캘린더 -->
         ${calendarHtml}
-        <div class="macro-sectors-grid">
+        
+        <!-- 5. 13대 세부 지표 Grid -->
+        ${indicatorsHtml}
+        
+        <!-- 6. 섹터 인사이트 -->
+        <div class="macro-sectors-grid" style="margin-top: 1.5rem;">
           ${sectorPillsHtml}
         </div>
       </div>
