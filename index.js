@@ -61,6 +61,9 @@ function renderDashboard() {
   // 2.5. Render Global Macro & Sector Insights
   renderMacroInsight(dashboardData.macro_insight);
 
+  // 2.6. Render AI Advisor (Arthur, Oliver, Leo) Suggestions
+  renderAgentAdvisor(dashboardData.agent_suggestions);
+
   // 3. Render Owned Stock cards
   renderOwnedStocks(dashboardData.owned_stocks || []);
 
@@ -860,4 +863,101 @@ function renderMacroInsight(macro) {
       </div>
     </div>
   `;
+}
+
+let currentAgentPersona = 'INTJ'; // Default to INTJ (Arthur)
+
+function renderAgentAdvisor(suggestions) {
+  const container = document.getElementById('agent-advisor-container');
+  if (!container) return;
+
+  if (!suggestions || Object.keys(suggestions).length === 0) {
+    container.style.display = 'none';
+    return;
+  }
+
+  container.style.display = 'block';
+
+  // Helper to construct inner HTML for the opinion body
+  const updateAgentBodyHtml = (persona) => {
+    const data = suggestions[persona];
+    if (!data) return '';
+    return `
+      <div class="agent-profile">
+        <div class="agent-avatar-circle avatar-${persona}">
+          <i class="${data.avatar || 'fa-solid fa-user-tie'}"></i>
+        </div>
+        <div class="agent-name-tag">${data.name}</div>
+        <span class="agent-mbti-pill mbti-${persona}">${data.mbti}</span>
+      </div>
+      <div class="agent-opinion-bubble">
+        <div class="agent-opinion-title title-${persona}">✨ ${data.title} (${data.style})</div>
+        <div class="agent-opinion-desc">${data.comment}</div>
+      </div>
+    `;
+  };
+
+  // Generate selector tabs dynamically
+  const personas = ['INTJ', 'ISTJ', 'ENTP'];
+  const tabsHtml = personas.map(p => {
+    const data = suggestions[p];
+    if (!data) return '';
+    const activeClass = p === currentAgentPersona ? 'active' : '';
+    const iconMap = {
+      'INTJ': 'fa-solid fa-brain',
+      'ISTJ': 'fa-solid fa-shield-halved',
+      'ENTP': 'fa-solid fa-rocket'
+    };
+    return `
+      <button class="agent-tab-btn ${activeClass}" data-persona="${p}">
+        <i class="${iconMap[p]}"></i> ${data.name} (${p})
+      </button>
+    `;
+  }).join('');
+
+  container.innerHTML = `
+    <div class="agent-card">
+      <div class="agent-card-header">
+        <div class="agent-card-title">
+          <i class="fa-solid fa-robot"></i> AI 자산관리 어드바이저 브리핑
+        </div>
+        <div class="agent-selector-tabs">
+          ${tabsHtml}
+        </div>
+      </div>
+      <div class="agent-card-body" id="agent-card-body-content">
+        ${updateAgentBodyHtml(currentAgentPersona)}
+      </div>
+    </div>
+  `;
+
+  // Attach event listeners for tab switching with transitions
+  const tabs = container.querySelectorAll('.agent-tab-btn');
+  tabs.forEach(tab => {
+    tab.addEventListener('click', (e) => {
+      const btn = e.currentTarget;
+      const selectedPersona = btn.getAttribute('data-persona');
+      if (selectedPersona === currentAgentPersona) return;
+
+      currentAgentPersona = selectedPersona;
+
+      // Update active state in tabs
+      tabs.forEach(t => t.classList.remove('active'));
+      btn.classList.add('active');
+
+      // Trigger smooth fade out/in animation
+      const bodyContent = document.getElementById('agent-card-body-content');
+      if (bodyContent) {
+        bodyContent.classList.add('fade-out');
+        setTimeout(() => {
+          bodyContent.innerHTML = updateAgentBodyHtml(currentAgentPersona);
+          bodyContent.classList.remove('fade-out');
+          bodyContent.classList.add('fade-in');
+          setTimeout(() => {
+            bodyContent.classList.remove('fade-in');
+          }, 300);
+        }, 150);
+      }
+    });
+  });
 }
