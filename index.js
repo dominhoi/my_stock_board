@@ -589,6 +589,61 @@ function renderMacroInsight(macro) {
     ? `<a href="${macro.ref_url}" target="_blank" class="macro-ref-link"><i class="fa-solid fa-arrow-up-right-from-square"></i> 참고 뉴스: ${macro.ref_title}</a>`
     : '';
 
+  // Icon mapping for indicators
+  const indicatorIcons = {
+    "^TNX": "fa-solid fa-percent",
+    "DX-Y.NYB": "fa-solid fa-dollar-sign",
+    "^VIX": "fa-solid fa-triangle-exclamation",
+    "USDKRW=X": "fa-solid fa-money-bill-transfer",
+    "GC=F": "fa-solid fa-gem",
+    "CL=F": "fa-solid fa-droplet",
+    "HG=F": "fa-solid fa-industry",
+    "BTC-USD": "fa-brands fa-bitcoin",
+    "ETH-USD": "fa-brands fa-ethereum",
+    "VNQ": "fa-solid fa-building-columns",
+    "TLT": "fa-solid fa-vault",
+    "^IXIC": "fa-solid fa-chart-line",
+    "^KS11": "fa-solid fa-chart-simple"
+  };
+
+  // Render Mini Indicators Dashboard Grid
+  let indicatorsHtml = '';
+  const indicators = dashboardData ? (dashboardData.macro_indicators || []) : [];
+  if (indicators.length > 0) {
+    const cardsHtml = indicators.map(ind => {
+      const isUp = ind.change_pct >= 0;
+      const changeClass = isUp ? 'change-up' : 'change-down';
+      const arrow = isUp ? '🔺' : '🔻';
+      const icon = indicatorIcons[ind.ticker] || 'fa-solid fa-chart-pie';
+      
+      let valFormatted = ind.value.toLocaleString();
+      if (ind.ticker === "^TNX") valFormatted = `${ind.value.toFixed(3)}%`;
+      else if (ind.ticker === "USDKRW=X" || ind.ticker === "DX-Y.NYB" || ind.ticker === "VNQ" || ind.ticker === "TLT") valFormatted = ind.value.toFixed(2);
+      
+      return `
+        <div class="indicator-mini-card">
+          <div class="ind-icon-name">
+            <i class="${icon}"></i>
+            <span class="ind-name" title="${ind.name}">${ind.name}</span>
+          </div>
+          <div class="ind-val-change">
+            <span class="ind-value">${valFormatted}</span>
+            <span class="ind-change ${changeClass}">${arrow} ${ind.change_pct >= 0 ? '+' : ''}${ind.change_pct.toFixed(2)}%</span>
+          </div>
+        </div>
+      `;
+    }).join('');
+
+    indicatorsHtml = `
+      <div class="macro-indicators-wrapper">
+        <div class="indicators-title"><i class="fa-solid fa-gauge-high"></i> 실시간 글로벌 13대 매크로 지표</div>
+        <div class="indicators-grid-container">
+          ${cardsHtml}
+        </div>
+      </div>
+    `;
+  }
+
   // Determine if it is a fallback state (news not collected)
   let calendarHtml = '';
   const isFallback = macro.summary.includes("수집되지 않았습니다") || macro.summary.startsWith("최근 24시간");
@@ -668,7 +723,11 @@ function renderMacroInsight(macro) {
         <h2><i class="fa-solid fa-earth-americas text-indigo"></i> 🌍 글로벌 거시경제 & 섹터 인사이트</h2>
       </div>
       <div class="macro-body">
-        <div class="macro-summary-wrapper">
+        <!-- 실시간 지표 Grid 주입 -->
+        ${indicatorsHtml}
+        
+        <div class="macro-summary-wrapper" style="margin-top: 1.5rem;">
+          <div class="summary-subtitle" style="font-family: var(--font-header); font-size: 0.95rem; font-weight: 600; color: var(--text-secondary); margin-bottom: 0.5rem;"><i class="fa-solid fa-quote-left"></i> CIO 오늘의 총평</div>
           <p class="macro-summary-text">${macro.summary}</p>
           ${macroRefHtml}
         </div>
