@@ -615,7 +615,8 @@ function renderMacroInsight(macro) {
     };
 
     // Calculate asset groups average change_pct
-    const stockAvg = getAvgChange(["^IXIC", "^KS11"]);
+    const usStockAvg = getAvgChange(["^IXIC"]);
+    const krStockAvg = getAvgChange(["^KS11"]);
     const cryptoAvg = getAvgChange(["BTC-USD", "ETH-USD"]);
     const bondAvg = getAvgChange(["TLT"]); // long term bond price
     const fxAvg = getAvgChange(["DX-Y.NYB", "USDKRW=X"]); // dollar strength
@@ -623,7 +624,7 @@ function renderMacroInsight(macro) {
     const reAvg = getAvgChange(["VNQ"]); // real estate REITs
 
     // Classify Risk-On (Stock, Crypto, REITs) vs Risk-Off (Bond price, Dollar, Gold)
-    const riskOnAvg = (stockAvg + cryptoAvg + reAvg) / 3;
+    const riskOnAvg = (usStockAvg + krStockAvg + cryptoAvg + reAvg) / 4;
     const riskOffAvg = (bondAvg + fxAvg + (indMap["GC=F"] ? indMap["GC=F"].change_pct : 0)) / 3;
 
     // Define Money Flow State
@@ -661,7 +662,8 @@ function renderMacroInsight(macro) {
     };
 
     const groups = [
-      { name: '주식 시장', avg: stockAvg, desc: '나스닥, 코스피 지수 평균', icon: 'fa-solid fa-chart-line' },
+      { name: '미국 주식시장', avg: usStockAvg, desc: '나스닥 종합지수 (^IXIC)', icon: 'fa-solid fa-chart-line' },
+      { name: '한국 주식시장', avg: krStockAvg, desc: '코스피 지수 (^KS11)', icon: 'fa-solid fa-chart-simple' },
       { name: '암호화폐', avg: cryptoAvg, desc: '비트코인, 이더리움 평균', icon: 'fa-brands fa-bitcoin' },
       { name: '리츠/부동산', avg: reAvg, desc: '미국 리츠부동산(VNQ)', icon: 'fa-solid fa-building-columns' },
       { name: '채권/국채', avg: bondAvg, desc: '미국 20년물 국채(TLT)', icon: 'fa-solid fa-vault' },
@@ -692,7 +694,7 @@ function renderMacroInsight(macro) {
 
     assetGroupsHtml = `
       <div class="asset-groups-wrapper">
-        <div class="indicators-title"><i class="fa-solid fa-traffic-light"></i> 6대 자산군별 자금 강도 신호등</div>
+        <div class="indicators-title"><i class="fa-solid fa-traffic-light"></i> 7대 자산군별 자금 강도 신호등</div>
         <div class="asset-groups-grid">
           ${groupCardsHtml}
         </div>
