@@ -1968,27 +1968,43 @@ body.tab-real-estate-active #stock-search-box {
   gap: 0.4rem;
 }
 
+.re-agent-card-content-layout.single-column {
+  display: block;
+}
+
+.re-agent-card-content-layout.single-column .re-agent-bullet-area {
+  background: none;
+  border: none;
+  padding: 0;
+}
+
 .re-insight-bullets {
   list-style: none;
   padding: 0;
   margin: 0;
   display: flex;
   flex-direction: column;
-  gap: 0.65rem;
-}
-
-.re-insight-bullets li {
-  font-size: 0.84rem;
-  line-height: 1.45;
-  color: var(--text-secondary);
-  display: flex;
-  align-items: flex-start;
   gap: 0.5rem;
 }
 
+.re-insight-bullets li {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--text-secondary);
+  display: flex;
+  align-items: flex-start;
+  gap: 0.6rem;
+  padding: 0.65rem 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+}
+
+.re-insight-bullets li:last-child {
+  border-bottom: none;
+}
+
 .re-insight-bullets li i {
-  margin-top: 0.15rem;
-  font-size: 0.88rem;
+  margin-top: 0.25rem;
+  font-size: 1rem;
 }
 
 /* Responsive adjustments for re-agent-card */
