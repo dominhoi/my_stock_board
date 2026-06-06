@@ -1575,7 +1575,12 @@ body.tab-real-estate-active #real-estate-section-wrapper {
   animation: fadeIn 0.5s ease-out;
 }
 
-body.tab-real-estate-active .dashboard-content-layout,
+body.tab-real-estate-active .dashboard-content-layout {
+  display: block !important;
+}
+
+body.tab-real-estate-active main.dashboard-main,
+body.tab-real-estate-active .dashboard-sidebar,
 body.tab-real-estate-active .dashboard-bottom-layout {
   display: none !important;
 }
