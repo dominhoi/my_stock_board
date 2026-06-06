@@ -47,77 +47,88 @@
       <div class="summary-card loading-skeleton"></div>
     </section>
 
-    <!-- AI Advisor Section -->
-    <section class="agent-advisor-section" id="agent-advisor-container" style="display: none;"></section>
+    <!-- Main Content Grid with Sidebar -->
+    <div class="dashboard-content-layout">
+      <!-- Left Column: Main Asset Dashboard -->
+      <div class="dashboard-main-content">
+        <!-- Controls / Navigation (Mobile Tabs & Search) -->
+        <div class="controls-bar">
+          <div class="tab-buttons">
+            <button class="tab-btn active" id="tab-owned" onclick="switchTab('owned')">
+              <i class="fa-solid fa-wallet"></i> 보유 종목
+            </button>
+            <button class="tab-btn" id="tab-watched" onclick="switchTab('watched')">
+              <i class="fa-solid fa-eye"></i> 관심 종목
+            </button>
+            <button class="tab-btn" id="tab-macro" onclick="switchTab('macro')">
+              <i class="fa-solid fa-earth-americas"></i> 매크로 & AI
+            </button>
+          </div>
+          <div class="search-box">
+            <i class="fa-solid fa-magnifying-glass search-icon"></i>
+            <input type="text" id="stock-search" placeholder="종목명 또는 티커 검색..." oninput="filterStocks()">
+          </div>
+        </div>
 
-    <!-- Macro Insights Card (Global & Sector Insights) -->
-    <section class="macro-insights-section" id="macro-insights-container" style="display: none;"></section>
+        <!-- Main Dashboard Grid -->
+        <main class="dashboard-main">
+          <!-- Section: Owned Stocks -->
+          <section class="dashboard-column" id="owned-section-wrapper">
+            <div class="column-header">
+              <h2><i class="fa-solid fa-wallet text-indigo"></i> 보유 종목 현황</h2>
+              <div class="owned-filter-group">
+                <button class="owned-filter-btn active" id="owned-filter-all" onclick="changeOwnedFilter('all')">전체</button>
+                <button class="owned-filter-btn" id="owned-filter-kr" onclick="changeOwnedFilter('kr')">국장</button>
+                <button class="owned-filter-btn" id="owned-filter-us" onclick="changeOwnedFilter('us')">미장</button>
+              </div>
+              <span class="count-badge" id="owned-count">0</span>
+            </div>
 
+            <!-- Visual Summary & Asset allocation chart panel -->
+            <div class="owned-visual-container" id="owned-visual-panel" style="display: none;">
+              <div class="owned-visual-metrics" id="owned-visual-metrics">
+                <!-- Dynamic summary metrics filled by JS -->
+              </div>
+              <div class="owned-chart-wrapper">
+                <canvas id="owned-assets-chart"></canvas>
+              </div>
+            </div>
 
-    <!-- Controls / Navigation (Mobile Tabs & Search) -->
-    <div class="controls-bar">
-      <div class="tab-buttons">
-        <button class="tab-btn active" id="tab-owned" onclick="switchTab('owned')">
-          <i class="fa-solid fa-wallet"></i> 보유 종목
-        </button>
-        <button class="tab-btn" id="tab-watched" onclick="switchTab('watched')">
-          <i class="fa-solid fa-eye"></i> 관심 종목 & AI 뉴스
-        </button>
+            <div class="stock-list" id="owned-stock-list">
+              <!-- Dynamically populated -->
+              <div class="loading-spinner-container">
+                <div class="spinner"></div>
+                <p>보유 자산을 불러오는 중...</p>
+              </div>
+            </div>
+          </section>
+
+          <!-- Section: Watched Stocks & AI News Briefing -->
+          <section class="dashboard-column" id="watched-section-wrapper">
+            <div class="column-header">
+              <h2><i class="fa-solid fa-eye text-violet"></i> 관심 종목 & AI 뉴스 브리핑</h2>
+              <span class="count-badge" id="watched-count">0</span>
+            </div>
+            <div class="stock-list" id="watched-stock-list">
+              <!-- Dynamically populated -->
+              <div class="loading-spinner-container">
+                <div class="spinner"></div>
+                <p>시황 데이터를 불러오는 중...</p>
+              </div>
+            </div>
+          </section>
+        </main>
       </div>
-      <div class="search-box">
-        <i class="fa-solid fa-magnifying-glass search-icon"></i>
-        <input type="text" id="stock-search" placeholder="종목명 또는 티커 검색..." oninput="filterStocks()">
-      </div>
+
+      <!-- Right Column: Sidebar (Macro & AI Advisor) -->
+      <aside class="dashboard-sidebar">
+        <!-- AI Advisor Section -->
+        <section class="agent-advisor-section" id="agent-advisor-container" style="display: none;"></section>
+
+        <!-- Macro Insights Card (Global & Sector Insights) -->
+        <section class="macro-insights-section" id="macro-insights-container" style="display: none;"></section>
+      </aside>
     </div>
-
-    <!-- Main Dashboard Layout Grid -->
-    <main class="dashboard-main">
-      <!-- Section: Owned Stocks -->
-      <section class="dashboard-column" id="owned-section-wrapper">
-        <div class="column-header">
-          <h2><i class="fa-solid fa-wallet text-indigo"></i> 보유 종목 현황</h2>
-          <div class="owned-filter-group">
-            <button class="owned-filter-btn active" id="owned-filter-all" onclick="changeOwnedFilter('all')">전체</button>
-            <button class="owned-filter-btn" id="owned-filter-kr" onclick="changeOwnedFilter('kr')">국장</button>
-            <button class="owned-filter-btn" id="owned-filter-us" onclick="changeOwnedFilter('us')">미장</button>
-          </div>
-          <span class="count-badge" id="owned-count">0</span>
-        </div>
-
-        <!-- Visual Summary & Asset allocation chart panel -->
-        <div class="owned-visual-container" id="owned-visual-panel" style="display: none;">
-          <div class="owned-visual-metrics" id="owned-visual-metrics">
-            <!-- Dynamic summary metrics filled by JS -->
-          </div>
-          <div class="owned-chart-wrapper">
-            <canvas id="owned-assets-chart"></canvas>
-          </div>
-        </div>
-
-        <div class="stock-list" id="owned-stock-list">
-          <!-- Dynamically populated -->
-          <div class="loading-spinner-container">
-            <div class="spinner"></div>
-            <p>보유 자산을 불러오는 중...</p>
-          </div>
-        </div>
-      </section>
-
-      <!-- Section: Watched Stocks & AI News Briefing -->
-      <section class="dashboard-column" id="watched-section-wrapper">
-        <div class="column-header">
-          <h2><i class="fa-solid fa-eye text-violet"></i> 관심 종목 & AI 뉴스 브리핑</h2>
-          <span class="count-badge" id="watched-count">0</span>
-        </div>
-        <div class="stock-list" id="watched-stock-list">
-          <!-- Dynamically populated -->
-          <div class="loading-spinner-container">
-            <div class="spinner"></div>
-            <p>시황 데이터를 불러오는 중...</p>
-          </div>
-        </div>
-      </section>
-    </main>
 
     <!-- Bottom Disclaimer Guide (As specified in ANTIGRAVITY.md 2.4) -->
     <footer class="dashboard-footer">

@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // Setup mobile tab view helper
 function initMobileView() {
-  const isMobile = window.innerWidth <= 820;
+  const isMobile = window.innerWidth <= 1023;
   if (isMobile) {
     document.body.className = `tab-${currentTab}-active`;
   }
@@ -569,7 +569,7 @@ function showErrorState(message) {
 
 // Resize listener to reset tabs if shifting to desktop
 window.addEventListener('resize', () => {
-  if (window.innerWidth > 820) {
+  if (window.innerWidth > 1023) {
     document.body.className = '';
   } else {
     document.body.className = `tab-${currentTab}-active`;
