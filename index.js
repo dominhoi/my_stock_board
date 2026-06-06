@@ -1065,9 +1065,11 @@ function renderReTransactions(regions) {
   const tbody = document.getElementById('real-estate-transactions-tbody');
   if (!tbody) return;
   
-  // Combine transactions from all regions
+  // Combine transactions from all regions (excluding Seoul to focus on Bundang and Yongin Suji)
   let allTxs = [];
   regions.forEach(reg => {
+    if (reg.name === '서울시 전체') return; // 서울 실거래 내역은 테이블에서 제외
+    
     (reg.recent_transactions || []).forEach(tx => {
       allTxs.push({
         region: reg.name,
