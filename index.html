@@ -55,16 +55,19 @@
         <div class="controls-bar">
           <div class="tab-buttons">
             <button class="tab-btn active" id="tab-owned" onclick="switchTab('owned')">
-              <i class="fa-solid fa-wallet"></i> 보유 종목
+              <i class="fa-solid fa-chart-line"></i> <span class="tab-label">보유 종목</span>
             </button>
             <button class="tab-btn" id="tab-watched" onclick="switchTab('watched')">
-              <i class="fa-solid fa-eye"></i> 관심 종목
+              <i class="fa-solid fa-eye"></i> <span class="tab-label">관심 종목</span>
             </button>
             <button class="tab-btn" id="tab-macro" onclick="switchTab('macro')">
-              <i class="fa-solid fa-earth-americas"></i> 매크로 & AI
+              <i class="fa-solid fa-earth-americas"></i> <span class="tab-label">매크로 & AI</span>
+            </button>
+            <button class="tab-btn" id="tab-real-estate" onclick="switchTab('real-estate')">
+              <i class="fa-solid fa-building"></i> <span class="tab-label">부동산 시황</span>
             </button>
           </div>
-          <div class="search-box">
+          <div class="search-box" id="stock-search-box">
             <i class="fa-solid fa-magnifying-glass search-icon"></i>
             <input type="text" id="stock-search" placeholder="종목명 또는 티커 검색..." oninput="filterStocks()">
           </div>
@@ -128,6 +131,73 @@
         <!-- Macro Insights Card (Global & Sector Insights) -->
         <section class="macro-insights-section" id="macro-insights-container" style="display: none;"></section>
       </aside>
+    </div>
+
+    <!-- Full Width Bottom Layout for Calendar & Indicators -->
+    <div class="dashboard-bottom-layout">
+      <div id="macro-calendar-container" style="display: none;"></div>
+      <div id="macro-indicators-container" style="display: none;"></div>
+    </div>
+
+    <!-- Real Estate Dashboard Section -->
+    <div id="real-estate-section-wrapper" style="display: none;">
+      <div class="real-estate-grid">
+        <!-- Left Pane: Price index trend & Area Overview -->
+        <div class="re-left-pane">
+          <div class="macro-card">
+            <div class="macro-header">
+              <h2><i class="fa-solid fa-chart-line text-indigo"></i> 지역별 아파트 매매/전세 가격지수 추이</h2>
+            </div>
+            <div class="macro-body">
+              <div class="chart-controls">
+                <span class="chart-desc">2026년 상반기 기준 가격지수 (기준점: 100)</span>
+              </div>
+              <div class="re-chart-wrapper">
+                <canvas id="real-estate-trend-chart"></canvas>
+              </div>
+            </div>
+          </div>
+          
+          <div class="re-metrics-grid" id="real-estate-metrics-container">
+            <!-- Dynamically populated KPI cards -->
+          </div>
+        </div>
+
+        <!-- Right Pane: Real Transactions Table -->
+        <div class="re-right-pane">
+          <div class="macro-card">
+            <div class="macro-header">
+              <h2><i class="fa-solid fa-list-check text-violet"></i> 최근 아파트 실거래 계약 현황</h2>
+              <div class="re-filter-group">
+                <button class="re-filter-btn active" id="re-filter-all" onclick="filterReTransactions('all')">전체</button>
+                <button class="re-filter-btn" id="re-filter-deal" onclick="filterReTransactions('매매')">매매</button>
+                <button class="re-filter-btn" id="re-filter-rent" onclick="filterReTransactions('전세')">전세</button>
+                <button class="re-filter-btn" id="re-filter-monthly" onclick="filterReTransactions('월세')">월세</button>
+              </div>
+            </div>
+            <div class="macro-body">
+              <div class="re-table-wrapper">
+                <table class="re-table">
+                  <thead>
+                    <tr>
+                      <th>지역</th>
+                      <th>아파트명</th>
+                      <th>전용면적</th>
+                      <th>거래구분</th>
+                      <th>거래금액/보증금</th>
+                      <th>층수</th>
+                      <th>계약일</th>
+                    </tr>
+                  </thead>
+                  <tbody id="real-estate-transactions-tbody">
+                    <!-- Dynamically populated -->
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
 
     <!-- Bottom Disclaimer Guide (As specified in ANTIGRAVITY.md 2.4) -->

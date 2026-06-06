@@ -19,7 +19,7 @@ function initMobileView() {
   }
 }
 
-// Switch tabs on mobile layout
+// Switch tabs on mobile/desktop layout
 function switchTab(tab) {
   currentTab = tab;
   document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
@@ -27,6 +27,11 @@ function switchTab(tab) {
   
   // Set body class for CSS to handle visibility
   document.body.className = `tab-${tab}-active`;
+
+  // Render Real Estate if selected
+  if (tab === 'real-estate') {
+    renderRealEstate();
+  }
 }
 
 // Fetch data from local data.json
@@ -69,6 +74,11 @@ function renderDashboard() {
 
   // 4. Render Watched Stock cards
   renderWatchedStocks(dashboardData.watched_stocks || []);
+
+  // 5. Render Real Estate if active
+  if (currentTab === 'real-estate') {
+    renderRealEstate();
+  }
 }
 
 // Render top-level summary cards
@@ -501,12 +511,8 @@ function renderWatchedStocks(stocks) {
 function renderNewsHtml(stock) {
   if (!stock.news_summary || stock.news_summary.includes("중요 뉴스 없음") || stock.news_summary.includes("수집 실패")) {
     return `
-      <div class="stock-news" style="opacity: 0.6">
-        <div class="news-header">
-          <i class="fa-regular fa-newspaper"></i>
-          <span>AI 뉴스 요약</span>
-        </div>
-        <div class="news-body" style="font-size: 0.8rem; font-style: italic">최근 24시간 동안 보도된 뉴스가 없습니다.</div>
+      <div class="stock-news-empty">
+        <span class="news-empty-badge"><i class="fa-regular fa-newspaper"></i> 최근 24시간 내 중요 뉴스 없음</span>
       </div>
     `;
   }
@@ -749,8 +755,7 @@ function renderMacroInsight(macro) {
     }).join('');
 
     indicatorsHtml = `
-      <div class="macro-indicators-wrapper" style="margin-top: 1.5rem;">
-        <div class="indicators-title"><i class="fa-solid fa-gauge-high"></i> 실시간 글로벌 13대 매크로 지표 세부 현황</div>
+      <div class="macro-indicators-wrapper">
         <div class="indicators-grid-container">
           ${cardsHtml}
         </div>
@@ -759,53 +764,85 @@ function renderMacroInsight(macro) {
   }
 
   // Determine if it is a fallback state (news not collected)
-  let calendarHtml = '';
   const isFallback = macro.summary.includes("수집되지 않았습니다") || macro.summary.startsWith("최근 24시간");
 
-  if (isFallback) {
-    calendarHtml = `
-      <div class="macro-calendar-container">
-        <div class="calendar-title"><i class="fa-regular fa-calendar-days"></i> 2026 주요 매크로 핵심 일정 캘린더</div>
-        <div class="calendar-table-wrapper">
-          <table class="calendar-table">
-            <thead>
-              <tr>
-                <th>날짜</th>
-                <th>경제 이벤트 / 발표 지표</th>
-                <th>중요도</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>2026-06-10</td>
-                <td>미국 5월 CPI (소비자물가지수) 발표</td>
-                <td><span class="badge badge-high">🚨 HIGH</span></td>
-              </tr>
-              <tr>
-                <td>2026-06-18</td>
-                <td>FOMC 금리 결정 및 성명서 발표</td>
-                <td><span class="badge badge-high">🚨 HIGH</span></td>
-              </tr>
-              <tr>
-                <td>2026-07-02</td>
-                <td>미국 6월 고용보고서 (비농업 고용 및 실업률)</td>
-                <td><span class="badge badge-medium">⚠️ MID</span></td>
-              </tr>
-              <tr>
-                <td>2026-07-15</td>
-                <td>미국 6월 CPI 발표</td>
-                <td><span class="badge badge-high">🚨 HIGH</span></td>
-              </tr>
-              <tr>
-                <td>2026-07-30</td>
-                <td>FOMC 금리 결정 및 성명서/기자회견</td>
-                <td><span class="badge badge-high">🚨 HIGH</span></td>
-              </tr>
-            </tbody>
-          </table>
+  // Render Calendar to its own bottom layout container
+  const calendarContainer = document.getElementById('macro-calendar-container');
+  if (calendarContainer) {
+    if (isFallback) {
+      calendarContainer.style.display = 'block';
+      calendarContainer.innerHTML = `
+        <div class="macro-card">
+          <div class="macro-header">
+            <h2><i class="fa-regular fa-calendar-days text-indigo"></i> 2026 주요 매크로 핵심 일정 캘린더</h2>
+          </div>
+          <div class="macro-body">
+            <div class="calendar-table-wrapper">
+              <table class="calendar-table">
+                <thead>
+                  <tr>
+                    <th>날짜</th>
+                    <th>경제 이벤트 / 발표 지표</th>
+                    <th>중요도</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>2026-06-10</td>
+                    <td>미국 5월 CPI (소비자물가지수) 발표</td>
+                    <td><span class="badge badge-high">🚨 HIGH</span></td>
+                  </tr>
+                  <tr>
+                    <td>2026-06-18</td>
+                    <td>FOMC 금리 결정 및 성명서 발표</td>
+                    <td><span class="badge badge-high">🚨 HIGH</span></td>
+                  </tr>
+                  <tr>
+                    <td>2026-07-02</td>
+                    <td>미국 6월 고용보고서 (비농업 고용 및 실업률)</td>
+                    <td><span class="badge badge-medium">⚠️ MID</span></td>
+                  </tr>
+                  <tr>
+                    <td>2026-07-15</td>
+                    <td>미국 6월 CPI 발표</td>
+                    <td><span class="badge badge-high">🚨 HIGH</span></td>
+                  </tr>
+                  <tr>
+                    <td>2026-07-30</td>
+                    <td>FOMC 금리 결정 및 성명서/기자회견</td>
+                    <td><span class="badge badge-high">🚨 HIGH</span></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
         </div>
-      </div>
-    `;
+      `;
+    } else {
+      calendarContainer.style.display = 'none';
+      calendarContainer.innerHTML = '';
+    }
+  }
+
+  // Render 13대 세부 지표 to its own bottom layout container
+  const indicatorsContainer = document.getElementById('macro-indicators-container');
+  if (indicatorsContainer) {
+    if (indicators.length > 0) {
+      indicatorsContainer.style.display = 'block';
+      indicatorsContainer.innerHTML = `
+        <div class="macro-card">
+          <div class="macro-header">
+            <h2><i class="fa-solid fa-gauge-high text-indigo"></i> 실시간 글로벌 13대 매크로 지표 세부 현황</h2>
+          </div>
+          <div class="macro-body">
+            ${indicatorsHtml}
+          </div>
+        </div>
+      `;
+    } else {
+      indicatorsContainer.style.display = 'none';
+      indicatorsContainer.innerHTML = '';
+    }
   }
 
   const sectorPillsHtml = (macro.sector_insights || []).map(si => {
@@ -819,8 +856,11 @@ function renderMacroInsight(macro) {
       ? `<a href="${si.ref_url}" target="_blank" class="macro-ref-link sector-ref-link"><i class="fa-solid fa-arrow-up-right-from-square"></i> ${si.ref_title}</a>`
       : '';
 
+    const isEmpty = si.insight.includes("뉴스 데이터 수집 전") || si.insight.includes("분석 스킵");
+    const emptyClass = isEmpty ? 'empty-state' : '';
+
     return `
-      <div class="macro-sector-pill">
+      <div class="macro-sector-pill ${emptyClass}">
         <div class="macro-sector-name">
           <i class="${iconClass}"></i>
           <span>${si.sector}</span>
@@ -850,13 +890,7 @@ function renderMacroInsight(macro) {
           ${macroRefHtml}
         </div>
         
-        <!-- 4. 매크로 캘린더 -->
-        ${calendarHtml}
-        
-        <!-- 5. 13대 세부 지표 Grid -->
-        ${indicatorsHtml}
-        
-        <!-- 6. 섹터 인사이트 -->
+        <!-- 4. 섹터 인사이트 -->
         <div class="macro-sectors-grid" style="margin-top: 1.5rem;">
           ${sectorPillsHtml}
         </div>
@@ -959,5 +993,266 @@ function renderAgentAdvisor(suggestions) {
         }, 150);
       }
     });
+  });
+}
+
+// ==========================================================================
+// K-Real Estate (부동산) Dashboard Rendering
+// ==========================================================================
+let realEstateChartInstance = null;
+let currentReFilter = 'all';
+
+function renderRealEstate() {
+  if (!dashboardData || !dashboardData.real_estate) return;
+  
+  const regions = dashboardData.real_estate;
+  
+  // 1. Render KPI Cards
+  renderReKPIs(regions);
+  
+  // 2. Render Charts
+  renderReCharts(regions);
+  
+  // 3. Render Transaction Table
+  renderReTransactions(regions);
+}
+
+// Render KPI cards for Seoul, Bundang, Yongin
+function renderReKPIs(regions) {
+  const container = document.getElementById('real-estate-metrics-container');
+  if (!container) return;
+  
+  container.innerHTML = regions.map(reg => {
+    return `
+      <div class="re-metric-card">
+        <div class="re-card-header">
+          <span class="re-region-name">${reg.name}</span>
+          <span class="re-region-code">시군구코드: ${reg.code}</span>
+        </div>
+        <div class="re-card-body">
+          <div class="re-metric-row">
+            <span class="re-metric-label">평매매가</span>
+            <span class="re-metric-val">${formatRePrice(reg.average_price_krw)}</span>
+          </div>
+          <div class="re-metric-row">
+            <span class="re-metric-label">평균 전세가율</span>
+            <span class="re-metric-val highlight-emerald">${reg.jeonse_ratio_pct.toFixed(1)}%</span>
+          </div>
+          <div class="re-metric-row">
+            <span class="re-metric-label">평균 월세</span>
+            <span class="re-metric-val">${formatRePrice(reg.monthly_rent_avg_krw)}</span>
+          </div>
+        </div>
+      </div>
+    `;
+  }).join('');
+}
+
+// Format prices for real estate (e.g. 15억 8,000만원)
+defFormatPrice = function(val) {
+  if (val >= 100000000) {
+    const eok = Math.floor(val / 100000000);
+    const rest = Math.round((val % 100000000) / 10000);
+    const restStr = rest > 0 ? ` ${rest.toLocaleString()}만원` : '원';
+    return `${eok}억${restStr}`;
+  }
+  return `${Math.round(val / 10000).toLocaleString()} 만원`;
+};
+
+// Expose price formatter
+function formatRePrice(val) {
+  return defFormatPrice(val);
+}
+
+// Render Transaction Table
+function renderReTransactions(regions) {
+  const tbody = document.getElementById('real-estate-transactions-tbody');
+  if (!tbody) return;
+  
+  // Combine transactions from all regions
+  let allTxs = [];
+  regions.forEach(reg => {
+    (reg.recent_transactions || []).forEach(tx => {
+      allTxs.push({
+        region: reg.name,
+        ...tx
+      });
+    });
+  });
+  
+  // Sort transactions by date descending
+  allTxs.sort((a, b) => b.date.localeCompare(a.date));
+  
+  // Filter by trade_type
+  const filteredTxs = allTxs.filter(tx => {
+    if (currentReFilter === 'all') return true;
+    return tx.trade_type === currentReFilter;
+  });
+  
+  if (filteredTxs.length === 0) {
+    tbody.innerHTML = `
+      <tr>
+        <td colspan="7" style="text-align: center; padding: 3rem 0; color: var(--text-muted);">
+          <i class="fa-solid fa-circle-exclamation" style="font-size: 1.5rem; margin-bottom: 0.5rem; display: block;"></i>
+          해당 거래 종류의 최근 실거래 내역이 없습니다.
+        </td>
+      </tr>
+    `;
+    return;
+  }
+  
+  tbody.innerHTML = filteredTxs.map(tx => {
+    let tradeBadgeClass = '';
+    let priceVal = '';
+    
+    if (tx.trade_type === '매매') {
+      tradeBadgeClass = 'badge-deal';
+      priceVal = formatRePrice(tx.price_krw);
+    } else if (tx.trade_type === '전세') {
+      tradeBadgeClass = 'badge-rent';
+      priceVal = formatRePrice(tx.price_krw || tx.deposit_krw);
+    } else if (tx.trade_type === '월세') {
+      tradeBadgeClass = 'badge-monthly';
+      const depositStr = formatRePrice(tx.deposit_krw);
+      const rentStr = formatRePrice(tx.price_krw);
+      priceVal = `${depositStr} / ${rentStr}`;
+    }
+    
+    return `
+      <tr>
+        <td><strong>${tx.region}</strong></td>
+        <td><span class="apt-name-text" title="${tx.apt_name}">${tx.apt_name}</span></td>
+        <td>${tx.size_sqm.toFixed(1)} ㎡</td>
+        <td><span class="badge ${tradeBadgeClass}">${tx.trade_type}</span></td>
+        <td><span class="tx-price-val">${priceVal}</span></td>
+        <td>${tx.floor}층</td>
+        <td><span class="tx-date-val">${tx.date}</span></td>
+      </tr>
+    `;
+  }).join('');
+}
+
+// Filter transaction table
+function filterReTransactions(filter) {
+  currentReFilter = filter;
+  
+  // Update button active state
+  document.querySelectorAll('.re-filter-btn').forEach(btn => btn.classList.remove('active'));
+  
+  const idMap = {
+    'all': 're-filter-all',
+    '매매': 're-filter-deal',
+    '전세': 're-filter-rent',
+    '월세': 're-filter-monthly'
+  };
+  
+  const activeBtn = document.getElementById(idMap[filter]);
+  if (activeBtn) activeBtn.classList.add('active');
+  
+  if (dashboardData && dashboardData.real_estate) {
+    renderReTransactions(dashboardData.real_estate);
+  }
+}
+
+// Render Price Index Chart
+function renderReCharts(regions) {
+  const canvas = document.getElementById('real-estate-trend-chart');
+  if (!canvas) return;
+  
+  const refRegion = regions.find(reg => reg.price_index_trend && reg.price_index_trend.length > 0);
+  if (!refRegion) return;
+  
+  const labels = refRegion.price_index_trend.map(t => t.date);
+  
+  const colors = [
+    { buy: '#6366f1', jeonse: 'rgba(99, 102, 241, 0.45)' }, // Indigo
+    { buy: '#8b5cf6', jeonse: 'rgba(139, 92, 246, 0.45)' }, // Violet
+    { buy: '#10b981', jeonse: 'rgba(16, 185, 129, 0.45)' }  // Emerald
+  ];
+  
+  const datasets = [];
+  regions.forEach((reg, idx) => {
+    const color = colors[idx % colors.length];
+    
+    datasets.push({
+      label: `${reg.name} 매매지수`,
+      data: reg.price_index_trend.map(t => t.buy_index),
+      borderColor: color.buy,
+      backgroundColor: color.buy,
+      borderWidth: 2,
+      tension: 0.2,
+      pointRadius: 3
+    });
+    
+    datasets.push({
+      label: `${reg.name} 전세지수`,
+      data: reg.price_index_trend.map(t => t.jeonse_index),
+      borderColor: color.jeonse,
+      backgroundColor: color.jeonse,
+      borderWidth: 1.5,
+      borderDash: [4, 4],
+      tension: 0.2,
+      pointRadius: 2
+    });
+  });
+  
+  const ctx = canvas.getContext('2d');
+  if (realEstateChartInstance) {
+    realEstateChartInstance.destroy();
+  }
+  
+  realEstateChartInstance = new Chart(ctx, {
+    type: 'line',
+    data: {
+      labels: labels,
+      datasets: datasets
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      interaction: {
+        mode: 'index',
+        intersect: false
+      },
+      plugins: {
+        legend: {
+          position: 'top',
+          labels: {
+            color: '#94a3b8',
+            font: {
+              size: 10,
+              family: 'Outfit'
+            },
+            boxWidth: 12,
+            boxHeight: 8
+          }
+        },
+        tooltip: {
+          padding: 10,
+          titleFont: { family: 'Outfit', size: 12 },
+          bodyFont: { family: 'Plus Jakarta Sans', size: 11 }
+        }
+      },
+      scales: {
+        x: {
+          grid: {
+            color: 'rgba(255, 255, 255, 0.02)'
+          },
+          ticks: {
+            color: '#94a3b8',
+            font: { size: 10 }
+          }
+        },
+        y: {
+          grid: {
+            color: 'rgba(255, 255, 255, 0.02)'
+          },
+          ticks: {
+            color: '#94a3b8',
+            font: { size: 10 }
+          }
+        }
+      }
+    }
   });
 }

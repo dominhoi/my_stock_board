@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-06 09:08:25",
+  "updated_at": "2026-06-06 09:42:49",
   "summary": {
     "total_buy_combined_krw": 76328918.0,
     "total_eval_combined_krw": 122539687.38719733,
@@ -280,5 +280,253 @@
       "avatar": "fa-solid fa-rocket",
       "comment": "암호화폐의 과도한 급락(이더리움 -10.86%)과 주요 기술주 조정은 오히려 메가 바잉 기회입니다! 현재 달러 환차익으로 얻은 수익의 일부를 모멘텀이 강한 낙폭과대 성장주와 코인에 재배치하는 역발상적인 공격적 베팅을 제안합니다. 시장 공포 속에서 매력적인 평단가를 확보하십시오."
     }
-  }
+  },
+  "real_estate": [
+    {
+      "name": "서울시 전체",
+      "code": "11000",
+      "average_price_krw": 1210000000,
+      "jeonse_ratio_pct": 53.6,
+      "monthly_rent_avg_krw": 1180000,
+      "price_index_trend": [
+        {
+          "date": "2026-01",
+          "buy_index": 98.2,
+          "jeonse_index": 97.4
+        },
+        {
+          "date": "2026-02",
+          "buy_index": 98.4,
+          "jeonse_index": 97.6
+        },
+        {
+          "date": "2026-03",
+          "buy_index": 98.7,
+          "jeonse_index": 98.0
+        },
+        {
+          "date": "2026-04",
+          "buy_index": 99.1,
+          "jeonse_index": 98.3
+        },
+        {
+          "date": "2026-05",
+          "buy_index": 99.5,
+          "jeonse_index": 98.7
+        },
+        {
+          "date": "2026-06",
+          "buy_index": 100.0,
+          "jeonse_index": 99.2
+        }
+      ],
+      "recent_transactions": [
+        {
+          "apt_name": "반포자이",
+          "size_sqm": 84.9,
+          "trade_type": "매매",
+          "price_krw": 3680000000,
+          "floor": 18,
+          "date": "2026-06-05"
+        },
+        {
+          "apt_name": "잠실엘스",
+          "size_sqm": 84.8,
+          "trade_type": "전세",
+          "price_krw": 1220000000,
+          "floor": 12,
+          "date": "2026-06-04"
+        },
+        {
+          "apt_name": "마포래미안푸르지오",
+          "size_sqm": 59.9,
+          "trade_type": "매매",
+          "price_krw": 1580000000,
+          "floor": 8,
+          "date": "2026-06-03"
+        },
+        {
+          "apt_name": "디에이치아너힐즈",
+          "size_sqm": 84.9,
+          "trade_type": "전세",
+          "price_krw": 1450000000,
+          "floor": 15,
+          "date": "2026-06-01"
+        },
+        {
+          "apt_name": "헬리오시티",
+          "size_sqm": 84.9,
+          "trade_type": "월세",
+          "price_krw": 1200000,
+          "deposit_krw": 100000000,
+          "floor": 22,
+          "date": "2026-05-30"
+        }
+      ]
+    },
+    {
+      "name": "성남시 분당구",
+      "code": "41135",
+      "average_price_krw": 1420000000,
+      "jeonse_ratio_pct": 50.8,
+      "monthly_rent_avg_krw": 1450000,
+      "price_index_trend": [
+        {
+          "date": "2026-01",
+          "buy_index": 99.1,
+          "jeonse_index": 96.1
+        },
+        {
+          "date": "2026-02",
+          "buy_index": 99.3,
+          "jeonse_index": 96.5
+        },
+        {
+          "date": "2026-03",
+          "buy_index": 99.6,
+          "jeonse_index": 97.0
+        },
+        {
+          "date": "2026-04",
+          "buy_index": 100.2,
+          "jeonse_index": 97.4
+        },
+        {
+          "date": "2026-05",
+          "buy_index": 100.8,
+          "jeonse_index": 97.9
+        },
+        {
+          "date": "2026-06",
+          "buy_index": 101.5,
+          "jeonse_index": 98.5
+        }
+      ],
+      "recent_transactions": [
+        {
+          "apt_name": "시범삼성한신",
+          "size_sqm": 84.6,
+          "trade_type": "매매",
+          "price_krw": 1580000000,
+          "floor": 10,
+          "date": "2026-06-05"
+        },
+        {
+          "apt_name": "파크타운삼익",
+          "size_sqm": 84.8,
+          "trade_type": "전세",
+          "price_krw": 830000000,
+          "floor": 7,
+          "date": "2026-06-04"
+        },
+        {
+          "apt_name": "상록우성",
+          "size_sqm": 59.1,
+          "trade_type": "매매",
+          "price_krw": 1210000000,
+          "floor": 15,
+          "date": "2026-06-03"
+        },
+        {
+          "apt_name": "봇들마을8단지",
+          "size_sqm": 84.9,
+          "trade_type": "전세",
+          "price_krw": 1050000000,
+          "floor": 14,
+          "date": "2026-06-01"
+        },
+        {
+          "apt_name": "양지마을금호",
+          "size_sqm": 84.7,
+          "trade_type": "월세",
+          "price_krw": 1600000,
+          "deposit_krw": 100000000,
+          "floor": 9,
+          "date": "2026-05-30"
+        }
+      ]
+    },
+    {
+      "name": "용인시 수지구",
+      "code": "41465",
+      "average_price_krw": 895000000,
+      "jeonse_ratio_pct": 58.2,
+      "monthly_rent_avg_krw": 1100000,
+      "price_index_trend": [
+        {
+          "date": "2026-01",
+          "buy_index": 97.5,
+          "jeonse_index": 98.1
+        },
+        {
+          "date": "2026-02",
+          "buy_index": 97.7,
+          "jeonse_index": 98.4
+        },
+        {
+          "date": "2026-03",
+          "buy_index": 98.0,
+          "jeonse_index": 98.8
+        },
+        {
+          "date": "2026-04",
+          "buy_index": 98.3,
+          "jeonse_index": 99.2
+        },
+        {
+          "date": "2026-05",
+          "buy_index": 98.8,
+          "jeonse_index": 99.6
+        },
+        {
+          "date": "2026-06",
+          "buy_index": 99.2,
+          "jeonse_index": 100.0
+        }
+      ],
+      "recent_transactions": [
+        {
+          "apt_name": "성복역롯데캐슬골드타운",
+          "size_sqm": 84.9,
+          "trade_type": "매매",
+          "price_krw": 1140000000,
+          "floor": 24,
+          "date": "2026-06-05"
+        },
+        {
+          "apt_name": "신정마을9단지",
+          "size_sqm": 59.3,
+          "trade_type": "전세",
+          "price_krw": 510000000,
+          "floor": 11,
+          "date": "2026-06-04"
+        },
+        {
+          "apt_name": "수지동천자이",
+          "size_sqm": 84.9,
+          "trade_type": "매매",
+          "price_krw": 965000000,
+          "floor": 8,
+          "date": "2026-06-03"
+        },
+        {
+          "apt_name": "상현마을현대성우",
+          "size_sqm": 84.8,
+          "trade_type": "전세",
+          "price_krw": 480000000,
+          "floor": 16,
+          "date": "2026-06-01"
+        },
+        {
+          "apt_name": "광교상록자이",
+          "size_sqm": 84.9,
+          "trade_type": "월세",
+          "price_krw": 1300000,
+          "deposit_krw": 80000000,
+          "floor": 13,
+          "date": "2026-05-30"
+        }
+      ]
+    }
+  ]
 }
