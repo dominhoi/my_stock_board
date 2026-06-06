@@ -1837,6 +1837,168 @@ body.tab-real-estate-active #stock-search-box {
   }
 }
 
+/* Real Estate Agent Card CSS */
+.re-agent-insight-section {
+  margin-bottom: 1.5rem;
+}
+
+.re-agent-card {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-color);
+  border-radius: var(--card-radius);
+  padding: 1.5rem;
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+  position: relative;
+  overflow: hidden;
+  transition: var(--transition-smooth);
+}
+
+.re-agent-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(90deg, #6366f1, #a855f7, #eab308); /* Indigo to Violet to Amber */
+  transition: var(--transition-smooth);
+}
+
+.re-agent-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  padding-bottom: 0.75rem;
+}
+
+.re-agent-card-title {
+  font-family: var(--font-header);
+  font-size: 1.15rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--text-primary);
+}
+
+.re-agent-card-title i {
+  color: var(--color-indigo);
+}
+
+.re-agent-selector-tabs {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.re-agent-tab-btn {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  color: var(--text-secondary);
+  padding: 0.45rem 0.85rem;
+  border-radius: 6px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  transition: all 0.2s ease;
+}
+
+.re-agent-tab-btn:hover {
+  background: rgba(255, 255, 255, 0.08);
+  color: #fff;
+}
+
+.re-agent-tab-btn.active {
+  background: var(--color-indigo);
+  border-color: rgba(99, 102, 241, 0.4);
+  color: #fff;
+  box-shadow: 0 2px 8px rgba(99, 102, 241, 0.3);
+}
+
+.re-agent-card-content-layout {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 1.75rem;
+  align-items: stretch;
+}
+
+.re-agent-opinion-area {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.25rem;
+  padding: 0.75rem 0;
+  transition: opacity 0.15s ease-in-out;
+}
+
+.re-agent-opinion-area.fade-out {
+  opacity: 0;
+}
+
+.re-agent-opinion-area.fade-in {
+  opacity: 1;
+}
+
+.re-agent-bullet-area {
+  background: rgba(15, 23, 42, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.03);
+  border-radius: 8px;
+  padding: 1.15rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+}
+
+.bullet-area-title {
+  font-family: var(--font-header);
+  font-size: 0.92rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.re-insight-bullets {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+}
+
+.re-insight-bullets li {
+  font-size: 0.84rem;
+  line-height: 1.45;
+  color: var(--text-secondary);
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+}
+
+.re-insight-bullets li i {
+  margin-top: 0.15rem;
+  font-size: 0.88rem;
+}
+
+/* Responsive adjustments for re-agent-card */
+@media (max-width: 1023px) {
+  .re-agent-card-content-layout {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+}
+
 
 
 

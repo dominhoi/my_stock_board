@@ -1002,10 +1002,131 @@ function renderAgentAdvisor(suggestions) {
 let realEstateChartInstance = null;
 let currentReFilter = 'all';
 
+let currentReAgentPersona = 'INTJ'; // Default to INTJ (Arthur) for real estate
+
+function renderReAgentInsights(suggestions) {
+  const container = document.getElementById('re-agent-insight-container');
+  if (!container) return;
+
+  if (!suggestions || Object.keys(suggestions).length === 0) {
+    container.style.display = 'none';
+    return;
+  }
+
+  container.style.display = 'block';
+
+  // Helper to construct inner HTML for the opinion body
+  const updateReAgentBodyHtml = (persona) => {
+    const data = suggestions[persona];
+    if (!data) return '';
+    return `
+      <div class="agent-profile">
+        <div class="agent-avatar-circle avatar-${persona}">
+          <i class="${data.avatar || 'fa-solid fa-user-tie'}"></i>
+        </div>
+        <div class="agent-name-tag">${data.name}</div>
+        <span class="agent-mbti-pill mbti-${persona}">${data.mbti}</span>
+      </div>
+      <div class="agent-opinion-bubble">
+        <div class="agent-opinion-title title-${persona}">✨ ${data.title} (${data.style}) - 자산/부동산 제언</div>
+        <div class="agent-opinion-desc">${data.comment}</div>
+      </div>
+    `;
+  };
+
+  // Generate selector tabs dynamically
+  const personas = ['INTJ', 'ISTJ', 'ENTP'];
+  const tabsHtml = personas.map(p => {
+    const data = suggestions[p];
+    if (!data) return '';
+    const activeClass = p === currentReAgentPersona ? 'active' : '';
+    const iconMap = {
+      'INTJ': 'fa-solid fa-brain',
+      'ISTJ': 'fa-solid fa-shield-halved',
+      'ENTP': 'fa-solid fa-rocket'
+    };
+    return `
+      <button class="re-agent-tab-btn ${activeClass}" data-persona="${p}">
+        <i class="${iconMap[p]}"></i> ${data.name} (${p})
+      </button>
+    `;
+  }).join('');
+
+  // 3-bullet points for real estate insights
+  const insights = suggestions.real_estate_insights || [
+    "분당 전세 거주 중이나 내년 수지구 매수 타겟(성복/수지구청)의 시세 모니터링이 중요합니다.",
+    "수지구는 평매매가 8.9억대로 분당(14.2억대) 대비 상대적으로 진입 장벽이 낮으나 자금 조달 계획이 우선입니다.",
+    "금리 인하 지연 가능성 및 고환율 리스크가 존재하므로 무리한 레버리지보다는 분할 매수 전략이 유효합니다."
+  ];
+
+  const bulletsHtml = insights.map(ins => `
+    <li><i class="fa-solid fa-circle-check text-indigo"></i> <span>${ins}</span></li>
+  `).join('');
+
+  container.innerHTML = `
+    <div class="re-agent-card">
+      <div class="re-agent-card-header">
+        <div class="re-agent-card-title">
+          <i class="fa-solid fa-robot"></i> AI 에이전트 한국 부동산 종합 분석
+        </div>
+        <div class="re-agent-selector-tabs">
+          ${tabsHtml}
+        </div>
+      </div>
+      <div class="re-agent-card-content-layout">
+        <div class="re-agent-opinion-area" id="re-agent-card-body-content">
+          ${updateReAgentBodyHtml(currentReAgentPersona)}
+        </div>
+        <div class="re-agent-bullet-area">
+          <div class="bullet-area-title">
+            <i class="fa-solid fa-lightbulb text-amber"></i> 에이전트 부동산 핵심 분석 (3대 요약)
+          </div>
+          <ul class="re-insight-bullets">
+            ${bulletsHtml}
+          </ul>
+        </div>
+      </div>
+    </div>
+  `;
+
+  // Attach event listeners for tab switching with transitions
+  const tabs = container.querySelectorAll('.re-agent-tab-btn');
+  tabs.forEach(tab => {
+    tab.addEventListener('click', (e) => {
+      const btn = e.currentTarget;
+      const selectedPersona = btn.getAttribute('data-persona');
+      if (selectedPersona === currentReAgentPersona) return;
+
+      currentReAgentPersona = selectedPersona;
+
+      // Update active state in tabs
+      tabs.forEach(t => t.classList.remove('active'));
+      btn.classList.add('active');
+
+      // Trigger smooth fade out/in animation
+      const bodyContent = document.getElementById('re-agent-card-body-content');
+      if (bodyContent) {
+        bodyContent.classList.add('fade-out');
+        setTimeout(() => {
+          bodyContent.innerHTML = updateReAgentBodyHtml(currentReAgentPersona);
+          bodyContent.classList.remove('fade-out');
+          bodyContent.classList.add('fade-in');
+          setTimeout(() => {
+            bodyContent.classList.remove('fade-in');
+          }, 300);
+        }, 150);
+      }
+    });
+  });
+}
+
 function renderRealEstate() {
   if (!dashboardData || !dashboardData.real_estate) return;
   
   const regions = dashboardData.real_estate;
+  
+  // 0. Render AI Agent Real Estate Insights
+  renderReAgentInsights(dashboardData.agent_suggestions);
   
   // 1. Render KPI Cards
   renderReKPIs(regions);
