@@ -1049,19 +1049,15 @@ function renderReKPIs(regions) {
 }
 
 // Format prices for real estate (e.g. 15억 8,000만원)
-defFormatPrice = function(val) {
+function formatRePrice(val) {
+  if (val === undefined || val === null || isNaN(val)) return '-';
   if (val >= 100000000) {
     const eok = Math.floor(val / 100000000);
     const rest = Math.round((val % 100000000) / 10000);
     const restStr = rest > 0 ? ` ${rest.toLocaleString()}만원` : '원';
     return `${eok}억${restStr}`;
   }
-  return `${Math.round(val / 10000).toLocaleString()} 만원`;
-};
-
-// Expose price formatter
-function formatRePrice(val) {
-  return defFormatPrice(val);
+  return `${Math.round(val / 10000).toLocaleString()}만원`;
 }
 
 // Render Transaction Table
