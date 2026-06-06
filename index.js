@@ -33,7 +33,7 @@ function switchTab(tab) {
 async function fetchDashboardData() {
   try {
     // Fetch data.json which is automatically written by the GitHub Action
-    const response = await fetch('./data.json');
+    const response = await fetch('./data.json?t=' + new Date().getTime());
     if (!response.ok) {
       throw new Error(`HTTP error! status: ${response.status}`);
     }
