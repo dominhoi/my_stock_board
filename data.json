@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-06 08:57:33",
+  "updated_at": "2026-06-06 09:00:33",
   "summary": {
     "total_buy_combined_krw": 76328918.0,
     "total_eval_combined_krw": 122539687.38719733,
@@ -221,14 +221,14 @@
     {
       "name": "비트코인",
       "ticker": "BTC-USD",
-      "value": 60907.8711,
-      "change_pct": -4.54
+      "value": 61068.4297,
+      "change_pct": -4.28
     },
     {
       "name": "이더리움",
       "ticker": "ETH-USD",
-      "value": 1577.4301,
-      "change_pct": -10.86
+      "value": 1583.37,
+      "change_pct": -10.52
     },
     {
       "name": "미국리츠부동산",
@@ -251,8 +251,8 @@
     {
       "name": "코스피지수",
       "ticker": "^KS11",
-      "value": NaN,
-      "change_pct": NaN
+      "value": 0.0,
+      "change_pct": -100.0
     }
   ],
   "agent_suggestions": {
