@@ -63,6 +63,9 @@ function renderDashboard() {
   // 2. Render Summary Panel
   renderSummary();
 
+  // 2.3. Render Asset History Trend Chart
+  renderAssetTrendChart();
+
   // 2.5. Render Global Macro & Sector Insights
   renderMacroInsight(dashboardData.macro_insight);
 
@@ -163,6 +166,151 @@ function renderSummary() {
       </div>
     </div>
   `;
+}
+
+// Global Chart Instance for Asset Trend
+let trendChartInstance = null;
+
+// Render Asset Trend Line Chart (yesterday vs today history)
+function renderAssetTrendChart() {
+  const container = document.getElementById('asset-trend-section');
+  const canvas = document.getElementById('asset-trend-chart');
+  if (!container || !canvas) return;
+
+  const history = dashboardData.history;
+  if (!history || history.length < 2) {
+    container.style.display = 'none';
+    return;
+  }
+
+  container.style.display = 'block';
+
+  // Format dates for readability (e.g. "2026-06-10" -> "06/10")
+  const labels = history.map(h => {
+    if (!h.date) return '';
+    const parts = h.date.split('-');
+    return parts.length >= 3 ? `${parts[1]}/${parts[2]}` : h.date;
+  });
+  
+  const evalData = history.map(h => h.total_eval_combined_krw);
+  const buyData = history.map(h => h.total_buy_combined_krw);
+
+  const ctx = canvas.getContext('2d');
+  if (trendChartInstance) {
+    trendChartInstance.destroy();
+  }
+
+  // Create elegant gradient fills
+  const evalGradient = ctx.createLinearGradient(0, 0, 0, 220);
+  evalGradient.addColorStop(0, 'rgba(139, 92, 246, 0.25)'); // Violet glow
+  evalGradient.addColorStop(1, 'rgba(139, 92, 246, 0.0)');
+
+  trendChartInstance = new Chart(ctx, {
+    type: 'line',
+    data: {
+      labels: labels,
+      datasets: [
+        {
+          label: '총 평가금액',
+          data: evalData,
+          borderColor: '#8b5cf6', // Violet
+          borderWidth: 3,
+          backgroundColor: evalGradient,
+          fill: true,
+          tension: 0.3,
+          pointBackgroundColor: '#8b5cf6',
+          pointBorderColor: 'rgba(255, 255, 255, 0.8)',
+          pointBorderWidth: 1.5,
+          pointRadius: labels.length > 20 ? 0 : 4,
+          pointHoverRadius: 6
+        },
+        {
+          label: '총 매수금액 (원금)',
+          data: buyData,
+          borderColor: 'rgba(99, 102, 241, 0.5)', // Indigo dashed
+          borderWidth: 2,
+          borderDash: [5, 5],
+          backgroundColor: 'transparent',
+          fill: false,
+          tension: 0.1,
+          pointRadius: 0,
+          pointHoverRadius: 0
+        }
+      ]
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      interaction: {
+        intersect: false,
+        mode: 'index'
+      },
+      plugins: {
+        legend: {
+          display: true,
+          position: 'top',
+          labels: {
+            color: '#94a3b8',
+            font: {
+              family: 'Plus Jakarta Sans',
+              size: 11,
+              weight: '500'
+            },
+            boxWidth: 15
+          }
+        },
+        tooltip: {
+          backgroundColor: '#0f172a',
+          titleColor: '#f8fafc',
+          bodyColor: '#94a3b8',
+          borderColor: 'rgba(255, 255, 255, 0.1)',
+          borderWidth: 1,
+          padding: 10,
+          callbacks: {
+            label: function(context) {
+              const label = context.dataset.label || '';
+              const value = context.parsed.y || 0;
+              return ` ${label}: ${Math.round(value).toLocaleString()} 원`;
+            }
+          }
+        }
+      },
+      scales: {
+        x: {
+          grid: {
+            display: false
+          },
+          ticks: {
+            color: '#64748b',
+            font: {
+              family: 'Plus Jakarta Sans',
+              size: 10
+            }
+          }
+        },
+        y: {
+          grid: {
+            color: 'rgba(255, 255, 255, 0.03)'
+          },
+          ticks: {
+            color: '#64748b',
+            font: {
+              family: 'Plus Jakarta Sans',
+              size: 10
+            },
+            callback: function(value) {
+              if (value >= 1e8) {
+                return (value / 1e8).toFixed(1) + ' 억원';
+              } else if (value >= 1e4) {
+                return (value / 1e4).toFixed(0) + ' 만원';
+              }
+              return value.toLocaleString() + ' 원';
+            }
+          }
+        }
+      }
+    }
+  });
 }
 
 // Render Owned Stocks
