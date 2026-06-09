@@ -595,13 +595,13 @@ body {
     gap: 1.5rem;
   }
 
-  /* Hide the tab buttons container on desktop since everything is shown */
+  /* Keep the tab buttons visible on desktop for switching to Real Estate */
   .tab-buttons {
-    display: none;
+    display: flex;
   }
   
   .controls-bar {
-    justify-content: flex-end;
+    justify-content: space-between;
   }
 }
 
@@ -1592,18 +1592,6 @@ body.tab-real-estate-active #stock-search-box {
 @media (min-width: 1024px) {
   .tab-buttons {
     display: flex !important;
-  }
-  
-  #tab-watched, #tab-macro {
-    display: none !important;
-  }
-  
-  #tab-owned .tab-label {
-    font-size: 0;
-  }
-  #tab-owned .tab-label::after {
-    content: '주식 & 매크로';
-    font-size: 0.9rem;
   }
 }
 

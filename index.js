@@ -744,7 +744,11 @@ function showErrorState(message) {
 // Resize listener to reset tabs if shifting to desktop
 window.addEventListener('resize', () => {
   if (window.innerWidth > 1023) {
-    document.body.className = '';
+    if (currentTab === 'real-estate') {
+      document.body.className = 'tab-real-estate-active';
+    } else {
+      document.body.className = '';
+    }
   } else {
     document.body.className = `tab-${currentTab}-active`;
   }
