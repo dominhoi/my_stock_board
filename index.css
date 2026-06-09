@@ -2062,6 +2062,28 @@ body.tab-real-estate-active #stock-search-box {
   height: 220px !important;
 }
 
+/* Interactive Neon Focus Highlight for Desktop Tabs */
+.highlight-glow {
+  animation: neon-focus-pulse 1.5s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+@keyframes neon-focus-pulse {
+  0% {
+    border-color: var(--border-color);
+    box-shadow: none;
+  }
+  30% {
+    border-color: var(--color-indigo);
+    box-shadow: 0 0 20px rgba(99, 102, 241, 0.35);
+    transform: translateY(-2px);
+  }
+  100% {
+    border-color: var(--border-color);
+    box-shadow: none;
+    transform: translateY(0);
+  }
+}
+
 
 
 

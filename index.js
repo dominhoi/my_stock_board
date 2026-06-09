@@ -31,6 +31,37 @@ function switchTab(tab) {
   // Render Real Estate if selected
   if (tab === 'real-estate') {
     renderRealEstate();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  } else {
+    // Desktop smooth scrolling & visual highlight interaction
+    const isDesktop = window.innerWidth > 1023;
+    if (isDesktop) {
+      let targetEl = null;
+      if (tab === 'owned') targetEl = document.getElementById('owned-section-wrapper');
+      else if (tab === 'watched') targetEl = document.getElementById('watched-section-wrapper');
+      else if (tab === 'macro') targetEl = document.getElementById('agent-advisor-container') || document.getElementById('macro-insights-container');
+
+      if (targetEl) {
+        // Remove existing highlight classes first
+        document.querySelectorAll('.highlight-glow').forEach(el => {
+          el.classList.remove('highlight-glow');
+        });
+        
+        // Trigger smooth scroll into view
+        targetEl.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        
+        // Force reflow to restart CSS animation
+        void targetEl.offsetWidth;
+        
+        // Add glowing animation class
+        targetEl.classList.add('highlight-glow');
+        
+        // Remove class after animation finishes
+        setTimeout(() => {
+          targetEl.classList.remove('highlight-glow');
+        }, 1500);
+      }
+    }
   }
 }
 
