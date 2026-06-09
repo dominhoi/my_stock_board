@@ -1,12 +1,12 @@
 {
-  "updated_at": "2026-06-10 08:08:33",
+  "updated_at": "2026-06-10 08:18:06",
   "summary": {
-    "total_buy_combined_krw": 76328918.0,
-    "total_eval_combined_krw": 118334959.39058378,
-    "total_profit_combined_pct": 55.03293180519575,
+    "total_buy_combined_krw": 59171768.0,
+    "total_eval_combined_krw": 105484959.39058378,
+    "total_profit_combined_pct": 78.26906809778573,
     "krw_rate": 1528.8800048828125,
-    "total_change_combined_krw": -5406709.0319773555,
-    "total_change_combined_pct": -4.369351974077295,
+    "total_change_combined_krw": -4306709.0319773555,
+    "total_change_combined_pct": -3.9226191694272203,
     "krw_change_pct": -1.6468514170390205
   },
   "owned_stocks": [
@@ -19,12 +19,12 @@
       "news_summary": "최근 24시간 내 중요 뉴스 없음",
       "news_url": "",
       "buy_price": 343143.0,
-      "qty": 126.0,
+      "qty": 76.0,
       "profit_pct": -25.104111114025347,
       "purchase_rate": 1.0,
       "fx_profit_krw": 0.0,
-      "stock_profit_krw": -10854018.0,
-      "total_profit_krw": -10854018.0,
+      "stock_profit_krw": -6546868.0,
+      "total_profit_krw": -6546868.0,
       "total_profit_krw_pct": -25.104111114025347
     },
     {
@@ -547,23 +547,23 @@
     },
     {
       "date": "2026-06-08",
-      "total_buy_combined_krw": 76328918.0,
-      "total_eval_combined_krw": 117000000.0,
-      "total_profit_combined_pct": 53.28,
+      "total_buy_combined_krw": 59171768.0,
+      "total_eval_combined_krw": 103050000.0,
+      "total_profit_combined_pct": 74.16,
       "krw_rate": 1520.0
     },
     {
       "date": "2026-06-09",
-      "total_buy_combined_krw": 76328918.0,
-      "total_eval_combined_krw": 122373941.55,
-      "total_profit_combined_pct": 60.32,
+      "total_buy_combined_krw": 59171768.0,
+      "total_eval_combined_krw": 109523941.55,
+      "total_profit_combined_pct": 85.09,
       "krw_rate": 1530.48
     },
     {
       "date": "2026-06-10",
-      "total_buy_combined_krw": 76328918.0,
-      "total_eval_combined_krw": 118334959.39058378,
-      "total_profit_combined_pct": 55.03293180519575,
+      "total_buy_combined_krw": 59171768.0,
+      "total_eval_combined_krw": 105484959.39058378,
+      "total_profit_combined_pct": 78.26906809778573,
       "krw_rate": 1528.8800048828125
     }
   ]
