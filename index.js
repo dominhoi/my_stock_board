@@ -94,10 +94,24 @@ function renderSummary() {
   const totalProfitPct = summary.total_profit_combined_pct;
   const krwRate = summary.krw_rate;
 
+  const totalChangeKrw = summary.total_change_combined_krw || 0;
+  const totalChangePct = summary.total_change_combined_pct || 0;
+  const krwChangePct = summary.krw_change_pct || 0;
+
   const isUp = totalProfitPct >= 0;
   const profitColorClass = isUp ? 'change-up' : 'change-down';
   const profitIcon = isUp ? 'fa-circle-chevron-up' : 'fa-circle-chevron-down';
   const profitArrow = isUp ? '🔺' : '🔻';
+
+  const isChangeUp = totalChangeKrw >= 0;
+  const changeColorClass = isChangeUp ? 'change-up' : 'change-down';
+  const changeIcon = isChangeUp ? 'fa-caret-up' : 'fa-caret-down';
+  const changeSign = isChangeUp ? '+' : '-';
+
+  const isKrwUp = krwChangePct >= 0;
+  const krwColorClass = isKrwUp ? 'change-up' : 'change-down';
+  const krwIcon = isKrwUp ? 'fa-caret-up' : 'fa-caret-down';
+  const krwSign = isKrwUp ? '+' : '-';
 
   summarySection.innerHTML = `
     <!-- Card 1: Total Buy -->
@@ -117,7 +131,10 @@ function renderSummary() {
         <i class="fa-solid fa-wallet"></i>
       </div>
       <div class="card-value">${formatKRW(totalEval)}</div>
-      <div class="card-change" style="color: var(--text-muted)">실시간 종가 환산</div>
+      <div class="card-change ${changeColorClass}">
+        <i class="fa-solid ${changeIcon}"></i>
+        <span>전일대비 ${changeSign}${Math.abs(totalChangePct).toFixed(2)}% (${formatKRW(Math.abs(totalChangeKrw))})</span>
+      </div>
     </div>
 
     <!-- Card 3: Total Profit/Loss -->
@@ -140,7 +157,10 @@ function renderSummary() {
         <i class="fa-solid fa-dollar-sign"></i>
       </div>
       <div class="card-value">${krwRate.toFixed(2)} 원</div>
-      <div class="card-change" style="color: var(--text-muted)">yfinance 실시간 조회</div>
+      <div class="card-change ${krwColorClass}">
+        <i class="fa-solid ${krwIcon}"></i>
+        <span>전일대비 ${krwSign}${Math.abs(krwChangePct).toFixed(2)}%</span>
+      </div>
     </div>
   `;
 }
