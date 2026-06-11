@@ -1,68 +1,63 @@
 // Global Data Store
 let dashboardData = null;
-let currentTab = 'owned'; // 'owned' or 'watched'
+let currentTab = 'market'; // Default to Market Macro & News
 let currentOwnedFilter = 'all'; // 'all', 'kr', or 'us'
 let ownedChartInstance = null; // Chart.js instance for owned assets ratio
 
 
 // Initialize dashboard on page load
 document.addEventListener('DOMContentLoaded', () => {
-  initMobileView();
+  initDashboardView();
   fetchDashboardData();
 });
 
-// Setup mobile tab view helper
-function initMobileView() {
-  const isMobile = window.innerWidth <= 1023;
-  if (isMobile) {
-    document.body.className = `tab-${currentTab}-active`;
-  }
+// Setup active tab view helper
+function initDashboardView() {
+  document.body.className = `tab-${currentTab}-active`;
 }
 
 // Switch tabs on mobile/desktop layout
 function switchTab(tab) {
   currentTab = tab;
   document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
-  document.getElementById(`tab-${tab}`).classList.add('active');
+  const targetBtn = document.getElementById(`tab-${tab}`);
+  if (targetBtn) targetBtn.classList.add('active');
   
   // Set body class for CSS to handle visibility
   document.body.className = `tab-${tab}-active`;
 
-  // Render Real Estate if selected
-  if (tab === 'real-estate') {
-    renderRealEstate();
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  } else {
-    // Desktop smooth scrolling & visual highlight interaction
-    const isDesktop = window.innerWidth > 1023;
-    if (isDesktop) {
-      let targetEl = null;
-      if (tab === 'owned') targetEl = document.getElementById('owned-section-wrapper');
-      else if (tab === 'watched') targetEl = document.getElementById('watched-section-wrapper');
-      else if (tab === 'macro') targetEl = document.getElementById('agent-advisor-container') || document.getElementById('macro-insights-container');
+  // Scroll to top smoothly on tab switch
+  window.scrollTo({ top: 0, behavior: 'smooth' });
 
-      if (targetEl) {
-        // Remove existing highlight classes first
-        document.querySelectorAll('.highlight-glow').forEach(el => {
-          el.classList.remove('highlight-glow');
-        });
-        
-        // Trigger smooth scroll into view
-        targetEl.scrollIntoView({ behavior: 'smooth', block: 'center' });
-        
-        // Force reflow to restart CSS animation
-        void targetEl.offsetWidth;
-        
-        // Add glowing animation class
-        targetEl.classList.add('highlight-glow');
-        
-        // Remove class after animation finishes
-        setTimeout(() => {
-          targetEl.classList.remove('highlight-glow');
-        }, 1500);
-      }
+  // Handle lazy rendering of charts to prevent resizing bugs in hidden canvas parents
+  if (tab === 'portfolio') {
+    renderSummary();
+    if (dashboardData) {
+      renderOwnedStocks(dashboardData.owned_stocks || []);
+      // Re-trigger asset trend and allocation charts to scale correctly
+      setTimeout(() => {
+        renderAssetTrendChart();
+        if (dashboardData.owned_stocks) {
+          renderAllocationChart(dashboardData.owned_stocks, getOwnedTotalEval(dashboardData.owned_stocks), dashboardData.summary.krw_rate);
+        }
+      }, 50);
     }
+  } else if (tab === 'real-estate') {
+    renderRealEstate();
   }
+}
+
+// Helper to calculate total evaluation of owned stocks
+function getOwnedTotalEval(stocks) {
+  const krwRate = (dashboardData && dashboardData.summary) ? dashboardData.summary.krw_rate : 1350;
+  let totalEvalKrw = 0;
+  stocks.forEach(stock => {
+    const evalKrw = stock.is_usd 
+      ? stock.current_price * stock.qty * krwRate 
+      : stock.current_price * stock.qty;
+    totalEvalKrw += evalKrw;
+  });
+  return totalEvalKrw;
 }
 
 // Fetch data from local data.json
@@ -91,26 +86,25 @@ function renderDashboard() {
     timeContainer.textContent = `업데이트: ${dashboardData.updated_at}`;
   }
 
-  // 2. Render Summary Panel
+  // Pre-render static content across all tab wrappers
   renderSummary();
-
-  // 2.3. Render Asset History Trend Chart
-  renderAssetTrendChart();
-
-  // 2.5. Render Global Macro & Sector Insights
   renderMacroInsight(dashboardData.macro_insight);
-
-  // 2.6. Render AI Advisor (Arthur, Oliver, Leo) Suggestions
   renderAgentAdvisor(dashboardData.agent_suggestions);
-
-  // 3. Render Owned Stock cards
   renderOwnedStocks(dashboardData.owned_stocks || []);
-
-  // 4. Render Watched Stock cards
   renderWatchedStocks(dashboardData.watched_stocks || []);
+  
+  // Render new integrated news feed
+  renderIntegratedNews(dashboardData.owned_stocks || [], dashboardData.watched_stocks || []);
 
-  // 5. Render Real Estate if active
-  if (currentTab === 'real-estate') {
+  // Render chart components based on active tab
+  if (currentTab === 'portfolio') {
+    setTimeout(() => {
+      renderAssetTrendChart();
+      if (dashboardData.owned_stocks) {
+        renderAllocationChart(dashboardData.owned_stocks, getOwnedTotalEval(dashboardData.owned_stocks), dashboardData.summary.krw_rate);
+      }
+    }, 50);
+  } else if (currentTab === 'real-estate') {
     renderRealEstate();
   }
 }
@@ -554,9 +548,6 @@ function renderOwnedStocks(stocks) {
 
         <!-- FX details for USD stocks -->
         ${fxDetailsHtml}
-
-        <!-- News snippet -->
-        ${renderNewsHtml(stock)}
       </div>
     `;
   }).join('');
@@ -698,9 +689,6 @@ function renderWatchedStocks(stocks) {
             <div class="stock-change ${changeColorClass}">${changeArrow}${stock.change_pct.toFixed(2)}%</div>
           </div>
         </div>
-
-        <!-- News snippet -->
-        ${renderNewsHtml(stock)}
       </div>
     `;
   }).join('');
@@ -772,18 +760,83 @@ function showErrorState(message) {
   }
 }
 
-// Resize listener to reset tabs if shifting to desktop
+// Resize listener to handle responsive view transitions gracefully
 window.addEventListener('resize', () => {
   if (window.innerWidth > 1023) {
     if (currentTab === 'real-estate') {
       document.body.className = 'tab-real-estate-active';
+    } else if (currentTab === 'portfolio') {
+      document.body.className = 'tab-portfolio-active';
     } else {
-      document.body.className = '';
+      document.body.className = 'tab-market-active';
     }
   } else {
     document.body.className = `tab-${currentTab}-active`;
   }
 });
+
+// Render integrated AI News Feed on Tab 1 (Market)
+function renderIntegratedNews(owned, watched) {
+  const container = document.getElementById('integrated-news-list');
+  if (!container) return;
+
+  const allStocks = [...owned, ...watched];
+  const newsItems = [];
+
+  allStocks.forEach(stock => {
+    const news = stock.news_summary;
+    if (news && !news.includes("중요 뉴스 없음") && !news.includes("수집 실패")) {
+      // Parse sentiment from AI summary text (e.g. "[호재]", "[악재]", "[중립]")
+      let sentiment = "neutral";
+      let sentimentLabel = "중립";
+      let cleanNews = news;
+
+      const sentimentMatch = news.match(/\[(호재|악재|중립)\]/);
+      if (sentimentMatch) {
+        sentimentLabel = sentimentMatch[1];
+        if (sentimentLabel === "호재") sentiment = "good";
+        else if (sentimentLabel === "악재") sentiment = "bad";
+        // Remove sentiment tag from text for cleaner display
+        cleanNews = news.replace(/\[(호재|악재|중립)\]/, "").trim();
+      }
+
+      newsItems.push({
+        ticker: stock.ticker,
+        name: stock.name,
+        news: cleanNews,
+        sentiment: sentiment,
+        sentimentLabel: sentimentLabel,
+        url: stock.news_url
+      });
+    }
+  });
+
+  if (newsItems.length === 0) {
+    container.innerHTML = `
+      <div class="stock-news-empty" style="text-align: center; padding: 2rem 1rem;">
+        <span class="news-empty-badge"><i class="fa-regular fa-newspaper"></i> 최근 24시간 내 수집된 주요 종목 뉴스가 없습니다.</span>
+      </div>
+    `;
+    return;
+  }
+
+  container.innerHTML = newsItems.map(item => {
+    const linkHtml = item.url 
+      ? `<a href="${item.url}" target="_blank" class="news-feed-link"><i class="fa-solid fa-arrow-up-right-from-square"></i> 뉴스 원문 보기</a>` 
+      : '';
+    
+    return `
+      <div class="news-feed-item">
+        <div class="news-feed-header">
+          <span class="news-feed-ticker-badge">${item.name} (${item.ticker})</span>
+          <span class="news-feed-sentiment sentiment-${item.sentiment}">${item.sentimentLabel}</span>
+        </div>
+        <div class="news-feed-body">${item.news}</div>
+        ${linkHtml}
+      </div>
+    `;
+  }).join('');
+}
 
 // Render Global Macro and Sector Insights Panel
 function renderMacroInsight(macro) {

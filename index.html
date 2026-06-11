@@ -39,61 +39,101 @@
       </div>
     </header>
 
-    <!-- Overall Summary Widgets -->
-    <section class="summary-grid" id="summary-section">
-      <div class="summary-card loading-skeleton"></div>
-      <div class="summary-card loading-skeleton"></div>
-      <div class="summary-card loading-skeleton"></div>
-      <div class="summary-card loading-skeleton"></div>
-    </section>
+    <!-- Controls / Navigation (Tabs & Search) -->
+    <div class="controls-bar">
+      <div class="tab-buttons">
+        <button class="tab-btn active" id="tab-market" onclick="switchTab('market')">
+          <i class="fa-solid fa-earth-americas"></i> <span class="tab-label">시장 기류 & 뉴스</span>
+        </button>
+        <button class="tab-btn" id="tab-portfolio" onclick="switchTab('portfolio')">
+          <i class="fa-solid fa-wallet"></i> <span class="tab-label">내 자산 현황</span>
+        </button>
+        <button class="tab-btn" id="tab-real-estate" onclick="switchTab('real-estate')">
+          <i class="fa-solid fa-building"></i> <span class="tab-label">부동산 시황</span>
+        </button>
+      </div>
+      <div class="search-box" id="stock-search-box">
+        <i class="fa-solid fa-magnifying-glass search-icon"></i>
+        <input type="text" id="stock-search" placeholder="종목명 또는 티커 검색..." oninput="filterStocks()">
+      </div>
+    </div>
 
-    <!-- Asset History Trend Chart -->
-    <section class="trend-chart-section" id="asset-trend-section" style="display: none;">
-      <div class="trend-card">
-        <div class="trend-header">
-          <h2><i class="fa-solid fa-chart-area text-indigo"></i> 누적 자산 흐름 추이</h2>
-          <span class="trend-period">최근 기록 추이</span>
+    <!-- 🌐 TAB 1: 시장 기류 & 뉴스 (Market Intelligence) -->
+    <div id="market-section-wrapper">
+      <!-- 13대 매크로 지표 격자판 -->
+      <div id="macro-indicators-container"></div>
+      
+      <div class="market-main-grid">
+        <!-- 좌측: 자금 강도 신호등 및 분석 보고서 -->
+        <div class="market-left-column">
+          <div id="macro-insights-container"></div>
+          <div id="macro-calendar-container"></div>
         </div>
-        <div class="trend-body">
-          <div class="trend-chart-wrapper">
-            <canvas id="asset-trend-chart"></canvas>
-          </div>
+        
+        <!-- 우측: 관심 종목 & 통합 뉴스 전광판 -->
+        <div class="market-right-column">
+          <!-- 관심 종목 리스트 (컴팩트 뷰) -->
+          <section class="dashboard-column" id="watched-section-wrapper">
+            <div class="column-header">
+              <h2><i class="fa-solid fa-eye text-violet"></i> 관심 종목 실시간 시세</h2>
+              <span class="count-badge" id="watched-count">0</span>
+            </div>
+            <div class="stock-list" id="watched-stock-list">
+              <div class="loading-spinner-container">
+                <div class="spinner"></div>
+                <p>시황 데이터를 불러오는 중...</p>
+              </div>
+            </div>
+          </section>
+
+          <!-- 통합 AI 뉴스 전광판 -->
+          <section class="dashboard-column" id="integrated-news-section-wrapper">
+            <div class="column-header">
+              <h2><i class="fa-solid fa-bolt text-amber"></i> 통합 AI 뉴스 브리핑 피드</h2>
+            </div>
+            <div class="stock-list" id="integrated-news-list">
+              <div class="loading-spinner-container">
+                <div class="spinner"></div>
+                <p>뉴스 분석 피드를 로드하는 중...</p>
+              </div>
+            </div>
+          </section>
         </div>
       </div>
-    </section>
+    </div>
 
-    <!-- Main Content Grid with Sidebar -->
-    <div class="dashboard-content-layout">
-      <!-- Left Column: Main Asset Dashboard -->
-      <div class="dashboard-main-content">
-        <!-- Controls / Navigation (Mobile Tabs & Search) -->
-        <div class="controls-bar">
-          <div class="tab-buttons">
-            <button class="tab-btn active" id="tab-owned" onclick="switchTab('owned')">
-              <i class="fa-solid fa-chart-line"></i> <span class="tab-label">보유 종목</span>
-            </button>
-            <button class="tab-btn" id="tab-watched" onclick="switchTab('watched')">
-              <i class="fa-solid fa-eye"></i> <span class="tab-label">관심 종목</span>
-            </button>
-            <button class="tab-btn" id="tab-macro" onclick="switchTab('macro')">
-              <i class="fa-solid fa-earth-americas"></i> <span class="tab-label">매크로 & AI</span>
-            </button>
-            <button class="tab-btn" id="tab-real-estate" onclick="switchTab('real-estate')">
-              <i class="fa-solid fa-building"></i> <span class="tab-label">부동산 시황</span>
-            </button>
+    <!-- 💼 TAB 2: 내 자산 현황 (Portfolio) -->
+    <div id="portfolio-section-wrapper" style="display: none;">
+      <!-- 4대 요약 카드 -->
+      <section class="summary-grid" id="summary-section">
+        <div class="summary-card loading-skeleton"></div>
+        <div class="summary-card loading-skeleton"></div>
+        <div class="summary-card loading-skeleton"></div>
+        <div class="summary-card loading-skeleton"></div>
+      </section>
+
+      <!-- 자산 누적 흐름 라인 차트 -->
+      <section class="trend-chart-section" id="asset-trend-section" style="display: none;">
+        <div class="trend-card">
+          <div class="trend-header">
+            <h2><i class="fa-solid fa-chart-area text-indigo"></i> 누적 자산 흐름 추이</h2>
+            <span class="trend-period">최근 기록 추이</span>
           </div>
-          <div class="search-box" id="stock-search-box">
-            <i class="fa-solid fa-magnifying-glass search-icon"></i>
-            <input type="text" id="stock-search" placeholder="종목명 또는 티커 검색..." oninput="filterStocks()">
+          <div class="trend-body">
+            <div class="trend-chart-wrapper">
+              <canvas id="asset-trend-chart"></canvas>
+            </div>
           </div>
         </div>
+      </section>
 
-        <!-- Main Dashboard Grid -->
-        <main class="dashboard-main">
-          <!-- Section: Owned Stocks -->
+      <!-- 자산 정보 상세 그리드 -->
+      <div class="portfolio-main-grid">
+        <!-- 좌측 (65%): 보유 종목 상세 내역 -->
+        <div class="portfolio-left-column">
           <section class="dashboard-column" id="owned-section-wrapper">
             <div class="column-header">
-              <h2><i class="fa-solid fa-wallet text-indigo"></i> 보유 종목 현황</h2>
+              <h2><i class="fa-solid fa-wallet text-indigo"></i> 보유 주식 잔고 현황</h2>
               <div class="owned-filter-group">
                 <button class="owned-filter-btn active" id="owned-filter-all" onclick="changeOwnedFilter('all')">전체</button>
                 <button class="owned-filter-btn" id="owned-filter-kr" onclick="changeOwnedFilter('kr')">국장</button>
@@ -102,67 +142,37 @@
               <span class="count-badge" id="owned-count">0</span>
             </div>
 
-            <!-- Visual Summary & Asset allocation chart panel -->
+            <!-- 비중 차트 및 요약 메트릭스 패널 -->
             <div class="owned-visual-container" id="owned-visual-panel" style="display: none;">
-              <div class="owned-visual-metrics" id="owned-visual-metrics">
-                <!-- Dynamic summary metrics filled by JS -->
-              </div>
+              <div class="owned-visual-metrics" id="owned-visual-metrics"></div>
               <div class="owned-chart-wrapper">
                 <canvas id="owned-assets-chart"></canvas>
               </div>
             </div>
 
             <div class="stock-list" id="owned-stock-list">
-              <!-- Dynamically populated -->
               <div class="loading-spinner-container">
                 <div class="spinner"></div>
                 <p>보유 자산을 불러오는 중...</p>
               </div>
             </div>
           </section>
+        </div>
 
-          <!-- Section: Watched Stocks & AI News Briefing -->
-          <section class="dashboard-column" id="watched-section-wrapper">
-            <div class="column-header">
-              <h2><i class="fa-solid fa-eye text-violet"></i> 관심 종목 & AI 뉴스 브리핑</h2>
-              <span class="count-badge" id="watched-count">0</span>
-            </div>
-            <div class="stock-list" id="watched-stock-list">
-              <!-- Dynamically populated -->
-              <div class="loading-spinner-container">
-                <div class="spinner"></div>
-                <p>시황 데이터를 불러오는 중...</p>
-              </div>
-            </div>
-          </section>
-        </main>
+        <!-- 우측 (35%): AI 개인 자산관리 리밸런싱 조언 -->
+        <div class="portfolio-right-column">
+          <section class="agent-advisor-section" id="agent-advisor-container" style="display: none;"></section>
+        </div>
       </div>
-
-      <!-- Right Column: Sidebar (Macro & AI Advisor) -->
-      <aside class="dashboard-sidebar">
-        <!-- AI Advisor Section -->
-        <section class="agent-advisor-section" id="agent-advisor-container" style="display: none;"></section>
-
-        <!-- Macro Insights Card (Global & Sector Insights) -->
-        <section class="macro-insights-section" id="macro-insights-container" style="display: none;"></section>
-      </aside>
     </div>
 
-    <!-- Full Width Bottom Layout for Calendar & Indicators -->
-    <div class="dashboard-bottom-layout">
-      <div id="macro-calendar-container" style="display: none;"></div>
-      <div id="macro-indicators-container" style="display: none;"></div>
-    </div>
-
-    <!-- Real Estate Dashboard Section -->
-    <div id="real-estate-section-wrapper">
-      <!-- AI Real Estate Agent Insights Section -->
-      <div class="re-agent-insight-section" id="re-agent-insight-container" style="display: none;">
-        <!-- Dynamically populated -->
-      </div>
+    <!-- 🏠 TAB 3: 부동산 시황 (K-Real Estate) -->
+    <div id="real-estate-section-wrapper" style="display: none;">
+      <!-- AI 부동산 분석 보고서 -->
+      <div class="re-agent-insight-section" id="re-agent-insight-container" style="display: none;"></div>
 
       <div class="real-estate-grid">
-        <!-- Left Pane: Price index trend & Area Overview -->
+        <!-- 좌측: 가격지수 추이 & 요약 카드 -->
         <div class="re-left-pane">
           <div class="macro-card">
             <div class="macro-header">
@@ -178,12 +188,10 @@
             </div>
           </div>
           
-          <div class="re-metrics-grid" id="real-estate-metrics-container">
-            <!-- Dynamically populated KPI cards -->
-          </div>
+          <div class="re-metrics-grid" id="real-estate-metrics-container"></div>
         </div>
 
-        <!-- Right Pane: Real Transactions Table -->
+        <!-- 우측: 최근 실거래가 계약 현황 테이블 -->
         <div class="re-right-pane">
           <div class="macro-card">
             <div class="macro-header">
@@ -209,9 +217,7 @@
                       <th>계약일</th>
                     </tr>
                   </thead>
-                  <tbody id="real-estate-transactions-tbody">
-                    <!-- Dynamically populated -->
-                  </tbody>
+                  <tbody id="real-estate-transactions-tbody"></tbody>
                 </table>
               </div>
             </div>
@@ -220,7 +226,7 @@
       </div>
     </div>
 
-    <!-- Bottom Disclaimer Guide (As specified in ANTIGRAVITY.md 2.4) -->
+    <!-- Bottom Disclaimer Guide -->
     <footer class="dashboard-footer">
       <p class="tips"><i class="fa-solid fa-circle-info"></i> 💡 (팁) 비공개(Private) 세션 문제가 발생할 경우 로그인 세션이 유지된 브라우저로 접속해 주세요.</p>
       <p class="copyright">&copy; 2026 My Stock. Powered by Antigravity AI Agent & Google Gemini.</p>

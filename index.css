@@ -582,20 +582,20 @@ body {
    Desktop Grid & Sidebar Layout (1024px and up)
    ========================================================================== */
 @media (min-width: 1024px) {
-  .dashboard-content-layout {
+  .market-main-grid {
     display: grid;
-    grid-template-columns: 63fr 37fr; /* Main Content 63%, Sidebar 37% */
+    grid-template-columns: 55fr 45fr; /* 좌측 분석 55%, 우측 관심/뉴스 45% */
+    gap: 1.5rem;
+    align-items: start;
+  }
+
+  .portfolio-main-grid {
+    display: grid;
+    grid-template-columns: 63fr 37fr; /* 좌측 보유자산 63%, 우측 AI 조언 37% */
     gap: 1.5rem;
     align-items: start;
   }
   
-  .dashboard-sidebar {
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
-  }
-
-  /* Keep the tab buttons visible on desktop for switching to Real Estate */
   .tab-buttons {
     display: flex;
   }
@@ -2081,6 +2081,128 @@ body.tab-real-estate-active #stock-search-box {
     border-color: var(--border-color);
     box-shadow: none;
     transform: translateY(0);
+  }
+}
+
+/* 3-Tab Physical View Transitions Visibility */
+#market-section-wrapper,
+#portfolio-section-wrapper,
+#real-estate-section-wrapper {
+  display: none !important;
+}
+
+body.tab-market-active #market-section-wrapper {
+  display: block !important;
+}
+
+body.tab-portfolio-active #portfolio-section-wrapper {
+  display: block !important;
+}
+
+body.tab-real-estate-active #real-estate-section-wrapper {
+  display: block !important;
+}
+
+/* Integrated AI News Feed Styles */
+#integrated-news-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+  margin-top: 0.5rem;
+}
+
+.news-feed-item {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  padding: 1.1rem;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  transition: var(--transition-smooth);
+}
+
+.news-feed-item:hover {
+  border-color: var(--border-hover);
+  box-shadow: 0 6px 20px rgba(124, 58, 237, 0.06);
+  transform: translateY(-1px);
+}
+
+.news-feed-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+
+.news-feed-ticker-badge {
+  background: rgba(139, 92, 246, 0.15);
+  color: var(--color-violet);
+  border: 1px solid rgba(139, 92, 246, 0.25);
+  padding: 0.15rem 0.5rem;
+  border-radius: 4px;
+  letter-spacing: 0.02em;
+}
+
+.news-feed-sentiment {
+  padding: 0.15rem 0.4rem;
+  border-radius: 4px;
+  font-weight: 800;
+  font-size: 0.7rem;
+}
+
+.sentiment-good {
+  background: rgba(16, 185, 129, 0.15);
+  color: var(--color-emerald);
+  border: 1px solid rgba(16, 185, 129, 0.25);
+}
+
+.sentiment-bad {
+  background: rgba(239, 68, 68, 0.15);
+  color: var(--color-ruby);
+  border: 1px solid rgba(239, 68, 68, 0.25);
+}
+
+.sentiment-neutral {
+  background: rgba(100, 116, 139, 0.15);
+  color: var(--text-secondary);
+  border: 1px solid rgba(100, 116, 139, 0.25);
+}
+
+.news-feed-body {
+  font-size: 0.85rem;
+  color: var(--text-primary);
+  line-height: 1.45;
+}
+
+.news-feed-link {
+  align-self: flex-start;
+  font-size: 0.75rem;
+  color: var(--color-indigo);
+  text-decoration: none;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  margin-top: 0.2rem;
+  transition: var(--transition-smooth);
+}
+
+.news-feed-link:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+
+/* Layout compatibility for mobile viewports */
+@media (max-width: 1023px) {
+  .market-main-grid,
+  .portfolio-main-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
   }
 }
 
