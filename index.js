@@ -845,10 +845,38 @@ function renderMacroInsight(macro) {
   
   if (!macro || !macro.summary) {
     container.style.display = 'none';
+    const headlineBanner = document.getElementById('market-headline-banner');
+    if (headlineBanner) headlineBanner.style.display = 'none';
     return;
   }
 
   container.style.display = 'block';
+
+  // Render Headline Banner at the absolute top of Tab 1
+  const headlineBanner = document.getElementById('market-headline-banner');
+  if (headlineBanner && macro.summary) {
+    headlineBanner.style.display = 'block';
+    
+    // Extract first 1-2 sentences for the main title
+    const sentences = macro.summary.split(/[.!?]+/);
+    const shortHeadline = sentences[0] ? (sentences[0].trim() + '.') : macro.summary;
+    const secondSentence = (sentences[1] && sentences[1].trim()) ? (' ' + sentences[1].trim() + '.') : '';
+    
+    const isGood = macro.summary.includes('상승') || macro.summary.includes('우세') || macro.summary.includes('호재') || macro.summary.includes('강세') || macro.summary.includes('상회');
+    const isBad = macro.summary.includes('하락') || macro.summary.includes('약세') || macro.summary.includes('우려') || macro.summary.includes('하회') || macro.summary.includes('악재');
+    const borderGlowClass = isGood ? 'glow-good' : (isBad ? 'glow-bad' : 'glow-neutral');
+    
+    headlineBanner.innerHTML = `
+      <div class="market-hero-card ${borderGlowClass}">
+        <div class="hero-badge">
+          <i class="fa-solid fa-wand-magic-sparkles"></i>
+          <span>오늘의 시장 기류 요약</span>
+        </div>
+        <h1 class="hero-title">${shortHeadline}${secondSentence}</h1>
+        <p class="hero-desc">${macro.summary}</p>
+      </div>
+    `;
+  }
 
   const macroRefHtml = macro.ref_title && macro.ref_url 
     ? `<a href="${macro.ref_url}" target="_blank" class="macro-ref-link"><i class="fa-solid fa-arrow-up-right-from-square"></i> 참고 뉴스: ${macro.ref_title}</a>`
