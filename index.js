@@ -1025,7 +1025,56 @@ function renderMacroInsight(macro) {
   // Render Calendar to its own bottom layout container
   const calendarContainer = document.getElementById('macro-calendar-container');
   if (calendarContainer) {
-    if (isFallback) {
+    const aiCalendar = (dashboardData && dashboardData.macro_calendar_ai) ? dashboardData.macro_calendar_ai : [];
+    if (aiCalendar.length > 0) {
+      calendarContainer.style.display = 'block';
+      const rowsHtml = aiCalendar.map(c => {
+        let badgeClass = 'badge-medium';
+        if (c.importance === 'HIGH') badgeClass = 'badge-high';
+        else if (c.importance === 'LOW') badgeClass = 'badge-low';
+
+        let impactClass = 'sentiment-neutral';
+        if (c.impact === '호재') impactClass = 'sentiment-good';
+        else if (c.impact === '악재') impactClass = 'sentiment-bad';
+        else if (c.impact === '대기') impactClass = 'sentiment-neutral';
+
+        return `
+          <tr>
+            <td>${c.date}</td>
+            <td><strong>${c.event}</strong></td>
+            <td><code>${c.actual || '-'}</code></td>
+            <td><span class="badge ${badgeClass}">${c.importance}</span></td>
+            <td><span class="news-feed-sentiment ${impactClass}" style="font-size: 0.65rem; padding: 0.1rem 0.3rem;">${c.impact}</span></td>
+          </tr>
+        `;
+      }).join('');
+
+      calendarContainer.innerHTML = `
+        <div class="macro-card" style="margin-top: 1.5rem;">
+          <div class="macro-header">
+            <h2><i class="fa-regular fa-calendar-days text-indigo"></i> AI 실시간 탐색: 최근 및 주요 매크로 일정 캘린더</h2>
+          </div>
+          <div class="macro-body">
+            <div class="calendar-table-wrapper">
+              <table class="calendar-table">
+                <thead>
+                  <tr>
+                    <th>날짜</th>
+                    <th>경제 이벤트 / 발표 지표</th>
+                    <th>발표 결과</th>
+                    <th>중요도</th>
+                    <th>영향</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  ${rowsHtml}
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      `;
+    } else if (isFallback) {
       calendarContainer.style.display = 'block';
       calendarContainer.innerHTML = `
         <div class="macro-card">
@@ -1127,6 +1176,44 @@ function renderMacroInsight(macro) {
     `;
   }).join('');
 
+  // 5. Render AI-discovered economic indicators (like CPI, Interest rates, etc.)
+  let aiIndicatorsHtml = '';
+  const aiIndicators = (dashboardData && dashboardData.macro_indicators_ai) ? dashboardData.macro_indicators_ai : [];
+  if (aiIndicators.length > 0) {
+    const cardsHtml = aiIndicators.map(ind => {
+      let sentimentClass = 'sentiment-neutral';
+      if (ind.sentiment === 'good') sentimentClass = 'sentiment-good';
+      else if (ind.sentiment === 'bad') sentimentClass = 'sentiment-bad';
+
+      return `
+        <div class="indicator-mini-card" style="display: flex; flex-direction: column; gap: 0.25rem; background: rgba(255,255,255,0.02); padding: 0.8rem; border-radius: 8px; border: 1px solid var(--border-color);">
+          <div class="ind-icon-name" style="display: flex; align-items: center; gap: 0.4rem; font-size: 0.75rem; color: var(--text-secondary);">
+            <i class="fa-solid fa-chart-line text-indigo"></i>
+            <span class="ind-name" title="${ind.description || ind.name}" style="font-weight: 600;">${ind.name}</span>
+          </div>
+          <div class="ind-val-change" style="display: flex; justify-content: space-between; align-items: baseline; margin-top: 0.2rem;">
+            <span class="ind-value" style="font-size: 1.2rem; font-family: var(--font-header); font-weight: 800; color: #fff;">${ind.value}</span>
+            <span class="news-feed-sentiment ${sentimentClass}" style="font-size: 0.65rem; padding: 0.1rem 0.3rem; border-radius: 4px;">
+              ${ind.sentiment === 'good' ? '호재' : ind.sentiment === 'bad' ? '악재' : '중립'}
+            </span>
+          </div>
+          <div class="ind-desc" style="font-size: 0.7rem; color: var(--text-muted); line-height: 1.35; margin-top: 0.2rem;">${ind.description}</div>
+        </div>
+      `;
+    }).join('');
+
+    aiIndicatorsHtml = `
+      <div class="macro-indicators-wrapper" style="margin-top: 1.5rem; border-top: 1px solid var(--border-color); padding-top: 1.5rem;">
+        <div class="indicators-title" style="font-family: var(--font-header); font-size: 0.95rem; font-weight: 600; color: var(--text-secondary); margin-bottom: 0.8rem;">
+          <i class="fa-solid fa-square-poll-vertical"></i> AI 실시간 탐색 거시경제 핵심 통계 (CPI, 금리 등)
+        </div>
+        <div class="indicators-grid-container" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 0.85rem;">
+          ${cardsHtml}
+        </div>
+      </div>
+    `;
+  }
+
   container.innerHTML = `
     <div class="macro-card">
       <div class="macro-header">
@@ -1150,6 +1237,9 @@ function renderMacroInsight(macro) {
         <div class="macro-sectors-grid" style="margin-top: 1.5rem;">
           ${sectorPillsHtml}
         </div>
+
+        <!-- 5. AI 실시간 탐색 거시경제 핵심 통계 -->
+        ${aiIndicatorsHtml}
       </div>
     </div>
   `;

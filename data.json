@@ -258,6 +258,59 @@
       "change_pct": 8.18
     }
   ],
+  "macro_indicators_ai": [
+    {
+      "name": "미국 소비자물가지수 (CPI YoY)",
+      "value": "4.2%",
+      "description": "5월 CPI YoY 4.2% 발표 (예상치 4.3% 하회, 인플레 둔화)",
+      "sentiment": "good",
+      "date": "2026-06-10"
+    },
+    {
+      "name": "미국 근원(Core) CPI YoY",
+      "value": "2.9%",
+      "description": "5월 근원 CPI YoY 2.9% 발표 (예상치 3.0% 하회, 2%대 안착)",
+      "sentiment": "good",
+      "date": "2026-06-10"
+    },
+    {
+      "name": "미국 기준금리 (Fed Funds Rate)",
+      "value": "5.25%~5.50%",
+      "description": "최근 FOMC에서 금리 동결 유지",
+      "sentiment": "neutral",
+      "date": "2026-05-01"
+    },
+    {
+      "name": "미국 실업률 (Unemployment)",
+      "value": "4.0%",
+      "description": "최근 고용 지표상 실업률 4.0%로 기록",
+      "sentiment": "neutral",
+      "date": "2026-06-05"
+    }
+  ],
+  "macro_calendar_ai": [
+    {
+      "date": "2026-06-10",
+      "event": "미국 5월 CPI 발표",
+      "actual": "YoY 4.2% / Core YoY 2.9%",
+      "importance": "HIGH",
+      "impact": "호재"
+    },
+    {
+      "date": "2026-06-18",
+      "event": "FOMC 금리 결정 및 성명서",
+      "actual": "대기 중",
+      "importance": "HIGH",
+      "impact": "대기"
+    },
+    {
+      "date": "2026-07-02",
+      "event": "미국 6월 고용보고서 발표",
+      "actual": "대기 중",
+      "importance": "MID",
+      "impact": "대기"
+    }
+  ],
   "agent_suggestions": {
     "INTJ": {
       "name": "아서 (Arthur)",
