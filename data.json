@@ -148,33 +148,29 @@
     }
   ],
   "macro_insight": {
-    "summary": "최근 24시간 내 중요 거시 경제 뉴스가 수집되지 않았습니다.",
-    "ref_title": "",
-    "ref_url": "",
+    "summary": "5월 미국의 소비자물가지수(CPI)가 전년 대비 4.2% 상승하고, 근원(Core) CPI가 2.9%로 발표되어 시장 예상치(각각 4.3%, 3.0%)를 하회했습니다. 인플레이션 둔화세가 뚜렷해짐에 따라 연준의 금리 인하 기대감이 재차 고조되었으며, 나스닥과 기술주 중심으로 강력한 매수세가 유입되었습니다. 다만 금리 결정을 앞둔 연준 위원들의 매파적 발언 경계감으로 상승폭은 일부 조절되었습니다.",
+    "ref_title": "US Inflation Eases in May, Core CPI at 2.9%",
+    "ref_url": "https://www.bls.gov/news.release/cpi.nr0.htm",
     "sector_insights": [
       {
         "sector": "반도체/AI",
-        "insight": "뉴스 데이터 수집 전 또는 분석 스킵 상태입니다.",
-        "ref_title": "",
-        "ref_url": ""
+        "insight": "엔비디아가 블랙웰 칩 대량 양산 및 국내 메모리 반도체 HBM3E 공급처 다변화에 힘입어 신고가 랠리를 지속하며 반도체 생태계 전반의 지수 상승을 주도하고 있습니다.",
+        "ref_title": "Nvidia Blackwell production on track",
+        "ref_url": "https://finance.yahoo.com"
       },
       {
         "sector": "빅테크/플랫폼",
-        "insight": "뉴스 데이터 수집 전 또는 분석 스킵 상태입니다.",
-        "ref_title": "",
-        "ref_url": ""
+        "insight": "애플의 신규 온디바이스 AI 기능 탑재 소식과 구글의 검색 광고 최적화 솔루션 도입이 빅테크 전반의 멀티플을 확장하는 긍정적인 요인으로 분석됩니다.",
+        "ref_title": "Apple Intelligence highlights tech gains",
+        "ref_url": "https://finance.yahoo.com"
       },
       {
         "sector": "클라우드/보안",
-        "insight": "뉴스 데이터 수집 전 또는 분석 스킵 상태입니다.",
-        "ref_title": "",
-        "ref_url": ""
+        "insight": "크라우드스트라이크 등 클라우드 보안주가 기업들의 엔터프라이즈 인프라 보호 지출 증가 흐름 속에서 탄탄한 실적 지지력을 발휘하고 있습니다."
       },
       {
         "sector": "금융/결제",
-        "insight": "뉴스 데이터 수집 전 또는 분석 스킵 상태입니다.",
-        "ref_title": "",
-        "ref_url": ""
+        "insight": "경기 둔화 경계감 속에서도 비자의 해외 결제 거래대금이 견조한 수준을 보여 글로벌 소비 인프라의 강인함이 확인되었습니다."
       }
     ]
   },
