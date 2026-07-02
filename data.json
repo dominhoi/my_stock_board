@@ -1,129 +1,129 @@
 {
-  "updated_at": "2026-07-01 00:08:52",
+  "updated_at": "2026-07-02 00:08:58",
   "summary": {
     "total_buy_combined_krw": 59171768.0,
-    "total_eval_combined_krw": 112580380.06853811,
-    "total_profit_combined_pct": 90.26029451838944,
-    "krw_rate": 1551.530029296875,
-    "total_change_combined_krw": 2251633.036655411,
-    "total_change_combined_pct": 2.0408398511085566,
-    "krw_change_pct": 0.6356527376567833
+    "total_eval_combined_krw": 114070501.18744123,
+    "total_profit_combined_pct": 92.7785919586537,
+    "krw_rate": 1552.97998046875,
+    "total_change_combined_krw": 6478099.60760659,
+    "total_change_combined_pct": 6.020963852916486,
+    "krw_change_pct": 0.2821882306406175
   },
   "owned_stocks": [
     {
       "name": "네이버",
       "ticker": "035420.KS",
-      "current_price": 199000.0,
-      "change_pct": -2.450980392156863,
+      "current_price": 197400.0,
+      "change_pct": -0.8040201005025126,
       "is_usd": false,
-      "news_summary": "한국 정부가 8800억 달러 규모의 AI 및 칩 투자 계획을 발표하면서 국내 주요 기술 기업들에게 긍정적인 영향을 미칠 것으로 예상됩니다. [호재]",
+      "news_summary": "한국 정부가 8800억 달러 규모의 AI 및 반도체 투자 계획을 발표하여 국내 기술 기업 전반에 긍정적인 영향을 미칠 것으로 보입니다. [호재]",
       "news_url": "https://finance.yahoo.com/technology/ai/articles/south-korea-unveils-880-billion-202959111.html",
       "buy_price": 343143.0,
       "qty": 76.0,
-      "profit_pct": -42.00668525949823,
+      "profit_pct": -42.47296316695955,
       "purchase_rate": 1.0,
       "fx_profit_krw": 0.0,
-      "stock_profit_krw": -10954868.0,
-      "total_profit_krw": -10954868.0,
-      "total_profit_krw_pct": -42.00668525949823
+      "stock_profit_krw": -11076468.0,
+      "total_profit_krw": -11076468.0,
+      "total_profit_krw_pct": -42.47296316695955
     },
     {
       "name": "크라우드스트라이크",
       "ticker": "CRWD",
-      "current_price": 763.1400146484375,
-      "change_pct": 2.7230811585794323,
+      "current_price": 772.739990234375,
+      "change_pct": 10.219794981290905,
       "is_usd": true,
-      "news_summary": "크라우드스트라이크의 주식 분할이 2026년 모멘텀 속에 수요일로 예정되어 있으며, 이는 시장의 긍정적인 평가를 반영합니다. [중립]",
-      "news_url": "https://www.investors.com/news/technology/crowdstrike-stock-split-cybersecurity-2026-momentum/?src=A00220&yptr=yahoo",
+      "news_summary": "중국 AI 기술의 미국 경쟁사 추격이 사이버 보안 수요를 증가시키며 CrowdStrike와 같은 기업에 긍정적인 영향을 미칠 것으로 분석됩니다. [호재]",
+      "news_url": "https://www.barrons.com/articles/ai-crowdstrike-stock-price-palo-alto-cybersecurity-5b55b270?siteid=yhoof2&yptr=yahoo",
       "buy_price": 161.3556,
       "qty": 50.0,
-      "profit_pct": 372.95539457473893,
+      "profit_pct": 378.90497152523676,
       "buy_price_krw": 200559.0,
       "purchase_rate": 1242.9627481165821,
-      "fx_profit_krw": 2489452.939760743,
-      "stock_profit_krw": 46684329.524494655,
-      "total_profit_krw": 49173782.46425539,
-      "total_profit_krw_pct": 490.36724818388
+      "fx_profit_krw": 2501150.826826172,
+      "stock_profit_krw": 47473385.92025392,
+      "total_profit_krw": 49974536.74708009,
+      "total_profit_krw_pct": 498.35247231069246
     },
     {
       "name": "Apple",
       "ticker": "AAPL",
-      "current_price": 289.3599853515625,
-      "change_pct": 2.704619642688476,
+      "current_price": 294.3800048828125,
+      "change_pct": 1.7348699838890467,
       "is_usd": true,
-      "news_summary": "아메리칸 익스프레스가 미국 카드 소지자들을 위해 애플 페이 리워드 교환 기능을 추가하며 애플 페이 생태계 확장에 긍정적인 소식이 있습니다. [호재]",
-      "news_url": "https://finance.yahoo.com/markets/stocks/articles/american-express-adds-apple-pay-201838820.html",
+      "news_summary": "애플이 2027년 아이패드 프로 신제품 및 맥북 프로 재설계 등 제품 로드맵을 발표하며 중장기적인 성장 동력을 제시했습니다. [호재]",
+      "news_url": "https://stocktwits.com/news-articles/markets/equity/apple-reportedly-plans-new-ipad-pro-redesigned-entry-level-macbook-pro-for-2027/cZm3twLR71j",
       "buy_price": 150.9482,
       "qty": 28.0,
-      "profit_pct": 91.69488960554844,
+      "profit_pct": 95.02054670596435,
       "buy_price_krw": 187121.0,
       "purchase_rate": 1239.6371735469518,
-      "fx_profit_krw": 1318230.624712696,
-      "stock_profit_krw": 6013001.158683191,
-      "total_profit_krw": 7331231.783395886,
-      "total_profit_krw_pct": 139.9253459258197
+      "fx_profit_krw": 1324358.9152582036,
+      "stock_profit_krw": 6236908.203274216,
+      "total_profit_krw": 7561267.118532419,
+      "total_profit_krw_pct": 144.3158460211845
     },
     {
       "name": "구글",
       "ticker": "GOOGL",
-      "current_price": 357.3699951171875,
-      "change_pct": 1.051887822679277,
+      "current_price": 361.2099914550781,
+      "change_pct": 1.0745155973800842,
       "is_usd": true,
-      "news_summary": "알파벳(GOOGL)이 광범위한 시장 수익률을 상회하며 견조한 실적을 기록하고 있어 투자자들의 관심을 받고 있습니다. [호재]",
-      "news_url": "https://finance.yahoo.com/markets/stocks/articles/alphabet-googl-outperforms-broader-market-214505678.html",
+      "news_summary": "Meta가 남는 AI 컴퓨팅 자원을 임대할 계획으로, 다른 빅테크 기업들도 유사한 AI 자원 활용 및 수익화 모델을 모색할 가능성이 있습니다. [중립]",
+      "news_url": "https://finance.yahoo.com/video/meta-to-reportedly-rent-out-excess-ai-compute-joining-the-ranks-of-amazon--microsoft-151209864.html",
       "buy_price": 299.4283,
       "qty": 6.0,
-      "profit_pct": 19.350774498331496,
+      "profit_pct": 20.63321718591,
       "buy_price_krw": 436087.0,
       "purchase_rate": 1456.3987438729073,
-      "fx_profit_krw": 170909.9944278805,
-      "stock_profit_krw": 539389.6795360834,
-      "total_profit_krw": 710299.673963964,
-      "total_profit_krw_pct": 27.146711319987528
+      "fx_profit_krw": 173514.93291474588,
+      "stock_profit_krw": 575674.3799354016,
+      "total_profit_krw": 749189.3128501475,
+      "total_profit_krw_pct": 28.6330217307612
     },
     {
       "name": "비자",
       "ticker": "V",
-      "current_price": 343.0899963378906,
-      "change_pct": 0.4214846969505735,
+      "current_price": 351.0799865722656,
+      "change_pct": 2.3288321780463965,
       "is_usd": true,
-      "news_summary": "블랙록과 구글이 은행 및 암호화폐 기업들과 함께 새로운 스테이블코인 지원에 참여하며 결제 시장의 변화를 예고하고 있습니다. [중립]",
-      "news_url": "https://www.wsj.com/livecoverage/stock-market-today-dow-sp-500-nasdaq-06-30-2026/card/blackrock-google-join-banks-and-crypto-firms-in-backing-new-stablecoin-czjc2S3yJVxmofXLQpzP?siteid=yhoof2&yptr=yahoo",
+      "news_summary": "최근 24시간 내 중요 뉴스 없음",
+      "news_url": "",
       "buy_price": 267.9314,
       "qty": 42.0,
-      "profit_pct": 28.051432694298107,
+      "profit_pct": 31.03353566333234,
       "buy_price_krw": 362120.0,
       "purchase_rate": 1351.539983742107,
-      "fx_profit_krw": 2250511.741445215,
-      "stock_profit_krw": 4897654.405477657,
-      "total_profit_krw": 7148166.1469228715,
-      "total_profit_krw_pct": 46.99945655296371
+      "fx_profit_krw": 2266828.214236523,
+      "stock_profit_krw": 5423379.794742052,
+      "total_profit_krw": 7690208.0089785755,
+      "total_profit_krw_pct": 50.56340182535239
     }
   ],
   "watched_stocks": [
     {
       "name": "삼성전자",
       "ticker": "005930.KS",
-      "current_price": 334000.0,
-      "change_pct": 3.4055727554179565,
+      "current_price": 314500.0,
+      "change_pct": -5.838323353293413,
       "is_usd": false,
-      "news_summary": "한국 정부의 대규모 AI 및 반도체 투자 추진 발표와 삼성의 대규모 투자 계획이 반도체 장비 주식의 급등을 이끌고 있습니다. [호재]",
-      "news_url": "https://finance.yahoo.com/technology/articles/chip-tool-stocks-surge-9-194154764.html"
+      "news_summary": "경쟁사인 SK하이닉스가 삼성전자를 제치고 기업공개(IPO)를 추진하며 AI 메모리 시장에서의 경쟁 심화가 예상됩니다. [악재]",
+      "news_url": "https://www.thestreet.com/investing/stocks/skhynix-surpasses-samsung-then-files-for-a-record-nasdaq-ipo"
     },
     {
       "name": "SK하이닉스",
       "ticker": "000660.KS",
-      "current_price": 2650000.0,
-      "change_pct": 0.837138508371385,
+      "current_price": 2560000.0,
+      "change_pct": -3.3962264150943398,
       "is_usd": false,
-      "news_summary": "SK 하이닉스가 나스닥 IPO를 추진하며 294억 달러 규모의 대규모 상장 서류를 제출했고, 한국의 AI 및 칩 투자 계획으로 관련주가 상승했습니다. [호재]",
-      "news_url": "https://finance.yahoo.com/markets/stocks/articles/sk-hynix-storms-nasdaq-monster-192025724.html"
+      "news_summary": "SK하이닉스가 삼성전자를 제치고 상장 초읽기에 들어가며 AI 메모리 시장에서의 지위 강화와 함께 기업 가치 상승이 기대됩니다. [호재]",
+      "news_url": "https://www.thestreet.com/investing/stocks/skhynix-surpasses-samsung-then-files-for-a-record-nasdaq-ipo"
     },
     {
       "name": "카카오",
       "ticker": "035720.KS",
-      "current_price": 34550.0,
-      "change_pct": -3.626220362622036,
+      "current_price": 34800.0,
+      "change_pct": 0.723589001447178,
       "is_usd": false,
       "news_summary": "최근 24시간 내 중요 뉴스 없음",
       "news_url": ""
@@ -131,193 +131,200 @@
     {
       "name": "NVIDIA",
       "ticker": "NVDA",
-      "current_price": 200.08999633789062,
-      "change_pct": 2.626042511735814,
+      "current_price": 197.5800018310547,
+      "change_pct": -1.254432781635583,
       "is_usd": true,
-      "news_summary": "엔비디아 주식이 단기적인 하락 추세를 보이고 있으며, 그 배경에는 여러 요인이 복합적으로 작용하고 있는 것으로 분석됩니다. [악재]",
-      "news_url": "https://finance.yahoo.com/markets/stocks/article/nvidia-stock-is-sagging-heres-whats-behind-the-negative-short-term-trend-120447121.html"
+      "news_summary": "엔비디아가 Palantir와 Sovereign-AI 계약을 체결하며 AI 시장 내 입지를 더욱 공고히 하고 새로운 성장 동력을 확보했습니다. [호재]",
+      "news_url": "https://247wallst.com/investing/2026/07/01/palantir-jumps-9-on-nvidia-sovereign-ai-deal-palo-alto-networks-climbs-4/"
     },
     {
       "name": "테슬라",
       "ticker": "TSLA",
-      "current_price": 420.6000061035156,
-      "change_pct": 2.1270420171716213,
+      "current_price": 425.29998779296875,
+      "change_pct": 1.1174468904540131,
       "is_usd": true,
-      "news_summary": "테슬라의 2분기 인도량 전망에서 유럽 및 해외 판매가 주도적인 반면, 미국 판매는 감소세를 보이며 지역별 실적에 편차가 나타나고 있습니다. [악재]",
-      "news_url": "https://finance.yahoo.com/markets/stocks/article/tesla-q2-delivery-preview-europe-international-sales-the-driver-as-us-sales-in-decline-152919456.html"
+      "news_summary": "테슬라 주가가 목요일 실적 발표를 앞두고 4거래일 연속 상승세를 보였으며, 월가는 전년 대비 성장을 기대하고 있습니다. [호재]",
+      "news_url": "https://stocktwits.com/news-articles/markets/equity/tsla-stock-up-for-fourth-straight-day-of-gains-before-thursday-deliveries-report-wall-street-expects-year-on-year-growth/cZm3oddR71L"
     }
   ],
   "macro_insight": {
-    "summary": "최근 발표된 미국의 5월 소비자물가지수(CPI)는 전년 대비 4.2% 상승하며 3년 만에 최고치를 기록, 인플레이션 우려를 다시 키웠습니다. 이는 연준의 금리 인하 기대감을 약화시키고 오히려 연내 금리 인상 가능성에 무게를 싣게 하고 있습니다. 한국 또한 높은 인플레이션 압력과 견조한 GDP 성장을 바탕으로 7월 기준금리 인상 가능성이 높아지고 있습니다. 이와는 별개로 한국 정부의 대규모 AI 및 반도체 투자 계획 등은 글로벌 기술 섹터 전반에 긍정적인 모멘텀을 제공하며 시장의 활력을 불어넣고 있습니다.",
-    "ref_title": "美 5월 소비자물가 4.2% 올라… 2023년 이후 최고",
-    "ref_url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHGET1bN_Rp2BLtPDwAghoR6Ik4ee6zQopqPlw7ZkNIaG5PzYTHp4cPrIgHMDQvisfi6py4OUEGN6chjK74HrKc8nfZxtz1xe3zziu1MSFzrgy9nrIQnPaVXpE0-hL_bSsk05Wi1zOWjD4y7eOWSG-y2qJ_b2EW1wcMML0QRB_VoFlk9sH5zw=="
+    "summary": "오늘 글로벌 시장은 미국의 5월 소비자물가 상승률이 3년래 최고치를 기록하며 인플레이션 우려가 지속되고, 중동 긴장 고조로 채권 금리가 들썩이는 복합적인 매크로 환경을 보여주고 있습니다. 이에 따라 미국 연방준비제도는 7월 기준금리 동결 후 9월 인상 가능성이 제기되고 있으며, 한국은행 역시 7월 금리 인상 가능성이 높은 상황입니다. 노동 시장은 견조한 흐름을 유지하나 민간 고용 증가세가 둔화 조짐을 보이면서 고용 상황에 대한 추가 모니터링이 필요해 보입니다.",
+    "ref_title": "美 5월 소비자물가 상승률 3년래 최고, 중동 긴장 고조에 들썩이는 채권 금리",
+    "ref_url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEeOQcFSKAiBeFMHfrPvqHJ4CXFFIIxTYaXQxdZEHGP3njTNb8_Ylq2d7fBfQ-5v1n0IsuwsCzpxtZeH4MQL63qWxigihsStKTjFFIjUoFi5fVLzv35lH3oaxqa0ZoUJDNgdaUgJ2XJ_EU7KJq1BtAZaAbd7-uu4VIUtiXDG6eadgVU6ofaQ=="
   },
   "macro_indicators": [
     {
       "name": "미국10년국채금리",
       "ticker": "^TNX",
-      "value": 4.418,
-      "change_pct": 1.05
+      "value": 4.475,
+      "change_pct": 2.36
     },
     {
       "name": "달러인덱스",
       "ticker": "DX-Y.NYB",
-      "value": 101.238,
-      "change_pct": 0.13
+      "value": 101.399,
+      "change_pct": 0.21
     },
     {
       "name": "VIX공포지수",
       "ticker": "^VIX",
-      "value": 16.45,
-      "change_pct": -6.8
+      "value": 16.59,
+      "change_pct": 0.85
     },
     {
       "name": "원달러환율",
       "ticker": "USDKRW=X",
-      "value": 1551.53,
-      "change_pct": 0.64
+      "value": 1552.98,
+      "change_pct": 0.28
     },
     {
       "name": "금선물",
       "ticker": "GC=F",
-      "value": 4020.5,
-      "change_pct": -0.04
+      "value": 4048.6001,
+      "change_pct": 0.64
     },
     {
       "name": "WTI원유선물",
       "ticker": "CL=F",
-      "value": 70.1,
-      "change_pct": -0.92
+      "value": 68.01,
+      "change_pct": -2.14
     },
     {
       "name": "구리선물",
       "ticker": "HG=F",
-      "value": 6.249,
-      "change_pct": 2.48
+      "value": 6.1565,
+      "change_pct": -0.58
     },
     {
       "name": "비트코인",
       "ticker": "BTC-USD",
-      "value": 58609.3203,
-      "change_pct": -2.54
+      "value": 59924.7812,
+      "change_pct": 2.33
     },
     {
       "name": "이더리움",
       "ticker": "ETH-USD",
-      "value": 1572.34,
-      "change_pct": -2.35
+      "value": 1605.22,
+      "change_pct": 2.27
     },
     {
       "name": "미국리츠부동산",
       "ticker": "VNQ",
-      "value": 96.43,
-      "change_pct": -1.75
+      "value": 96.82,
+      "change_pct": 0.4
     },
     {
       "name": "미국20년국채",
       "ticker": "TLT",
-      "value": 86.42,
-      "change_pct": -1.18
+      "value": 85.52,
+      "change_pct": -1.04
     },
     {
       "name": "나스닥종합지수",
       "ticker": "^IXIC",
-      "value": 26213.7188,
-      "change_pct": 1.52
+      "value": 26040.0312,
+      "change_pct": -0.66
     },
     {
       "name": "코스피지수",
       "ticker": "^KS11",
-      "value": 8394.6504,
-      "change_pct": -0.2
+      "value": 8476.4805,
+      "change_pct": 0.97
     }
   ],
   "macro_indicators_ai": [
     {
       "name": "미국 소비자물가지수 (CPI YoY)",
       "value": "4.2%",
-      "description": "2026년 5월 CPI가 전년 동월 대비 4.2% 상승하며 2023년 4월 이후 최고치를 기록, 인플레이션 우려 재점화.",
+      "description": "2026년 5월 미국 소비자물가지수(CPI)는 전년 동월 대비 4.2% 상승하며 3년 만에 최고치를 기록, 인플레이션 압력이 여전함을 시사했습니다.",
       "sentiment": "bad",
       "date": "2026-06-10"
     },
     {
       "name": "미국 근원 소비자물가지수 (Core CPI YoY)",
       "value": "2.9%",
-      "description": "2026년 5월 근원 CPI는 전년 동월 대비 2.9% 상승하며 시장 예상치에 부합하거나 하회하여 기조적인 인플레이션 압력의 완만한 둔화 흐름을 시사.",
+      "description": "2026년 5월 미국 근원 CPI는 전년 동월 대비 2.9% 상승했습니다.",
       "sentiment": "neutral",
+      "date": "2026-06-10"
+    },
+    {
+      "name": "미국 소비자물가지수 (CPI MoM)",
+      "value": "0.5%",
+      "description": "2026년 5월 미국 CPI는 전월 대비 0.5% 상승하며 시장 예상치에 부합했습니다.",
+      "sentiment": "neutral",
+      "date": "2026-06-10"
+    },
+    {
+      "name": "미국 근원 소비자물가지수 (Core CPI MoM)",
+      "value": "0.2%",
+      "description": "2026년 5월 미국 근원 CPI는 전월 대비 0.2% 상승하여 시장 예상치(0.3%)를 하회했습니다.",
+      "sentiment": "good",
       "date": "2026-06-10"
     },
     {
       "name": "미국 기준금리 (Fed Rate)",
       "value": "3.50%~3.75%",
-      "description": "2026년 6월 FOMC 회의에서 기준금리를 동결했으나, 시장에서는 매파적 발언과 인플레이션 우려로 추가 금리 인상 가능성을 염두.",
+      "description": "미국 연방준비제도(Fed)는 2026년 6월 FOMC에서 기준금리를 3.50%~3.75%로 동결했으며, 다수의 투자은행은 연말까지 현 수준을 유지할 것으로 전망합니다.",
       "sentiment": "neutral",
-      "date": "2026-06-17"
+      "date": "2026-06-19"
     },
     {
       "name": "미국 실업률",
       "value": "4.3%",
-      "description": "2026년 5월 실업률은 4.3%로 지난 3개월 연속 같은 수준을 유지하며 견조한 고용시장을 나타냄.",
+      "description": "2026년 5월 미국 실업률은 4.3%로 변동 없이 유지되어 고용 시장의 견조함을 나타냈습니다. 6월 실업률은 4.3% 유지될 것으로 예상됩니다.",
       "sentiment": "good",
       "date": "2026-06-05"
     },
     {
       "name": "한국 기준금리",
       "value": "2.50%",
-      "description": "한국은행은 2026년 5월 통화정책회의에서 기준금리를 2.50%로 동결했으나, 7월 회의에서 인상 가능성이 높다는 신호를 보냄.",
+      "description": "한국은행은 현재 기준금리 2.50%를 유지하고 있으나, 7월 금융통화위원회에서 기준금리 인상 가능성이 높게 점쳐지고 있습니다.",
       "sentiment": "neutral",
-      "date": "2026-05-28"
+      "date": "2026-05-23"
     }
   ],
   "macro_calendar_ai": [
     {
-      "date": "2026-07-02",
-      "event": "미국 6월 고용보고서 (Employment Situation)",
-      "actual": "대기 중",
+      "date": "2026-06-05",
+      "event": "미국 5월 고용보고서 (실업률)",
+      "actual": "4.3%",
       "importance": "HIGH",
-      "impact": "대기"
+      "impact": "호재"
     },
     {
-      "date": "2026-07-14",
-      "event": "미국 6월 소비자물가지수 (CPI)",
+      "date": "2026-06-10",
+      "event": "미국 5월 소비자물가지수 (CPI) 발표",
+      "actual": "YoY 4.2%, MoM 0.5% (근원 YoY 2.9%, 근원 MoM 0.2%)",
+      "importance": "HIGH",
+      "impact": "악재"
+    },
+    {
+      "date": "2026-06-19",
+      "event": "미국 연방공개시장위원회(FOMC) 회의 (금리 결정)",
+      "actual": "3.50%~3.75% 동결",
+      "importance": "HIGH",
+      "impact": "중립"
+    },
+    {
+      "date": "2026-07-03",
+      "event": "미국 6월 고용보고서 (비농업 고용, 실업률) 발표",
       "actual": "대기 중",
       "importance": "HIGH",
       "impact": "대기"
     },
     {
       "date": "2026-07-16",
-      "event": "한국은행 금융통화위원회 기준금리 결정",
-      "actual": "대기 중",
+      "event": "한국은행 금융통화위원회 (기준금리 결정)",
+      "actual": "대기 중 (인상 예상)",
       "importance": "HIGH",
       "impact": "대기"
     },
     {
       "date": "2026-07-28",
-      "event": "미국 FOMC 회의",
+      "event": "미국 연방공개시장위원회(FOMC) 회의 (금리 결정)",
       "actual": "대기 중",
       "importance": "HIGH",
       "impact": "대기"
-    },
-    {
-      "date": "2026-06-10",
-      "event": "미국 5월 소비자물가지수 (CPI) 발표",
-      "actual": "4.2% (YoY)",
-      "importance": "HIGH",
-      "impact": "악재"
-    },
-    {
-      "date": "2026-06-10",
-      "event": "미국 5월 근원 소비자물가지수 (Core CPI) 발표",
-      "actual": "2.9% (YoY)",
-      "importance": "HIGH",
-      "impact": "중립"
-    },
-    {
-      "date": "2026-06-05",
-      "event": "미국 5월 실업률 발표",
-      "actual": "4.3%",
-      "importance": "HIGH",
-      "impact": "호재"
     }
   ],
   "agent_suggestions": {
@@ -327,7 +334,7 @@
       "title": "용의주도한 자산 전략가",
       "style": "시나리오 기반 중장기 매크로 설계",
       "avatar": "fa-solid fa-brain",
-      "comment": "현재 높은 환율을 활용하여 수익난 해외 자산 일부를 원화로 전환, 내년 용인 수지 아파트 매수 시드머니를 확보하는 전략이 유효합니다. 분당 대비 수지 매매가 지수 상승세는 완만하나 전세가 상승세는 뚜렷하므로, 잠재적 매매가 상승 압력을 주시하며 전략적 진입 시점을 모색해야 합니다."
+      "comment": "미국 국채금리 상승과 환율 강세 속 분당/수지 부동산 매매 및 전세 지수 동반 상승은 긍정적이나, 2027년 수지 아파트 매수를 위해선 현재 강세인 해외 주식의 전략적 익절 및 국내 부동산 시장 변동성 시나리오를 고려한 자산 재배치가 필요합니다. 매크로 지표와 실거주 지역 데이터를 연동하여 최적의 매수 시점을 포착하는 시나리오 플래닝이 핵심이 될 것입니다."
     },
     "ISTJ": {
       "name": "올리버 (Oliver)",
@@ -335,7 +342,7 @@
       "title": "원칙주의 자산 보전가",
       "style": "수치 중심의 철저한 리스크 회피",
       "avatar": "fa-solid fa-shield-halved",
-      "comment": "현재 포트폴리오의 높은 수익률에도 불구하고, 네이버의 손실과 급등한 환율은 면밀한 리스크 관리가 필요합니다. 무주택자로서 내년 주택 매수 시 대출 금리 상승과 전세 보증금의 안전성 확보를 최우선으로 고려하며, 영끌 매수를 지양하고 안정적 현금 흐름을 위한 포트폴리오 리밸런싱을 권고합니다."
+      "comment": "무주택자로서 내년 주택 구매 시, 예상치 못한 대출 금리 인상 리스크와 현재 분당 전세금의 안전한 회수 가능성을 최우선으로 고려해야 합니다. 네이버 손실 만회를 위한 무리한 영끌 매수보다는 고수익 종목 비중을 점진적으로 줄이고 현금성 자산을 충분히 확보하는 보수적 리밸런싱이 필수적입니다. 안전 마진을 확보하는 것이 자산 보전의 근본입니다."
     },
     "ENTP": {
       "name": "레오 (Leo)",
@@ -343,19 +350,19 @@
       "title": "성장 추구형 트렌드 모험가",
       "style": "모멘텀 및 하이리스크 트레이딩",
       "avatar": "fa-solid fa-rocket",
-      "comment": "포트폴리오의 폭발적인 수익률은 당신의 공격적 투자 성향을 증명합니다. 나스닥의 상승 모멘텀과 최근 하락한 비트코인의 단기 반등 기회를 활용해 시드머니를 극대화하고, 용인 수지구 성복역 인근 급매물을 적극적으로 탐색하여 내년 초과 수익을 통한 내집 마련을 노려야 합니다!"
+      "comment": "현재 포트폴리오의 압도적 수익률을 바탕으로, 크라우드스트라이크 같은 성장주와 비트코인의 단기 모멘텀을 활용해 매수 시드머니를 공격적으로 증액할 기회입니다. 용인 수지구의 최근 실거래가 급매물을 주시하며 타이밍을 포착, 과감한 자산 전환과 대출 활용으로 내년 내집마련 목표를 조기 달성할 수 있습니다."
     },
     "real_estate_insights": [
-      "투자자는 현재 분당 전세 보증금(추정치)을 용인 수지 아파트 매입 시 자금으로 활용할 계획이므로, 용인 수지 평균 매매가(약 10억원) 대비 높아진 전세가율(58.2%, 전세지수 100.0)을 고려할 때, 예상되는 매매가와 전세 보증금 회수액 간의 갭을 면밀히 분석하여 자금 계획을 수립해야 합니다.",
-      "분당의 매매가 지수가 6개월간 2.4pt 급등하며 과열 양상을 보이는 반면, 용인 수지구는 매매가 지수 상승세가 상대적으로 완만하고 전세가 지수(100.0pt)가 먼저 상승하고 있어, 분당 진입이 어렵다면 수지 지역의 매수 적기가 도래할 수 있습니다.",
-      "용인 수지구청역 및 성복역 인근을 집중 타겟하는 투자자는 '더샵동천이스트포레'(매매 11.25억, 78㎡)와 '성복역롯데캐슬클라시엘'(전세 7.56억, 101㎡) 등 주요 단지의 최근 실거래가를 벤치마킹하여, 실질적인 매입 가능한 예산 범위와 선호하는 평형대의 매물을 구체적으로 탐색해야 합니다."
+      "현재 거주 중인 분당(평균 15.43억원)과 내집마련 타겟인 용인 수지(평균 9.07억원)는 약 6억원 이상의 평균 가격 격차가 존재하며, 예산 현실화에 유리한 수지구에 집중하는 전략은 합리적입니다.",
+      "용인 수지구의 매매 및 전세 가격지수가 6개월간 꾸준히 상승세(매매 97.5->99.2, 전세 98.1->100.0)를 보이고 있으며, 상대적으로 높은 전세가율(58.2%)은 안정적인 실수요 기반과 매매가 동반 상승 가능성을 시사합니다.",
+      "투자자의 현재 자산(1.14억원)으로는 용인 수지구 평균 아파트 가격(9.07억원) 대비 약 8억원 가량의 추가 자금 조달이 필요하며, 이는 주택담보대출(LTV/DSR) 가능성과 금리 변동성을 고려한 철저한 자금 계획 수립이 중요함을 시사합니다."
     ]
   },
   "real_estate": [
     {
       "name": "서울시 전체",
       "code": "11000",
-      "average_price_krw": 1592200000,
+      "average_price_krw": 1718117000,
       "jeonse_ratio_pct": 53.6,
       "monthly_rent_avg_krw": 1180000,
       "price_index_trend": [
@@ -391,6 +398,24 @@
         }
       ],
       "recent_transactions": [
+        {
+          "apt_name": "효성쥬얼리시티",
+          "size_sqm": 92.81,
+          "trade_type": "월세",
+          "floor": 10,
+          "date": "2026-07-01",
+          "deposit_krw": 40000000,
+          "price_krw": 2100000
+        },
+        {
+          "apt_name": "창신쌍용1",
+          "size_sqm": 79.87,
+          "trade_type": "월세",
+          "floor": 5,
+          "date": "2026-07-01",
+          "deposit_krw": 100000000,
+          "price_krw": 1590000
+        },
         {
           "apt_name": "힐스테이트창경궁",
           "size_sqm": 84.96,
@@ -483,15 +508,15 @@
           "trade_type": "매매",
           "floor": 6,
           "date": "2026-06-23",
-          "price_krw": 555000000
+          "price_krw": 515000000
         },
         {
-          "apt_name": "블루빌",
-          "size_sqm": 42.25,
+          "apt_name": "현대",
+          "size_sqm": 114.9,
           "trade_type": "매매",
-          "floor": 5,
+          "floor": 4,
           "date": "2026-06-22",
-          "price_krw": 300000000
+          "price_krw": 1599170000
         },
         {
           "apt_name": "종로센트레빌",
@@ -501,31 +526,13 @@
           "date": "2026-06-20",
           "deposit_krw": 525000000,
           "price_krw": 525000000
-        },
-        {
-          "apt_name": "창신쌍용2",
-          "size_sqm": 79.87,
-          "trade_type": "전세",
-          "floor": 6,
-          "date": "2026-06-19",
-          "deposit_krw": 490000000,
-          "price_krw": 490000000
-        },
-        {
-          "apt_name": "숭인한양LEEPS",
-          "size_sqm": 12.78,
-          "trade_type": "월세",
-          "floor": 8,
-          "date": "2026-06-18",
-          "deposit_krw": 10000000,
-          "price_krw": 650000
         }
       ]
     },
     {
       "name": "성남시 분당구",
       "code": "41135",
-      "average_price_krw": 1531500000,
+      "average_price_krw": 1543000000,
       "jeonse_ratio_pct": 50.8,
       "monthly_rent_avg_krw": 1450000,
       "price_index_trend": [
@@ -562,12 +569,110 @@
       ],
       "recent_transactions": [
         {
+          "apt_name": "한솔마을(4단지)(주공)",
+          "size_sqm": 42.75,
+          "trade_type": "전세",
+          "floor": 10,
+          "date": "2026-07-01",
+          "deposit_krw": 315000000,
+          "price_krw": 315000000
+        },
+        {
+          "apt_name": "백현마을5단지(주공)",
+          "size_sqm": 74.76,
+          "trade_type": "월세",
+          "floor": 3,
+          "date": "2026-07-01",
+          "deposit_krw": 440000000,
+          "price_krw": 1600000
+        },
+        {
+          "apt_name": "산운마을12단지판교센트럴포레와이시티",
+          "size_sqm": 59.84,
+          "trade_type": "월세",
+          "floor": 3,
+          "date": "2026-07-01",
+          "deposit_krw": 550000000,
+          "price_krw": 400000
+        },
+        {
+          "apt_name": "백현마을6단지(주공)",
+          "size_sqm": 84.98,
+          "trade_type": "월세",
+          "floor": 2,
+          "date": "2026-07-01",
+          "deposit_krw": 100000000,
+          "price_krw": 3400000
+        },
+        {
+          "apt_name": "성남판교경기행복주택",
+          "size_sqm": 16.39,
+          "trade_type": "월세",
+          "floor": 8,
+          "date": "2026-07-01",
+          "deposit_krw": 66350000,
+          "price_krw": 120000
+        },
+        {
+          "apt_name": "시범우성",
+          "size_sqm": 193.99,
+          "trade_type": "전세",
+          "floor": 14,
+          "date": "2026-07-01",
+          "deposit_krw": 1050000000,
+          "price_krw": 1050000000
+        },
+        {
+          "apt_name": "판교알파리움1단지",
+          "size_sqm": 123.339,
+          "trade_type": "전세",
+          "floor": 2,
+          "date": "2026-07-01",
+          "deposit_krw": 1400000000,
+          "price_krw": 1400000000
+        },
+        {
+          "apt_name": "효자촌(대창)",
+          "size_sqm": 70.686,
+          "trade_type": "전세",
+          "floor": 3,
+          "date": "2026-07-01",
+          "deposit_krw": 577500000,
+          "price_krw": 577500000
+        },
+        {
+          "apt_name": "무지개(1단지)(대림)",
+          "size_sqm": 60.72,
+          "trade_type": "전세",
+          "floor": 6,
+          "date": "2026-07-01",
+          "deposit_krw": 610000000,
+          "price_krw": 610000000
+        },
+        {
+          "apt_name": "현대I-PARK3",
+          "size_sqm": 163.74,
+          "trade_type": "월세",
+          "floor": 31,
+          "date": "2026-07-01",
+          "deposit_krw": 1100000000,
+          "price_krw": 2200000
+        },
+        {
           "apt_name": "한솔마을(5단지)(주공)",
           "size_sqm": 41.85,
           "trade_type": "매매",
           "floor": 7,
           "date": "2026-06-29",
           "price_krw": 1200000000
+        },
+        {
+          "apt_name": "이매촌(삼환)",
+          "size_sqm": 84.93,
+          "trade_type": "매매",
+          "floor": 14,
+          "date": "2026-06-27",
+          "price_krw": 1880000000
         },
         {
           "apt_name": "매화마을(주공3)",
@@ -578,20 +683,13 @@
           "price_krw": 780000000
         },
         {
-          "apt_name": "한솔마을(5단지)(주공)",
-          "size_sqm": 41.85,
-          "trade_type": "매매",
-          "floor": 6,
-          "date": "2026-06-24",
-          "price_krw": 1170000000
-        },
-        {
-          "apt_name": "장안타운(건영)",
-          "size_sqm": 131.76,
-          "trade_type": "매매",
-          "floor": 14,
-          "date": "2026-06-24",
-          "price_krw": 1625000000
+          "apt_name": "산운마을4단지(리가)",
+          "size_sqm": 84.8501,
+          "trade_type": "전세",
+          "floor": 20,
+          "date": "2026-06-25",
+          "deposit_krw": 680000000,
+          "price_krw": 680000000
         },
         {
           "apt_name": "무지개(6단지)(건영)",
@@ -600,100 +698,13 @@
           "floor": 7,
           "date": "2026-06-23",
           "price_krw": 1450000000
-        },
-        {
-          "apt_name": "분당더샾스타파크",
-          "size_sqm": 116.7905,
-          "trade_type": "월세",
-          "floor": 18,
-          "date": "2026-06-23",
-          "deposit_krw": 750000000,
-          "price_krw": 1700000
-        },
-        {
-          "apt_name": "파크타운(서안)",
-          "size_sqm": 101.91,
-          "trade_type": "전세",
-          "floor": 14,
-          "date": "2026-06-20",
-          "deposit_krw": 890000000,
-          "price_krw": 890000000
-        },
-        {
-          "apt_name": "양지마을(5단지)(한양501-514)",
-          "size_sqm": 35.1,
-          "trade_type": "전세",
-          "floor": 9,
-          "date": "2026-06-20",
-          "deposit_krw": 280000000,
-          "price_krw": 280000000
-        },
-        {
-          "apt_name": "산운마을12단지판교센트럴포레와이시티",
-          "size_sqm": 55.44,
-          "trade_type": "전세",
-          "floor": 5,
-          "date": "2026-06-20",
-          "deposit_krw": 525000000,
-          "price_krw": 525000000
-        },
-        {
-          "apt_name": "판교퍼스트힐푸르지오A2",
-          "size_sqm": 84.97,
-          "trade_type": "매매",
-          "floor": 10,
-          "date": "2026-06-18",
-          "price_krw": 1390000000
-        },
-        {
-          "apt_name": "정든마을(2단지)(동아)",
-          "size_sqm": 84.97,
-          "trade_type": "전세",
-          "floor": 11,
-          "date": "2026-06-18",
-          "deposit_krw": 550000000,
-          "price_krw": 550000000
-        },
-        {
-          "apt_name": "더샵분당파크리버",
-          "size_sqm": 84.9377,
-          "trade_type": "전세",
-          "floor": 18,
-          "date": "2026-06-18",
-          "deposit_krw": 900000000,
-          "price_krw": 900000000
-        },
-        {
-          "apt_name": "판교원마을9단지(한림풀에버)",
-          "size_sqm": 84.9562,
-          "trade_type": "전세",
-          "floor": 10,
-          "date": "2026-06-17",
-          "deposit_krw": 830000000,
-          "price_krw": 830000000
-        },
-        {
-          "apt_name": "장미마을(현대)",
-          "size_sqm": 75.188,
-          "trade_type": "매매",
-          "floor": 4,
-          "date": "2026-06-16",
-          "price_krw": 1480000000
-        },
-        {
-          "apt_name": "탑마을(주공)",
-          "size_sqm": 41.85,
-          "trade_type": "매매",
-          "floor": 11,
-          "date": "2026-06-16",
-          "price_krw": 800000000
         }
       ]
     },
     {
       "name": "용인시 수지구",
       "code": "41465",
-      "average_price_krw": 997500000,
+      "average_price_krw": 907500000,
       "jeonse_ratio_pct": 58.2,
       "monthly_rent_avg_krw": 1100000,
       "price_index_trend": [
@@ -730,6 +741,59 @@
       ],
       "recent_transactions": [
         {
+          "apt_name": "수지쌍용파크뷰",
+          "size_sqm": 120.03,
+          "trade_type": "매매",
+          "floor": 11,
+          "date": "2026-07-01",
+          "price_krw": 980000000
+        },
+        {
+          "apt_name": "우남퍼스트빌",
+          "size_sqm": 39.5619,
+          "trade_type": "전세",
+          "floor": 11,
+          "date": "2026-07-01",
+          "deposit_krw": 280000000,
+          "price_krw": 280000000
+        },
+        {
+          "apt_name": "동부센트레빌5단지",
+          "size_sqm": 149.691,
+          "trade_type": "전세",
+          "floor": 8,
+          "date": "2026-07-01",
+          "deposit_krw": 630000000,
+          "price_krw": 630000000
+        },
+        {
+          "apt_name": "성현마을반도유보라",
+          "size_sqm": 122.14,
+          "trade_type": "전세",
+          "floor": 17,
+          "date": "2026-07-01",
+          "deposit_krw": 650000000,
+          "price_krw": 650000000
+        },
+        {
+          "apt_name": "버들치마을성복힐스테이트3차",
+          "size_sqm": 153.249,
+          "trade_type": "전세",
+          "floor": 15,
+          "date": "2026-07-01",
+          "deposit_krw": 720000000,
+          "price_krw": 720000000
+        },
+        {
+          "apt_name": "힐스테이트광교산",
+          "size_sqm": 76.7243,
+          "trade_type": "전세",
+          "floor": 14,
+          "date": "2026-07-01",
+          "deposit_krw": 530000000,
+          "price_krw": 530000000
+        },
+        {
           "apt_name": "더샵동천이스트포레",
           "size_sqm": 78.2273,
           "trade_type": "매매",
@@ -754,20 +818,20 @@
           "price_krw": 875000000
         },
         {
-          "apt_name": "현대",
-          "size_sqm": 84.51,
+          "apt_name": "상현마을현대성우3차",
+          "size_sqm": 103.727,
           "trade_type": "매매",
-          "floor": 4,
-          "date": "2026-06-28",
-          "price_krw": 1200000000
+          "floor": 10,
+          "date": "2026-06-27",
+          "price_krw": 867500000
         },
         {
-          "apt_name": "성동마을엘지빌리지1차",
-          "size_sqm": 161.519,
+          "apt_name": "죽전퍼스트하임",
+          "size_sqm": 59.94,
           "trade_type": "매매",
           "floor": 5,
-          "date": "2026-06-27",
-          "price_krw": 1150000000
+          "date": "2026-06-26",
+          "price_krw": 830000000
         },
         {
           "apt_name": "보원",
@@ -801,58 +865,6 @@
           "floor": 17,
           "date": "2026-06-17",
           "price_krw": 820000000
-        },
-        {
-          "apt_name": "신봉마을동일하이빌3단지",
-          "size_sqm": 134.825,
-          "trade_type": "매매",
-          "floor": 3,
-          "date": "2026-06-17",
-          "price_krw": 880000000
-        },
-        {
-          "apt_name": "신봉마을자이2차",
-          "size_sqm": 134.96,
-          "trade_type": "전세",
-          "floor": 7,
-          "date": "2026-06-17",
-          "deposit_krw": 530000000,
-          "price_krw": 530000000
-        },
-        {
-          "apt_name": "신봉마을자이2차",
-          "size_sqm": 134.96,
-          "trade_type": "전세",
-          "floor": 7,
-          "date": "2026-06-17",
-          "deposit_krw": 530000000,
-          "price_krw": 530000000
-        },
-        {
-          "apt_name": "신봉마을LG자이1차",
-          "size_sqm": 115.869,
-          "trade_type": "전세",
-          "floor": 13,
-          "date": "2026-06-17",
-          "deposit_krw": 567000000,
-          "price_krw": 567000000
-        },
-        {
-          "apt_name": "동천자이",
-          "size_sqm": 74.9346,
-          "trade_type": "매매",
-          "floor": 15,
-          "date": "2026-06-10",
-          "price_krw": 1000000000
-        },
-        {
-          "apt_name": "성복역롯데캐슬클라시엘",
-          "size_sqm": 101.82,
-          "trade_type": "전세",
-          "floor": 17,
-          "date": "2026-06-06",
-          "deposit_krw": 756000000,
-          "price_krw": 756000000
         }
       ]
     }
@@ -983,6 +995,13 @@
       "total_eval_combined_krw": 112580380.06853811,
       "total_profit_combined_pct": 90.26029451838944,
       "krw_rate": 1551.530029296875
+    },
+    {
+      "date": "2026-07-02",
+      "total_buy_combined_krw": 59171768.0,
+      "total_eval_combined_krw": 114070501.18744123,
+      "total_profit_combined_pct": 92.7785919586537,
+      "krw_rate": 1552.97998046875
     }
   ]
 }
