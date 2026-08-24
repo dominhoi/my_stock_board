@@ -1,129 +1,129 @@
 {
-  "updated_at": "2026-08-23 23:22:05",
+  "updated_at": "2026-08-24 23:23:12",
   "summary": {
     "total_buy_combined_krw": 59171768.0,
-    "total_eval_combined_krw": 66647691.33223543,
-    "total_profit_combined_pct": 12.634274054876023,
-    "krw_rate": 1386.050048828125,
-    "total_change_combined_krw": 400604.6331545487,
-    "total_change_combined_pct": 0.6047128305796227,
-    "krw_change_pct": -0.34081278275260873
+    "total_eval_combined_krw": 67262717.01942444,
+    "total_profit_combined_pct": 13.673664473612549,
+    "krw_rate": 1382.25,
+    "total_change_combined_krw": 653453.8755546957,
+    "total_change_combined_pct": 0.9810255281510873,
+    "krw_change_pct": -0.1971133523407343
   },
   "owned_stocks": [
     {
       "name": "네이버",
       "ticker": "035420.KS",
-      "current_price": 222000.0,
-      "change_pct": 1.1389521640091116,
+      "current_price": 223500.0,
+      "change_pct": 0.6756756756756757,
       "is_usd": false,
       "news_summary": "최근 24시간 내 중요 뉴스 없음",
       "news_url": "",
       "buy_price": 343143.0,
       "qty": 76.0,
-      "profit_pct": -35.30394033974174,
+      "profit_pct": -34.866804801496755,
       "purchase_rate": 1.0,
       "fx_profit_krw": 0.0,
-      "stock_profit_krw": -9206868.0,
-      "total_profit_krw": -9206868.0,
-      "total_profit_krw_pct": -35.30394033974174
+      "stock_profit_krw": -9092868.0,
+      "total_profit_krw": -9092868.0,
+      "total_profit_krw_pct": -34.866804801496755
     },
     {
       "name": "크라우드스트라이크",
       "ticker": "CRWD",
-      "current_price": 191.9499969482422,
-      "change_pct": 0.8458551231100673,
+      "current_price": 190.67999267578125,
+      "change_pct": -0.6616328693161606,
       "is_usd": true,
-      "news_summary": "최근 24시간 내 중요 뉴스 없음",
-      "news_url": "",
+      "news_summary": "세일즈포스와 크라우드스트라이크 중 2026년 더 나은 성장 기술주 투자를 비교하는 기사가 발행되었으나, 기업 가치에 직접적인 영향을 미칠 뉴스는 아닙니다. [중립]",
+      "news_url": "https://www.fool.com/coverage/better-buy/2026/08/24/salesforce-vs-crowdstrike-which-growth-tech-stock-is-a-better-investment-in-2026/",
       "buy_price": 161.3556,
       "qty": 50.0,
-      "profit_pct": 18.960852271778712,
+      "profit_pct": 18.173768171529986,
       "buy_price_krw": 200559.0,
       "purchase_rate": 1242.9627481165821,
-      "fx_profit_krw": 1154396.8629345705,
-      "stock_profit_krw": 2120268.2691989057,
-      "total_profit_krw": 3274665.1321334764,
-      "total_profit_krw_pct": 32.65537953553295
+      "fx_profit_krw": 1123738.9050000012,
+      "stock_profit_krw": 2026682.0888049311,
+      "total_profit_krw": 3150420.9938049316,
+      "total_profit_krw_pct": 31.41640109698325
     },
     {
       "name": "Apple",
       "ticker": "AAPL",
-      "current_price": 309.3500061035156,
-      "change_pct": -0.626399539324739,
+      "current_price": 310.3399963378906,
+      "change_pct": 0.3200226975407676,
       "is_usd": true,
-      "news_summary": "최근 24시간 내 중요 뉴스 없음",
+      "news_summary": "최근 48시간 내 중요 뉴스 없음",
       "news_url": "",
       "buy_price": 150.9482,
       "qty": 28.0,
-      "profit_pct": 104.93785689628336,
+      "profit_pct": 105.59370455420509,
       "buy_price_krw": 187121.0,
       "purchase_rate": 1239.6371735469518,
-      "fx_profit_krw": 618821.2794544924,
-      "stock_profit_krw": 6147479.270358748,
-      "total_profit_krw": 6766300.549813241,
-      "total_profit_krw_pct": 129.14295619666345
+      "fx_profit_krw": 602760.1846000007,
+      "stock_profit_krw": 6168940.693665381,
+      "total_profit_krw": 6771700.878265381,
+      "total_profit_krw_pct": 129.2460279380985
     },
     {
       "name": "구글",
       "ticker": "GOOGL",
-      "current_price": 344.82000732421875,
-      "change_pct": 1.2181858493291498,
+      "current_price": 348.05999755859375,
+      "change_pct": 0.9396178196030786,
       "is_usd": true,
-      "news_summary": "최근 24시간 내 중요 뉴스 없음",
-      "news_url": "",
+      "news_summary": "구글이 2027년까지 모든 픽셀 생산 시설을 중국 밖으로 이전할 계획이라는 보도가 나오면서 공급망 리스크 감소가 예상됩니다. [호재]",
+      "news_url": "https://www.foxbusiness.com/markets/google-plans-move-all-pixel-manufacturing-out-china-2027",
       "buy_price": 299.4283,
       "qty": 6.0,
-      "profit_pct": 15.159457981833638,
+      "profit_pct": 16.241516769989268,
       "buy_price_krw": 436087.0,
       "purchase_rate": 1456.3987438729073,
-      "fx_profit_krw": -126386.34098686546,
-      "stock_profit_krw": 377491.0689187523,
-      "total_profit_krw": 251104.7279318869,
-      "total_profit_krw_pct": 9.596889608873417
+      "fx_profit_krw": -133213.3939500003,
+      "stock_profit_krw": 403326.98370219744,
+      "total_profit_krw": 270113.58975219727,
+      "total_profit_krw_pct": 10.323383092219261
     },
     {
       "name": "비자",
       "ticker": "V",
-      "current_price": 371.0400085449219,
-      "change_pct": 1.4518900279124896,
+      "current_price": 382.4100036621094,
+      "change_pct": 3.0643582512237177,
       "is_usd": true,
-      "news_summary": "최근 24시간 내 중요 뉴스 없음",
-      "news_url": "",
+      "news_summary": "비자 주가가 사상 최고치 경신을 향해 나아가고 있으며, 이는 강력한 시장 성과와 긍정적인 투자 심리를 반영합니다. [호재]",
+      "news_url": "https://www.wsj.com/livecoverage/stock-market-today-dow-sp-500-nasdaq-08-24-2026/card/visa-charges-toward-new-all-time-closing-high-xotwcrOgtpfDSQp8VKTE?siteid=yhoof2&yptr=yahoo",
       "buy_price": 267.9314,
       "qty": 42.0,
-      "profit_pct": 38.48321195086574,
+      "profit_pct": 42.72683368284172,
       "buy_price_krw": 362120.0,
       "purchase_rate": 1351.539983742107,
-      "fx_profit_krw": 388345.8622086919,
-      "stock_profit_krw": 6002375.060148138,
-      "total_profit_krw": 6390720.922356829,
-      "total_profit_krw_pct": 42.019226212547466
+      "fx_profit_krw": 345583.4612999987,
+      "stock_profit_krw": 6645998.096301928,
+      "total_profit_krw": 6991581.557601929,
+      "total_profit_krw_pct": 45.96990709211054
     }
   ],
   "watched_stocks": [
     {
       "name": "삼성전자",
       "ticker": "005930.KS",
-      "current_price": 281500.0,
-      "change_pct": 3.8745387453874542,
+      "current_price": 257000.0,
+      "change_pct": -8.703374777975133,
       "is_usd": false,
-      "news_summary": "최근 24시간 내 중요 뉴스 없음",
-      "news_url": ""
+      "news_summary": "삼성전자는 사상 최대 규모의 주주환원 정책을 발표했으나, 주요 메모리 주식들이 하락세를 보이면서 시장이 부정적으로 반응했습니다. [악재]",
+      "news_url": "https://www.fool.com/investing/2026/08/24/samsung-just-authorized-its-largest-shareholder-return-ever-every-major-memory-stock-fell-monday/"
     },
     {
       "name": "SK하이닉스",
       "ticker": "000660.KS",
-      "current_price": 1730000.0,
-      "change_pct": 2.3063276167947957,
+      "current_price": 1671000.0,
+      "change_pct": -3.410404624277456,
       "is_usd": false,
-      "news_summary": "최근 24시간 내 중요 뉴스 없음",
-      "news_url": ""
+      "news_summary": "SK하이닉스가 해외 사업 확장의 일환으로 일본 내 메모리 반도체 공장 설립을 검토하며 성장 기대감을 높이고 있습니다. [호재]",
+      "news_url": "https://finance.yahoo.com/technology/articles/sk-hynix-nasdaqgs-skhy-weighs-220926859.html"
     },
     {
       "name": "카카오",
       "ticker": "035720.KS",
       "current_price": 35800.0,
-      "change_pct": -7.493540051679587,
+      "change_pct": 0.0,
       "is_usd": false,
       "news_summary": "최근 24시간 내 중요 뉴스 없음",
       "news_url": ""
@@ -131,50 +131,50 @@
     {
       "name": "NVIDIA",
       "ticker": "NVDA",
-      "current_price": 214.72000122070312,
-      "change_pct": -0.9822480160760152,
+      "current_price": 208.47999572753906,
+      "change_pct": -2.9061128249297004,
       "is_usd": true,
-      "news_summary": "최근 24시간 내 중요 뉴스 없음",
-      "news_url": ""
+      "news_summary": "엔비디아가 200억 달러 규모의 Groq 투자 프로젝트를 2026년 말 이전에 가동할 예정으로, 이는 회사의 미래 성장 잠재력을 시사합니다. [호재]",
+      "news_url": "https://www.fool.com/investing/2026/08/24/nvidia-s-usd20-billion-groq-bet-is-going-live-before-the-end-of-2026-here-s-what-it-means-for-investors/"
     },
     {
       "name": "테슬라",
       "ticker": "TSLA",
-      "current_price": 362.8599853515625,
-      "change_pct": 5.137188948486279,
+      "current_price": 348.95001220703125,
+      "change_pct": -3.8334271361044,
       "is_usd": true,
-      "news_summary": "최근 24시간 내 중요 뉴스 없음",
-      "news_url": ""
+      "news_summary": "테슬라가 9월 3일부터 오스틴에서 사이버캡 서비스를 시작하며 새로운 로보택시 사업에 대한 기대를 높이고 있습니다. [호재]",
+      "news_url": "https://finance.yahoo.com/video/tesla-launch-cybercabs-austin-starting-205004873.html"
     }
   ],
   "macro_insight": {
-    "summary": "최근 24시간 내 중요 거시 경제 뉴스가 수집되지 않았습니다.",
-    "ref_title": "",
-    "ref_url": "",
+    "summary": "최근 글로벌 시장은 인공지능(AI) 및 반도체 섹터의 강력한 성장 기대감과 기업들의 전략적 투자가 투자 심리를 지지하고 있습니다. 하지만 일부 기업의 주주환원 정책이 시장에서 부정적으로 해석되거나, 중국 메모리 반도체 기업의 IPO 소식 등 경쟁 심화 우려가 제기되기도 합니다. 미국 노동 시장은 실업률 하락으로 견조한 모습을 보였으나, 일부 분석에서는 이면의 약점을 지적하며 주의를 요하고 있습니다. 전반적으로 AI 및 기술 혁신을 중심으로 한 성장 동력과 인플레이션, 금리 인상 가능성이라는 거시 경제적 불확실성이 혼재된 양상입니다.",
+    "ref_title": "The Fastest ETF in History Just Hit $25 Billion in Four Months. It Owns Memory Chips",
+    "ref_url": "https://247wallst.com/investing/2026/08/24/the-fastest-etf-in-history-just-hit-25-billion-in-four-months-it-owns-memory-chips/",
     "sector_insights": [
       {
         "sector": "반도체/AI",
-        "insight": "뉴스 데이터 수집 전 또는 분석 스킵 상태입니다.",
-        "ref_title": "",
-        "ref_url": ""
+        "insight": "메모리 반도체에 투자하는 ETF가 사상 최고 속도로 성장하고 SK하이닉스가 해외 공장 확장을 고려하는 등 긍정적 모멘텀이 있으나, 중국 기업의 IPO와 TSMC의 AI 칩 관련 하락 소식은 경쟁 심화 및 AI 칩 시장의 단기적인 변동성을 시사합니다.",
+        "ref_title": "The Fastest ETF in History Just Hit $25 Billion in Four Months. It Owns Memory Chips",
+        "ref_url": "https://247wallst.com/investing/2026/08/24/the-fastest-etf-in-history-just-hit-25-billion-in-four-months-it-owns-memory-chips/"
       },
       {
         "sector": "빅테크/플랫폼",
-        "insight": "뉴스 데이터 수집 전 또는 분석 스킵 상태입니다.",
-        "ref_title": "",
-        "ref_url": ""
+        "insight": "구글의 픽셀 생산 기지 다변화 계획은 지정학적 리스크 관리 노력의 일환으로 해석될 수 있습니다.",
+        "ref_title": "Google plans to move all Pixel manufacturing out of China by 2027: report",
+        "ref_url": "https://www.foxbusiness.com/markets/google-plans-move-all-pixel-manufacturing-out-china-2027"
       },
       {
         "sector": "클라우드/보안",
-        "insight": "뉴스 데이터 수집 전 또는 분석 스킵 상태입니다.",
-        "ref_title": "",
-        "ref_url": ""
+        "insight": "클라우드 보안 섹터는 여전히 투자자들의 관심을 받고 있으며, 성장 기술주로서의 잠재력이 지속적으로 논의되고 있습니다.",
+        "ref_title": "Salesforce vs. CrowdStrike: Which Growth Tech Stock Is a Better Investment in 2026?",
+        "ref_url": "https://www.fool.com/coverage/better-buy/2026/08/24/salesforce-vs-crowdstrike-which-growth-tech-stock-is-a-better-investment-in-2026/"
       },
       {
         "sector": "금융/결제",
-        "insight": "뉴스 데이터 수집 전 또는 분석 스킵 상태입니다.",
-        "ref_title": "",
-        "ref_url": ""
+        "insight": "비자가 사상 최고가 기록을 향해 상승하는 모습은 견조한 시장 수요와 긍정적인 투자자 신뢰를 반영하고 있습니다.",
+        "ref_title": "Visa Charges Toward New All-Time Closing High",
+        "ref_url": "https://www.wsj.com/livecoverage/stock-market-today-dow-sp-500-nasdaq-08-24-2026/card/visa-charges-toward-new-all-time-closing-high-xotwcrOgtpfDSQp8VKTE?siteid=yhoof2&yptr=yahoo"
       }
     ]
   },
@@ -182,74 +182,74 @@
     {
       "name": "미국10년국채금리",
       "ticker": "^TNX",
-      "value": 4.738,
-      "change_pct": 0.89
+      "value": 4.704,
+      "change_pct": -0.72
     },
     {
       "name": "달러인덱스",
       "ticker": "DX-Y.NYB",
-      "value": 98.86,
-      "change_pct": 0.06
+      "value": 98.984,
+      "change_pct": 0.19
     },
     {
       "name": "VIX공포지수",
       "ticker": "^VIX",
-      "value": 15.13,
-      "change_pct": -5.5
+      "value": 15.85,
+      "change_pct": 4.76
     },
     {
       "name": "원달러환율",
       "ticker": "USDKRW=X",
-      "value": 1386.05,
-      "change_pct": -0.34
+      "value": 1382.25,
+      "change_pct": -0.2
     },
     {
       "name": "금선물",
       "ticker": "GC=F",
-      "value": 4664.8999,
-      "change_pct": 0.88
+      "value": 4728.7002,
+      "change_pct": 2.26
     },
     {
       "name": "WTI원유선물",
       "ticker": "CL=F",
-      "value": 86.12,
-      "change_pct": -1.08
+      "value": 85.15,
+      "change_pct": -2.19
     },
     {
       "name": "구리선물",
       "ticker": "HG=F",
-      "value": 6.5705,
-      "change_pct": -0.14
+      "value": 6.6075,
+      "change_pct": 0.43
     },
     {
       "name": "비트코인",
       "ticker": "BTC-USD",
-      "value": 77554.0078,
-      "change_pct": 0.61
+      "value": 78820.5391,
+      "change_pct": 1.37
     },
     {
       "name": "이더리움",
       "ticker": "ETH-USD",
-      "value": 2454.25,
-      "change_pct": 1.24
+      "value": 2480.5601,
+      "change_pct": 0.68
     },
     {
       "name": "미국리츠부동산",
       "ticker": "VNQ",
-      "value": 98.5,
-      "change_pct": -0.1
+      "value": 99.1,
+      "change_pct": 0.61
     },
     {
       "name": "미국20년국채",
       "ticker": "TLT",
-      "value": 82.05,
-      "change_pct": -0.35
+      "value": 82.56,
+      "change_pct": 0.62
     },
     {
       "name": "나스닥종합지수",
       "ticker": "^IXIC",
-      "value": 26180.4609,
-      "change_pct": 0.43
+      "value": 25980.1914,
+      "change_pct": -0.76
     },
     {
       "name": "코스피지수",
@@ -258,8 +258,87 @@
       "change_pct": 0.88
     }
   ],
-  "macro_indicators_ai": [],
-  "macro_calendar_ai": [],
+  "macro_indicators_ai": [
+    {
+      "name": "미국 소비자물가지수 (CPI YoY)",
+      "value": "4.2%",
+      "description": "2026년 5월 미국 헤드라인 CPI는 전년 동기 대비 4.2% 상승하며 인플레이션 압력이 지속되고 있음을 보여주었습니다.",
+      "sentiment": "bad",
+      "date": "2026-06-10"
+    },
+    {
+      "name": "미국 근원 소비자물가지수 (Core CPI YoY)",
+      "value": "2.9%",
+      "description": "2026년 5월 미국 근원 CPI는 전년 동기 대비 2.9% 상승하여 연준의 목표치인 2%를 상회하며 인플레이션의 끈적함을 시사했습니다.",
+      "sentiment": "bad",
+      "date": "2026-06-10"
+    },
+    {
+      "name": "미국 소비자물가지수 (CPI MoM)",
+      "value": "0.5%",
+      "description": "2026년 5월 미국 CPI는 전월 대비 0.5% 상승했으며, 에너지 가격이 상승의 주된 요인이었습니다.",
+      "sentiment": "bad",
+      "date": "2026-06-10"
+    },
+    {
+      "name": "미국 근원 소비자물가지수 (Core CPI MoM)",
+      "value": "0.2%",
+      "description": "2026년 5월 미국 근원 CPI는 전월 대비 0.2% 상승했습니다.",
+      "sentiment": "bad",
+      "date": "2026-06-10"
+    },
+    {
+      "name": "미국 기준금리 (Federal Funds Rate)",
+      "value": "3.63%",
+      "description": "2026년 8월 기준 미국 연방기금 실효금리는 3.63%로, 연준은 2026년 말까지 금리를 동결할 것으로 예상됩니다.",
+      "sentiment": "neutral",
+      "date": "2026-08-24"
+    },
+    {
+      "name": "미국 실업률",
+      "value": "4.1%",
+      "description": "2026년 7월 미국 실업률은 4.1%를 기록하여 견조한 노동 시장을 나타냈습니다.",
+      "sentiment": "good",
+      "date": "2026-08-07"
+    },
+    {
+      "name": "한국 기준금리",
+      "value": "2.75%",
+      "description": "한국은행은 2026년 7월 금융통화위원회에서 기준금리를 2.50%에서 2.75%로 인상했습니다.",
+      "sentiment": "neutral",
+      "date": "2026-07-16"
+    }
+  ],
+  "macro_calendar_ai": [
+    {
+      "date": "2026-07-14",
+      "event": "미국 2026년 6월 소비자물가지수 (CPI) 발표",
+      "actual": "3.5% (YoY)",
+      "importance": "HIGH",
+      "impact": "중립"
+    },
+    {
+      "date": "2026-08-12",
+      "event": "미국 2026년 7월 소비자물가지수 (CPI) 발표",
+      "actual": "대기 중",
+      "importance": "HIGH",
+      "impact": "대기"
+    },
+    {
+      "date": "2026-08-27",
+      "event": "한국은행 금융통화위원회 기준금리 결정",
+      "actual": "대기 중",
+      "importance": "HIGH",
+      "impact": "대기"
+    },
+    {
+      "date": "2026-09-11",
+      "event": "미국 2026년 8월 소비자물가지수 (CPI) 발표",
+      "actual": "대기 중",
+      "importance": "HIGH",
+      "impact": "대기"
+    }
+  ],
   "agent_suggestions": {
     "INTJ": {
       "name": "아서 (Arthur)",
@@ -267,7 +346,7 @@
       "title": "용의주도한 자산 전략가",
       "style": "시나리오 기반 중장기 매크로 설계",
       "avatar": "fa-solid fa-brain",
-      "comment": "현재 포트폴리오의 견조한 미국 기술주 성과를 바탕으로, 내년 수지구 아파트 매수를 위한 자산 확보 전략이 필요합니다. 분당/수지 매매가 지수 상승세와 전세가 안정화를 고려, 환율 변동성 속 달러 자산 비중 유지 및 국내 부동산 매수 시점을 거시경제 지표와 연동하여 치밀한 시나리오를 설계하십시오."
+      "comment": "미국 국채금리 하락 속 VIX 상승은 시장 변동성을 시사하며, 2027년 용인 수지구 매수를 위해선 현재 포트폴리오의 고수익 자산을 단계적으로 매도하여 유동성을 확보하는 전략이 필요합니다. 분당 대비 수지의 안정적인 매매가 대비 전세가율 상승 추이를 고려한 시나리오를 설계하십시오."
     },
     "ISTJ": {
       "name": "올리버 (Oliver)",
@@ -275,7 +354,7 @@
       "title": "원칙주의 자산 보전가",
       "style": "수치 중심의 철저한 리스크 회피",
       "avatar": "fa-solid fa-shield-halved",
-      "comment": "무주택자로서 내년 주택 매수는 높은 대출 금리 리스크와 전세금 미반환 위험을 수반합니다. 현재 네이버 손실 만회를 위한 무리한 영끌 매수는 지양하며, 보유 현금 비중을 확대하고 고배당/저변동성 자산으로 리밸런싱하여 자산 보전에 집중하십시오."
+      "comment": "VIX 상승과 높은 원달러 환율은 시장 불안정성을 시사하므로, 현재 포트폴리오 규모로는 2027년 용인 수지 매수를 위한 '영끌'은 극도로 위험합니다. 분당 전세금의 안전한 회수 계획을 최우선으로 하고, 변동하는 대출 금리 리스크에 대비해 주식 손실 만회를 위한 무리한 투자보다 유동성 확보 및 자산 보전에 집중해야 합니다."
     },
     "ENTP": {
       "name": "레오 (Leo)",
@@ -283,12 +362,12 @@
       "title": "성장 추구형 트렌드 모험가",
       "style": "모멘텀 및 하이리스크 트레이딩",
       "avatar": "fa-solid fa-rocket",
-      "comment": "애플 등 우량 기술주로 검증된 투자 감각을 활용하여, 비트코인/이더리움 등 고변동성 자산의 상승 모멘텀을 적극 활용해 시드머니를 단기간에 폭발적으로 키우세요. 용인 수지구 핵심 지역의 급매물을 기민하게 포착, 과감한 선진입으로 내집마련 기회를 선점할 때입니다."
+      "comment": "현재 Apple 및 크립토 자산의 강력한 모멘텀을 활용해 시드머니를 단기에 폭발적으로 증식시키고, 손실 중인 네이버는 과감히 정리하십시오. 용인 수지구는 전세가율 상승과 매매 가격 지수 회복세가 뚜렷하니, 성복역 주변의 급매물을 선제적으로 포착하여 2027년 매수 목표를 조기에 달성하는 공격적인 전략을 펼치십시오."
     },
     "real_estate_insights": [
-      "용인 수지구 매매가 지수는 완만한 상승세를 보이며 내집마련에 유리한 시점을 고려하게 하지만, 분당구의 더 가파른 상승세는 상대적으로 수지구의 가격 경쟁력을 부각시킵니다.",
-      "현재 분당 전세 보증금 회수 시점과 용인 수지 매입 자금(LTV/DSR 고려) 간의 자금 조달 계획이 필수적이며, 수지구의 높은 전세가율은 매매 전환 시 자금 부담을 줄이는 요소가 될 수 있습니다.",
-      "용인 수지구청역/성복역 인근 핵심 입지의 최근 실거래가(예: 성복역롯데캐슬골드타운 11.4억)는 평균 매매가를 상회하므로, 타겟 단지의 구체적인 호가 및 급매물 동향 파악이 성공적인 내집마련의 핵심입니다."
+      "용인 수지구는 분당 대비 약 5억원 이상 낮은 평균 매매가(8.95억원 vs 14.2억원)를 형성하며, 높은 전세가율(58.2%)과 꾸준한 전세가 지수 상승세로 실질적인 내집마련의 현실적 대안입니다.",
+      "분당 아파트 매매 가격 지수가 가장 가파르게 상승(2.4%)하고 있으나, 수지구의 전세 가격 지수도 1.9% 상승하며 매매가 상승을 견인할 잠재력을 보여 매수 접근성 대비 가치 상승 기대감이 있습니다.",
+      "수지구의 84m² 매매 실거래가는 성복역롯데캐슬골드타운 11.4억원, 수지동천자이 9.65억원으로 분포하며, 투자자분은 현재 분당 전세금 회수액과 이 매매가 사이의 자금 조달 계획을 면밀히 수립해야 합니다."
     ]
   },
   "real_estate": [
@@ -337,7 +416,7 @@
           "trade_type": "매매",
           "price_krw": 3680000000,
           "floor": 18,
-          "date": "2026-08-22"
+          "date": "2026-08-23"
         },
         {
           "apt_name": "잠실엘스",
@@ -345,7 +424,7 @@
           "trade_type": "전세",
           "price_krw": 1220000000,
           "floor": 12,
-          "date": "2026-08-21"
+          "date": "2026-08-22"
         },
         {
           "apt_name": "마포래미안푸르지오",
@@ -353,7 +432,7 @@
           "trade_type": "매매",
           "price_krw": 1580000000,
           "floor": 8,
-          "date": "2026-08-20"
+          "date": "2026-08-21"
         },
         {
           "apt_name": "디에이치아너힐즈",
@@ -361,7 +440,7 @@
           "trade_type": "전세",
           "price_krw": 1450000000,
           "floor": 15,
-          "date": "2026-08-18"
+          "date": "2026-08-19"
         },
         {
           "apt_name": "헬리오시티",
@@ -370,7 +449,7 @@
           "price_krw": 1200000,
           "deposit_krw": 100000000,
           "floor": 22,
-          "date": "2026-08-16"
+          "date": "2026-08-17"
         }
       ]
     },
@@ -419,7 +498,7 @@
           "trade_type": "매매",
           "price_krw": 1580000000,
           "floor": 10,
-          "date": "2026-08-22"
+          "date": "2026-08-23"
         },
         {
           "apt_name": "파크타운삼익",
@@ -427,7 +506,7 @@
           "trade_type": "전세",
           "price_krw": 830000000,
           "floor": 7,
-          "date": "2026-08-21"
+          "date": "2026-08-22"
         },
         {
           "apt_name": "상록우성",
@@ -435,7 +514,7 @@
           "trade_type": "매매",
           "price_krw": 1210000000,
           "floor": 15,
-          "date": "2026-08-20"
+          "date": "2026-08-21"
         },
         {
           "apt_name": "봇들마을8단지",
@@ -443,7 +522,7 @@
           "trade_type": "전세",
           "price_krw": 1050000000,
           "floor": 14,
-          "date": "2026-08-18"
+          "date": "2026-08-19"
         },
         {
           "apt_name": "양지마을금호",
@@ -452,7 +531,7 @@
           "price_krw": 1600000,
           "deposit_krw": 100000000,
           "floor": 9,
-          "date": "2026-08-16"
+          "date": "2026-08-17"
         }
       ]
     },
@@ -501,7 +580,7 @@
           "trade_type": "매매",
           "price_krw": 1140000000,
           "floor": 24,
-          "date": "2026-08-22"
+          "date": "2026-08-23"
         },
         {
           "apt_name": "신정마을9단지",
@@ -509,7 +588,7 @@
           "trade_type": "전세",
           "price_krw": 510000000,
           "floor": 11,
-          "date": "2026-08-21"
+          "date": "2026-08-22"
         },
         {
           "apt_name": "수지동천자이",
@@ -517,7 +596,7 @@
           "trade_type": "매매",
           "price_krw": 965000000,
           "floor": 8,
-          "date": "2026-08-20"
+          "date": "2026-08-21"
         },
         {
           "apt_name": "상현마을현대성우",
@@ -525,7 +604,7 @@
           "trade_type": "전세",
           "price_krw": 480000000,
           "floor": 16,
-          "date": "2026-08-18"
+          "date": "2026-08-19"
         },
         {
           "apt_name": "광교상록자이",
@@ -534,7 +613,7 @@
           "price_krw": 1300000,
           "deposit_krw": 80000000,
           "floor": 13,
-          "date": "2026-08-16"
+          "date": "2026-08-17"
         }
       ]
     }
@@ -910,6 +989,13 @@
       "total_eval_combined_krw": 66647691.33223543,
       "total_profit_combined_pct": 12.634274054876023,
       "krw_rate": 1386.050048828125
+    },
+    {
+      "date": "2026-08-24",
+      "total_buy_combined_krw": 59171768.0,
+      "total_eval_combined_krw": 67262717.01942444,
+      "total_profit_combined_pct": 13.673664473612549,
+      "krw_rate": 1382.25
     }
   ]
 }
