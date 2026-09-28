@@ -1,129 +1,129 @@
 {
-  "updated_at": "2026-09-25 01:11:04",
+  "updated_at": "2026-09-28 01:25:29",
   "summary": {
     "total_buy_combined_krw": 59171768.0,
-    "total_eval_combined_krw": 69069108.43695357,
-    "total_profit_combined_pct": 16.72645717963603,
-    "krw_rate": 1364.5799560546875,
-    "total_change_combined_krw": -196445.70733353496,
-    "total_change_combined_pct": -0.28361240989181835,
-    "krw_change_pct": 0.1526573251146789
+    "total_eval_combined_krw": 69095372.60370432,
+    "total_profit_combined_pct": 16.77084349364771,
+    "krw_rate": 1359.280029296875,
+    "total_change_combined_krw": -257551.1035234928,
+    "total_change_combined_pct": -0.37136300786790244,
+    "krw_change_pct": -0.5909165209782016
   },
   "owned_stocks": [
     {
       "name": "네이버",
       "ticker": "035420.KS",
-      "current_price": 194700.0,
-      "change_pct": -3.134328358208955,
+      "current_price": 200000.0,
+      "change_pct": 2.7221366204417055,
       "is_usd": false,
       "news_summary": "최근 24시간 내 중요 뉴스 없음",
       "news_url": "",
       "buy_price": 343143.0,
       "qty": 76.0,
-      "profit_pct": -43.25980713580053,
+      "profit_pct": -41.7152615673349,
       "purchase_rate": 1.0,
       "fx_profit_krw": 0.0,
-      "stock_profit_krw": -11281668.0,
-      "total_profit_krw": -11281668.0,
-      "total_profit_krw_pct": -43.25980713580053
+      "stock_profit_krw": -10878868.0,
+      "total_profit_krw": -10878868.0,
+      "total_profit_krw_pct": -41.7152615673349
     },
     {
       "name": "크라우드스트라이크",
       "ticker": "CRWD",
-      "current_price": 262.489990234375,
-      "change_pct": 5.2696947299870605,
+      "current_price": 252.1300048828125,
+      "change_pct": -2.9036885874464837,
       "is_usd": true,
-      "news_summary": "크라우드스트라이크가 스노우플레이크(SNOW)와의 파트너십을 통해 새로운 AI 성장 동력을 확보할 가능성이 제기되어 긍정적인 평가를 받고 있습니다. [호재]",
-      "news_url": "https://finance.yahoo.com/technology/ai/articles/could-crowdstrike-crwd-snowflake-snow-203651870.html",
+      "news_summary": "짐 크레이머가 2023년 이후 875% 및 1,400% 상승한 2개의 인공지능(AI) 주식을 매수하라고 조언하며 클라우드 보안 분야의 긍정적 전망을 제시했습니다. [호재]",
+      "news_url": "https://www.fool.com/investing/2026/09/26/jim-cramer-says-buy-2-ai-stocks-up-1400-since-2023/",
       "buy_price": 161.3556,
       "qty": 50.0,
-      "profit_pct": 62.677954923395895,
+      "profit_pct": 56.257362547573486,
       "buy_price_krw": 200559.0,
       "purchase_rate": 1242.9627481165821,
-      "fx_profit_krw": 981180.8778588879,
-      "stock_profit_krw": 6900298.089082052,
-      "total_profit_krw": 7881478.966940939,
-      "total_profit_krw_pct": 78.59511631929695
+      "fx_profit_krw": 938422.2347607429,
+      "stock_profit_krw": 6169391.786425788,
+      "total_profit_krw": 7107814.021186531,
+      "total_profit_krw_pct": 70.8800305265436
     },
     {
       "name": "Apple",
       "ticker": "AAPL",
-      "current_price": 337.0199890136719,
-      "change_pct": -0.8035352424806843,
+      "current_price": 341.07000732421875,
+      "change_pct": 1.5331012415526353,
       "is_usd": true,
-      "news_summary": "애플 팀 쿡 CEO가 새로운 미스터리 웨어러블 기기 개발에 무게를 싣고 있다는 루머가 보도되며 미래 제품 라인업에 대한 기대감을 높이고 있습니다. [중립]",
-      "news_url": "https://tech.yahoo.com/wearables/articles/apple-pendant-tim-cook-eddy-233022844.html",
+      "news_summary": "애플이 폴더블 아이폰으로 '터너스 시대'를 열며 프리미엄 기기를 통한 매출 증대 가능성에 대한 기대가 커지고 있습니다. [호재]",
+      "news_url": "https://finance.yahoo.com/technology/articles/apple-aapl-opens-ternus-era-234433247.html",
       "buy_price": 150.9482,
       "qty": 28.0,
-      "profit_pct": 123.2686371971788,
+      "profit_pct": 125.95168893979438,
       "buy_price_krw": 187121.0,
       "purchase_rate": 1239.6371735469518,
-      "fx_profit_krw": 528076.8674309577,
-      "stock_profit_krw": 7109475.342908217,
-      "total_profit_krw": 7637552.210339174,
-      "total_profit_krw_pct": 145.7718384349312
+      "fx_profit_krw": 505676.46411269554,
+      "stock_profit_krw": 7236005.723229889,
+      "total_profit_krw": 7741682.187342584,
+      "total_profit_krw_pct": 147.75928385801137
     },
     {
       "name": "구글",
       "ticker": "GOOGL",
-      "current_price": 337.8299865722656,
-      "change_pct": -3.795995258808022,
+      "current_price": 343.9200134277344,
+      "change_pct": 0.4556689282977723,
       "is_usd": true,
-      "news_summary": "알파벳의 웨이모(Waymo)가 라스베이거스에서 조옥스(Zoox)와의 경쟁에 나서며 로보택시 시장에서의 선두 경쟁에 박차를 가하고 있습니다. [호재]",
-      "news_url": "https://finance.yahoo.com/technology/articles/waymo-takes-zoox-las-vegas-235409214.html",
+      "news_summary": "구글의 AI 모델인 Gemini 4가 알파벳이 AI 경쟁에서 승리하는 데 필요한 촉매제가 될지에 대한 기대감이 고조되고 있습니다. [호재]",
+      "news_url": "https://finance.yahoo.com/technology/ai/articles/gemini-4-catalyst-alphabet-googl-213837552.html",
       "buy_price": 299.4283,
       "qty": 6.0,
-      "profit_pct": 12.825002370272164,
+      "profit_pct": 14.858887228673575,
       "buy_price_krw": 436087.0,
       "purchase_rate": 1456.3987438729073,
-      "fx_profit_krw": -164958.8612668215,
-      "stock_profit_krw": 314413.0306512488,
-      "total_profit_krw": 149454.16938442737,
-      "total_profit_krw_pct": 5.711940101570993
+      "fx_profit_krw": -174480.5496221194,
+      "stock_profit_krw": 362860.18518911384,
+      "total_profit_krw": 188379.63556699455,
+      "total_profit_krw_pct": 7.199619784087218
     },
     {
       "name": "비자",
       "ticker": "V",
-      "current_price": 361.5199890136719,
-      "change_pct": -2.278692503094653,
+      "current_price": 367.3800048828125,
+      "change_pct": -0.16305399358714556,
       "is_usd": true,
-      "news_summary": "비자 주가는 결제 네트워크의 AI 에이전트 신원 표준화 소식에 상승하며 기술 혁신이 기업 가치에 긍정적인 영향을 미치고 있음을 보여주었습니다. [호재]",
-      "news_url": "https://finance.yahoo.com/technology/ai/articles/visa-share-rises-payment-networks-192129440.html",
+      "news_summary": "비자가 기업 간 해외 결제 부문으로 사업 영역을 확장하며 새로운 성장 동력을 확보하고 있습니다. [호재]",
+      "news_url": "https://finance.yahoo.com/markets/currencies/articles/visa-v-pushes-further-corporate-031642323.html",
       "buy_price": 267.9314,
       "qty": 42.0,
-      "profit_pct": 34.93005635534763,
+      "profit_pct": 37.11718928158943,
       "buy_price_krw": 362120.0,
       "purchase_rate": 1351.539983742107,
-      "fx_profit_krw": 146740.35758217867,
-      "stock_profit_krw": 5363782.732706857,
-      "total_profit_krw": 5510523.090289034,
-      "total_profit_krw_pct": 36.23189294188873
+      "fx_profit_krw": 87099.65214521543,
+      "stock_profit_krw": 5677497.107462994,
+      "total_profit_krw": 5764596.759608209,
+      "total_profit_krw_pct": 37.902436706118266
     }
   ],
   "watched_stocks": [
     {
       "name": "삼성전자",
       "ticker": "005930.KS",
-      "current_price": 285500.0,
-      "change_pct": 3.25497287522604,
+      "current_price": 276500.0,
+      "change_pct": -3.1523642732049035,
       "is_usd": false,
-      "news_summary": "삼성전자가 중국 CXMT의 추격에도 불구하고 3.3% 상승하며 시장의 기대감을 반영했습니다. [중립]",
-      "news_url": "https://finance.yahoo.com/markets/stocks/articles/samsung-jumps-3-3-cxmt-201052394.html"
+      "news_summary": "최근 24시간 내 중요 뉴스 없음",
+      "news_url": ""
     },
     {
       "name": "SK하이닉스",
       "ticker": "000660.KS",
-      "current_price": 1862000.0,
-      "change_pct": 1.1956521739130435,
+      "current_price": 1796000.0,
+      "change_pct": -3.544575725026853,
       "is_usd": false,
-      "news_summary": "일부 기술 경영진이 중국발 메모리 칩 가격 버블 붕괴 가능성을 언급하며 SK하이닉스 등 메모리 반도체 업계에 가격 압박 우려가 제기되었습니다. [악재]",
-      "news_url": "https://247wallst.com/investing/2026/09/24/tech-exec-says-china-is-about-to-burst-the-memory-chip-pricing-bubble/"
+      "news_summary": "최근 24시간 내 중요 뉴스 없음",
+      "news_url": ""
     },
     {
       "name": "카카오",
       "ticker": "035720.KS",
-      "current_price": 33450.0,
-      "change_pct": -2.049780380673499,
+      "current_price": 34350.0,
+      "change_pct": 2.690582959641256,
       "is_usd": false,
       "news_summary": "최근 24시간 내 중요 뉴스 없음",
       "news_url": ""
@@ -131,172 +131,210 @@
     {
       "name": "NVIDIA",
       "ticker": "NVDA",
-      "current_price": 225.50999450683594,
-      "change_pct": -1.468082615473974,
+      "current_price": 225.07000732421875,
+      "change_pct": 0.21818750074313387,
       "is_usd": true,
-      "news_summary": "엔비디아가 이온큐(IonQ)의 온프레미스 양자 시스템과의 협력을 통해 양자 컴퓨팅 분야에서 투자 스토리를 강화하고 있습니다. [호재]",
-      "news_url": "https://finance.yahoo.com/markets/stocks/articles/ionq-prem-quantum-system-nvidia-002115947.html"
+      "news_summary": "일론 머스크의 긍정적인 발언이 엔비디아 투자자들에게 희소식이 되며 주식 매수 여부에 대한 관심이 높아지고 있습니다. [호재]",
+      "news_url": "https://www.fool.com/investing/2026/09/27/elon-musk-just-gave-nvidia-investors-more-good-new/"
     },
     {
       "name": "테슬라",
       "ticker": "TSLA",
-      "current_price": 380.1199951171875,
-      "change_pct": 0.32198501988797334,
+      "current_price": 372.1099853515625,
+      "change_pct": -1.5425774070442844,
       "is_usd": true,
-      "news_summary": "테슬라가 네바다 행사에서 세미(Semi) 전기 트럭을 공식적으로 공개할 예정이며, 이는 상업용 전기차 시장 확장에 대한 기대감을 높이고 있습니다. [호재]",
-      "news_url": "https://finance.yahoo.com/news/tesla-set-formally-roll-semi-230854250.html"
+      "news_summary": "테슬라의 3분기 인도량 발표가 10월 초로 예정된 가운데, 특정 수치가 주가를 급등시킬 수 있다는 전망이 나오고 있습니다. [중립]",
+      "news_url": "https://www.fool.com/investing/2026/09/27/tesla-reports-q3-deliveries-in-3-weeks-heres-the-n/"
     }
   ],
   "macro_insight": {
-    "summary": "오늘 시장은 미 연준의 금리 인상과 고유가로 인한 높은 인플레이션 압력이 지속되는 가운데, 에너지 가격 상승과 중동지역 긴장 고조가 주요 변수로 작용하고 있습니다. 특히 AI 관련 투자 붐이 경제 성장을 견인하고 있지만, 높은 국채 금리가 기술주에 하방 압력을 가하는 혼조세를 보입니다. [cite: NVDA, GOOGL news] 노동 시장은 낮은 실업률을 유지하며 견조한 흐름을 이어가고 있습니다.",
-    "ref_title": null,
-    "ref_url": null
+    "summary": "글로벌 경제는 지속적인 인플레이션 압력과 견고한 노동 시장으로 인해 중앙은행들의 긴축 기조가 이어지고 있습니다. 특히 미국 연방준비제도(Fed)는 9월 FOMC에서 금리를 인상하며 추가 인상 가능성을 시사했고, 한국은행 역시 반도체 수출 호조에 따른 경제 성장과 인플레이션 우려로 기준금리를 인상했습니다. 인공지능(AI) 관련 투자가 미국 경제 성장을 견인하고 있지만, 이는 동시에 데이터 센터 및 메모리 칩 수요 증가를 통해 단기적인 인플레이션 압력으로 작용하고 있습니다. 전반적으로 위험자산 선호 심리가 다소 우세한 가운데, AI 및 기술 섹터의 성장이 시장을 주도하고 있습니다.",
+    "sector_insights": [
+      {
+        "sector": "반도체/AI",
+        "insight": "AI 투자 붐이 지속되면서 데이터 센터 건설 및 IT 장비 관련 지출이 크게 늘어나고 있으며, 이는 전반적인 반도체 산업의 성장을 견인하고 있습니다. 엔비디아에 대한 긍정적 전망과 삼성전자, SK하이닉스 등 국내 반도체 기업들의 수출 호조는 섹터의 강세를 뒷받침합니다.",
+        "ref_title": "The Fed's September 2026 rate hike: What Warsh's comments mean for investors | Facet",
+        "ref_url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEg483CdVtwSmb9Q1zfDf03cR8rnMc7REtt6CzMVONmpga9_ikNuCpNIySqhpAEPjMK485VRMpzSWKjEeoFD54Vr7v3DVpUhoclYRb3rGff75TByQBW5ClvCCLUMn0IG8trlxhQ_WzaEfaAAy46pzG61BKRSybvomxf8g=="
+      },
+      {
+        "sector": "빅테크/플랫폼",
+        "insight": "애플의 폴더블 아이폰 출시와 구글 Gemini 4의 AI 경쟁력 강화 노력은 빅테크 기업들이 새로운 기술과 제품 혁신을 통해 시장 선도력을 유지하려는 전략을 보여줍니다. 이는 프리미엄 디바이스 및 AI 기반 서비스의 성장을 이끌 것으로 기대됩니다.",
+        "ref_title": "Apple (AAPL) Opens the Ternus Era with a Foldable iPhone. Can Premium Devices Lift Revenue?",
+        "ref_url": "https://finance.yahoo.com/technology/articles/apple-aapl-opens-ternus-era-234433247.html"
+      },
+      {
+        "sector": "클라우드/보안",
+        "insight": "클라우드 보안 기업 CrowdStrike에 대한 긍정적인 평가와 높은 주가 상승률은 기업들의 디지털 전환 가속화와 함께 사이버 보안에 대한 중요성이 더욱 부각되고 있음을 시사하며, 관련 시장의 견조한 성장이 예상됩니다.",
+        "ref_title": "Jim Cramer Says Buy 2 Artificial Intelligence (AI) Stocks Up 875% and 1,400% Since 2023",
+        "ref_url": "https://www.fool.com/investing/2026/09/26/jim-cramer-says-buy-2-ai-stocks-up-1400-since-2023/"
+      },
+      {
+        "sector": "금융/결제",
+        "insight": "Visa의 기업 간 해외 결제 시장 확장 전략은 글로벌 상거래의 디지털화와 국경을 넘는 비즈니스 활동 증가에 발맞춰 결제 인프라 기업들이 새로운 수익원을 창출하려는 움직임을 반영합니다.",
+        "ref_title": "Visa (V) Pushes Further Into Corporate Cross Border Payments",
+        "ref_url": "https://finance.yahoo.com/markets/currencies/articles/visa-v-pushes-further-corporate-031642323.html"
+      }
+    ]
   },
   "macro_indicators": [
     {
       "name": "미국10년국채금리",
       "ticker": "^TNX",
-      "value": 5.162,
-      "change_pct": 0.94
+      "value": 5.184,
+      "change_pct": 0.43
     },
     {
       "name": "달러인덱스",
       "ticker": "DX-Y.NYB",
-      "value": 101.258,
-      "change_pct": 0.16
+      "value": 100.97,
+      "change_pct": -0.32
     },
     {
       "name": "VIX공포지수",
       "ticker": "^VIX",
-      "value": 15.67,
-      "change_pct": 3.23
+      "value": 14.87,
+      "change_pct": -5.11
     },
     {
       "name": "원달러환율",
       "ticker": "USDKRW=X",
-      "value": 1364.58,
-      "change_pct": 0.15
+      "value": 1359.28,
+      "change_pct": -0.59
     },
     {
       "name": "금선물",
       "ticker": "GC=F",
-      "value": 4314.2002,
-      "change_pct": -0.1
+      "value": 4254.0,
+      "change_pct": -1.56
     },
     {
       "name": "WTI원유선물",
       "ticker": "CL=F",
-      "value": 93.57,
-      "change_pct": 1.53
+      "value": 93.11,
+      "change_pct": 0.76
     },
     {
       "name": "구리선물",
       "ticker": "HG=F",
-      "value": 6.7535,
-      "change_pct": 1.13
+      "value": 6.6535,
+      "change_pct": -0.63
     },
     {
       "name": "비트코인",
       "ticker": "BTC-USD",
-      "value": 84715.7266,
-      "change_pct": 0.39
+      "value": 84007.8203,
+      "change_pct": -0.47
     },
     {
       "name": "이더리움",
       "ticker": "ETH-USD",
-      "value": 2696.96,
-      "change_pct": 0.46
+      "value": 2670.6101,
+      "change_pct": -0.91
     },
     {
       "name": "미국리츠부동산",
       "ticker": "VNQ",
-      "value": 91.45,
-      "change_pct": -2.52
+      "value": 90.99,
+      "change_pct": -0.2
     },
     {
       "name": "미국20년국채",
       "ticker": "TLT",
-      "value": 80.46,
-      "change_pct": -1.58
+      "value": 79.32,
+      "change_pct": -0.13
     },
     {
       "name": "나스닥종합지수",
       "ticker": "^IXIC",
-      "value": 26939.373,
-      "change_pct": 0.01
+      "value": 27068.7207,
+      "change_pct": 0.48
     },
     {
       "name": "코스피지수",
       "ticker": "^KS11",
-      "value": 7080.9199,
-      "change_pct": 1.04
+      "value": 6985.6299,
+      "change_pct": -1.35
     }
   ],
   "macro_indicators_ai": [
     {
       "name": "미국 소비자물가지수 (CPI YoY)",
       "value": "4.2%",
-      "description": "2026년 5월 CPI 4.2% 발표로 인플레이션 압력 지속되며 3년 만에 최고치 기록.",
+      "description": "2026년 5월 미국 소비자물가지수(CPI)는 전년 동월 대비 4.2% 상승하며 높은 인플레이션 압력이 지속되고 있음을 보여주었습니다.",
       "sentiment": "bad",
       "date": "2026-06-10"
     },
     {
       "name": "미국 근원 소비자물가지수 (Core CPI YoY)",
       "value": "2.9%",
-      "description": "2026년 5월 근원 CPI 2.9% 기록, 시장 예상치에 부합했으나 여전히 높은 수준.",
+      "description": "2026년 5월 미국 근원 CPI는 전년 동월 대비 2.9% 상승했으며, 이는 에너지 및 식품 가격을 제외한 근원 인플레이션도 여전히 높은 수준을 유지하고 있음을 나타냅니다.",
       "sentiment": "bad",
       "date": "2026-06-10"
     },
     {
-      "name": "미국 기준금리 (Fed Rate)",
-      "value": "3.75~4.00%",
-      "description": "2026년 9월 FOMC에서 기준금리를 3.75~4.00%로 25bp 인상 결정.",
+      "name": "미국 소비자물가지수 (CPI MoM)",
+      "value": "0.5%",
+      "description": "2026년 5월 미국 소비자물가지수는 전월 대비 0.5% 상승하며 인플레이션이 계속되고 있음을 나타냈습니다.",
+      "sentiment": "bad",
+      "date": "2026-06-10"
+    },
+    {
+      "name": "미국 근원 소비자물가지수 (Core CPI MoM)",
+      "value": "0.2%",
+      "description": "2026년 5월 미국 근원 CPI는 전월 대비 0.2% 상승했습니다.",
       "sentiment": "neutral",
-      "date": "2026-09-16"
+      "date": "2026-06-10"
+    },
+    {
+      "name": "미국 기준금리 (Fed Rate)",
+      "value": "3.75%~4.00%",
+      "description": "미국 연방준비제도(Fed)는 2026년 9월 FOMC 회의에서 기준금리를 0.25% 인상하여 3.75%~4.00%로 설정했습니다.",
+      "sentiment": "neutral",
+      "date": "2026-09-17"
     },
     {
       "name": "미국 실업률",
       "value": "4.1%",
-      "description": "2026년 8월 실업률 4.1%로 견조한 노동시장 이어감.",
+      "description": "2026년 8월 미국 실업률은 4.1%로 지난달과 동일한 수준을 유지하며 견조한 노동 시장 상황을 반영했습니다.",
       "sentiment": "good",
-      "date": "2026-09-04"
+      "date": "2026-09-24"
     },
     {
       "name": "한국 기준금리",
       "value": "3.00%",
-      "description": "2026년 7월 및 8월 연속 인상으로 기준금리 3.00% 도달, 통화신용정책보고서에서 추가 인상 가능성 시사.",
+      "description": "한국은행은 2026년 8월 금융통화위원회에서 기준금리를 0.25% 인상하여 3.00%로 결정했습니다.",
       "sentiment": "neutral",
-      "date": "2026-09-15"
+      "date": "2026-08-27"
     }
   ],
   "macro_calendar_ai": [
     {
-      "date": "2026-06-10",
-      "event": "미국 5월 소비자물가지수(CPI) 발표",
-      "actual": "CPI YoY 4.2%, Core CPI YoY 2.9%",
+      "date": "2026-09-11",
+      "event": "미국 8월 소비자물가지수 (CPI) 발표",
+      "actual": "헤드라인 CPI YoY: 3.4%, 근원 CPI YoY: 2.4%",
       "importance": "HIGH",
-      "impact": "악재"
+      "impact": "중립"
     },
     {
-      "date": "2026-09-16",
-      "event": "미국 FOMC 회의 결과 (기준금리 인상)",
-      "actual": "기준금리 3.75~4.00%로 25bp 인상",
+      "date": "2026-09-17",
+      "event": "미국 연방공개시장위원회 (FOMC) 회의 및 기준금리 발표",
+      "actual": "기준금리 0.25% 인상 (3.75%~4.00%)",
       "importance": "HIGH",
-      "impact": "악재"
+      "impact": "중립"
     },
     {
-      "date": "2026-09-04",
-      "event": "미국 8월 실업률 발표",
-      "actual": "4.1%",
-      "importance": "MID",
+      "date": "2026-09-24",
+      "event": "미국 8월 고용보고서 발표",
+      "actual": "실업률 4.1%",
+      "importance": "HIGH",
       "impact": "호재"
     },
     {
-      "date": "2026-09-15",
-      "event": "한국은행 금융통화위원회 기준금리 발표 및 통화신용정책보고서",
-      "actual": "기준금리 3.00% 유지 (추가 인상 가능성 언급)",
+      "date": "2026-10-14",
+      "event": "미국 9월 소비자물가지수 (CPI) 발표",
+      "actual": "대기 중",
       "importance": "HIGH",
-      "impact": "중립"
+      "impact": "대기"
     }
   ],
   "agent_suggestions": {
@@ -306,7 +344,7 @@
       "title": "용의주도한 자산 전략가",
       "style": "시나리오 기반 중장기 매크로 설계",
       "avatar": "fa-solid fa-brain",
-      "comment": "현재 포트폴리오의 미국 성장주 비중을 점진적으로 조정하여 내년 주택 매수 자금을 확보하고, 국내 매크로 환경 변화에 따른 용인 수지구 아파트 매매가 및 전세가 지수 추이를 면밀히 주시하며 최적의 진입 시점을 포착하는 중장기 전략이 필요합니다."
+      "comment": "글로벌 고금리 기조 속 미 테크 주식의 강세는 유효하나, 2027년 수지구 매수 자금 확보를 위해 점진적 현금화 전략이 필요합니다. 분당/수지 부동산 가격지수 상승세는 긍정적이나, 금리 변동성 대비 현금성 자산 비중을 높여 매수 시나리오를 선제적으로 설계하십시오."
     },
     "ISTJ": {
       "name": "올리버 (Oliver)",
@@ -314,7 +352,7 @@
       "title": "원칙주의 자산 보전가",
       "style": "수치 중심의 철저한 리스크 회피",
       "avatar": "fa-solid fa-shield-halved",
-      "comment": "무주택자로서 내년 내집마련 목표 달성을 위해 대출 금리 상승 리스크를 최우선으로 고려하고, 전세 보증금의 안전성을 확보해야 합니다. 현재 네이버 손실분을 만회하려는 무리한 주식 투기 대신, 고수익 종목 일부를 익절하여 현금 비중을 높여 안정적인 실구매 자금 확보에 집중하는 보수적 리밸런싱을 권고합니다."
+      "comment": "현재 주택 매입 시 높은 대출 금리 리스크와 전세 보증금의 안전성 확보가 최우선입니다. 네이버 손실 만회를 위한 무리한 영끌 매수는 지양하고, 고수익 미 주식 비중을 줄여 현금성 자산을 충분히 확보하여 안정적인 내집마련 계획을 수립해야 합니다."
     },
     "ENTP": {
       "name": "레오 (Leo)",
@@ -322,12 +360,12 @@
       "title": "성장 추구형 트렌드 모험가",
       "style": "모멘텀 및 하이리스크 트레이딩",
       "avatar": "fa-solid fa-rocket",
-      "comment": "강력한 수익을 낸 애플, 크라우드스트라이크 비중을 유지하며 네이버 손실을 만회하고, 비트코인/이더리움의 단기 모멘텀을 활용해 시드머니를 공격적으로 증식시키세요. 동시에 용인 수지구청역/성복역 인근 지역의 급매물 동향을 밀착 분석하여, 과감한 가격 협상으로 내년보다 더 빠른 시점에 최저가 매수 기회를 선점할 수 있습니다."
+      "comment": "미국 빅테크 강세 모멘텀을 활용, 시드머니를 공격적으로 증식하고 용인 수지구청역/성복역 인근 급매 매물을 포착하여 과감하게 진입할 준비를 하세요. 높은 변동성의 코인 트레이딩으로 단기 수익을 노리는 것도 가능합니다."
     },
     "real_estate_insights": [
-      "현재 분당 전세 보증금 규모와 용인 수지구 아파트 평균 매매가(약 9.6억) 간의 자금 갭이 상당하므로, LTV/DSR 규제 및 내년 예상 대출 금리를 고려한 자금 조달 계획을 최우선으로 수립해야 합니다.",
-      "용인 수지구는 분당 대비 합리적인 매매가와 높은 전세가율(58.2%)을 보이며, 전세가 지수가 2026년 6월 100을 달성하는 등 견고한 전세 시장을 형성하고 있어 실거주 및 투자 안정성이 높습니다.",
-      "2026년 상반기 서울, 분당, 수지 모두 매매 및 전세 가격지수가 상승 추세에 있으며, 특히 분당은 높은 상승률을 보여 수지구 매매 결정 시 주변 시세와의 연관성을 지속적으로 관찰하며 내년 적절한 매수 시점을 결정해야 합니다."
+      "용인 수지구는 분당구 대비 평균 매매가가 약 7.3억원 낮고 전세가율(58.2%)도 높아, 2027년 내집마련의 현실적 대안이자 상대적으로 안정적인 시장입니다.",
+      "수지구의 매매 및 전세 가격지수 모두 2026년 상반기 꾸준히 상승하여 안정적인 우상향 추세를 보이며, 2027년 매수 시점에도 긍정적인 시장 환경이 예상됩니다.",
+      "수지구청역, 성복역 인근 실거래가는 면적과 단지에 따라 6.5억~13억대까지 다양하므로, 예산에 맞춰 죽전GS자이105동(197.25m² 6.5억) 등 급매 위주의 단지 탐색이 유리합니다."
     ]
   },
   "real_estate": [
@@ -673,7 +711,7 @@
     {
       "name": "용인시 수지구",
       "code": "41465",
-      "average_price_krw": 964100000,
+      "average_price_krw": 962100000,
       "jeonse_ratio_pct": 58.2,
       "monthly_rent_avg_krw": 1100000,
       "price_index_trend": [
@@ -734,6 +772,14 @@
           "price_krw": 940000000
         },
         {
+          "apt_name": "우남퍼스트빌",
+          "size_sqm": 59.9524,
+          "trade_type": "매매",
+          "floor": 5,
+          "date": "2026-09-23",
+          "price_krw": 1095000000
+        },
+        {
           "apt_name": "성동마을수지자이",
           "size_sqm": 84.996,
           "trade_type": "매매",
@@ -781,14 +827,6 @@
           "date": "2026-09-21",
           "deposit_krw": 450000000,
           "price_krw": 450000000
-        },
-        {
-          "apt_name": "버들치마을성복자이1차",
-          "size_sqm": 134.859,
-          "trade_type": "매매",
-          "floor": 9,
-          "date": "2026-09-19",
-          "price_krw": 1135000000
         },
         {
           "apt_name": "더샵동천이스트포레",
@@ -1376,6 +1414,13 @@
       "total_eval_combined_krw": 69069108.43695357,
       "total_profit_combined_pct": 16.72645717963603,
       "krw_rate": 1364.5799560546875
+    },
+    {
+      "date": "2026-09-28",
+      "total_buy_combined_krw": 59171768.0,
+      "total_eval_combined_krw": 69095372.60370432,
+      "total_profit_combined_pct": 16.77084349364771,
+      "krw_rate": 1359.280029296875
     }
   ]
 }
